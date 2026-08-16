@@ -19,7 +19,7 @@ consistent. Below is what still needs a decision or an external confirmation.
 
 | # | Item | Recommendation |
 |---|---|---|
-| 6 | **Cslib build cost** | Cslib's ~200 Lean files have no prebuilt object cache and compile locally on first build. This has not been timed. Time a cold build on a representative student laptop before Unit 8, and if it is bad, ship a prebuilt container or self-host a `lean4web` instance with Cslib preloaded. |
+| 6 | ~~**Cslib build cost**~~ **— MEASURED 2026-08-16, resolved** | Cold build of the pinned triple is **1 m 34 s wall on a 24-core machine** (2,803 jobs, 1066% CPU ≈ 17 CPU-minutes, peak RSS 3.1 GB). Dependency fetch including the Mathlib cache adds ~1 m 45 s. Extrapolating to a 4-core/8-thread student laptop: **roughly 5–10 minutes of compilation, ~10 minutes end to end.** That is fine — no container or self-hosted `lean4web` is needed. **The real constraint is disk: ~10.7 GB** (7.8 GB project `.lake` + 2.9 GB toolchain), and **RAM: budget 4 GB free.** Tell students in week 1 so nobody discovers it on Oct 29. Full method in `labs/README.md`. |
 | 7 | **AWS credits** | Project topic 3 (guardrails / Automated Reasoning checks) needs Bedrock access. Apply for AWS Educate or research credits before the term so teams are not blocked in October. |
 | 8 | **Case-study assignment mechanism** | Participation includes each student leading one in-class case study. Decide whether to assign from the menu in the research brief or let students claim topics; either way, publish the sign-up in week 1. |
 | 9 | **Quiz question banks** | Coverage and format are specified in `quizzes/README.md`; the actual question banks are not yet written. Five banks of ~12 questions each, to be built in Brightspace. |
