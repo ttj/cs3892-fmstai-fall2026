@@ -545,7 +545,9 @@ Posters are not strictly required. But read the next section before deciding.
 ### 40AU awards — $3,500 / $1,000 / $500
 
 The top three projects receive monetary awards of **$3,500, $1,000, and $500**, divided equally
-among team members and deposited into each student's Vanderbilt account.
+among team members and deposited into each student's Vanderbilt account. *(Amounts as announced by
+the department for Fall 2026; they are set by the donor and could change — confirm before counting
+on a number.)*
 
 **Only teams that submit a poster file — or another medium that introduces the project, such as a
 short video — by December 3 will be considered by the judges.** There are too many projects for

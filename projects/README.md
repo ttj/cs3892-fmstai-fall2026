@@ -66,9 +66,10 @@ Two reasons it matters beyond your course grade, both detailed in
 
 1. **Presenting at the Showcase is required** if you selected "Senior project design" as your
    Immersion experience.
-2. **The 40AU awards — $3,500 / $1,000 / $500** — are judged from the submitted posters and videos,
-   starting *before* the event, because there are too many projects to visit in two hours. **A team
-   that does not submit by December 3 is not eligible**, regardless of how good the work is.
+2. **The 40AU awards — $3,500 / $1,000 / $500** (as announced for Fall 2026; amounts could change)
+   — are judged from the submitted posters and videos, starting *before* the event, because there
+   are too many projects to visit in two hours. **A team that does not submit by December 3 is not
+   eligible**, regardless of how good the work is.
 
 Read the judging metrics in §12 before you design the poster. Several of them — interface,
 usefulness, completeness — do not reward a verification project by default. Give the judges
