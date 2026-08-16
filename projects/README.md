@@ -29,10 +29,17 @@ and in one case not at all. A public or instructor-accessible Git repository is 
 **proposal** time, and commit history is part of the final grade — not to police you, but because
 a project with three commits on the last night did not happen the way the report claims.
 
-## Teams
+## Teams — minimum three, four preferred
 
-Two to four members. Undergraduates using this course for the CS Project requirement **must** be
-on a team. Solo projects need instructor approval and are held to the same total scope.
+**Three or four members.** Teams of two, and solo projects, require instructor approval in advance
+and carry the same total scope. Undergraduates using this course for the CS Project requirement
+**must** be on a team.
+
+The rationale is in [syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase)
+and is worth reading rather than skipping: ABET requires that we assess your ability to function as
+a member or leader of a *team*, two people barely qualifies, and a pair that loses a member in
+November is one person holding a two-person project. **Team size is also one of the Showcase
+judging metrics.**
 
 Every deliverable includes a **responsibility breakdown**: who did what, concretely. "Everyone
 contributed equally" is not a responsibility breakdown.
@@ -41,11 +48,35 @@ contributed equally" is not a responsibility breakdown.
 
 | Deliverable | Weight | When | Format |
 |---|---|---|---|
-| Proposal (report + lightning talk) | 5% | ~Week 6 | 1–3 pages + 5–7 slides, 5–10 min |
-| Milestone (presentation + running artifact) | 10% | ~Week 11 | ~8 slides, 8–15 min, **live tool demo** |
-| Final (report + presentation + demo + artifacts) | 35% | Finals period | 6–10 pages + ~15 min + repository |
+| Proposal (report + lightning talk) | 5% | **Thu Oct 1** | 1–3 pages + 5–7 slides, 5–10 min |
+| Milestone (presentation + running artifact) | 10% | **Thu Nov 12** | ~8 slides, 8–15 min, **live tool demo** |
+| **Showcase poster or video file** | see below | **Thu Dec 3** | printable poster file, or a short video |
+| Final (report + presentation + demo + artifacts) | 35% | **Dec 8 / Dec 10** + finals period | 6–10 pages + ~15 min + repository |
 
 Exact dates are on the [course schedule](../schedule/schedule.md).
+
+### The Showcase poster — Thursday December 3
+
+Every team prepares a poster file (or a short video) by **Thursday December 3**. This is a week
+before the CS Immersion Showcase and the deadline is **not extendable** — it is set by the
+department, which pays for the printing.
+
+Two reasons it matters beyond your course grade, both detailed in
+[syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase):
+
+1. **Presenting at the Showcase is required** if you selected "Senior project design" as your
+   Immersion experience.
+2. **The 40AU awards — $3,500 / $1,000 / $500** — are judged from the submitted posters and videos,
+   starting *before* the event, because there are too many projects to visit in two hours. **A team
+   that does not submit by December 3 is not eligible**, regardless of how good the work is.
+
+Read the judging metrics in §12 before you design the poster. Several of them — interface,
+usefulness, completeness — do not reward a verification project by default. Give the judges
+something to look at: a counterexample trace visualized, a what-the-verifier-caught-versus-what-
+testing-missed comparison, a 60-second screen recording of the tool finding a real bug.
+
+The poster is folded into the final-deliverable grade (see [rubrics](rubrics.md)); it is not a
+separate percentage.
 
 ### Proposal — ~Week 6
 
@@ -114,9 +145,11 @@ related work · threats to validity · conclusions and future work · responsibi
 reproduce your headline result. Reproducibility is graded: a grader will follow your README, and
 what they get is what you get.
 
-**Immersion Showcase.** Undergraduates using this course for the CS Project and/or Immersion
-requirement must present at the School of Engineering Immersion Showcase (early December —
-confirm the date with the instructor by mid-October). Plan a poster or demo accordingly.
+**Immersion Showcase.** Thursday December 10, 2026, 5–7 p.m., Featheringill Hall atrium. Poster or
+video file due **December 3**. Who must attend, the award structure, the judging metrics, and the
+funding route are all in
+[syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase) —
+that section is the single source of truth, so check it there rather than relying on this summary.
 
 ## Grading weights within the project
 

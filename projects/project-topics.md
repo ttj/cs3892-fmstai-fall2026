@@ -3,6 +3,9 @@
 You must choose one of the **eight topics below**, or propose your own (see
 [*Proposing your own topic*](#proposing-your-own-topic) at the end — the bar is higher).
 
+**Teams are three or four people** — see [`README.md`](README.md#teams--minimum-three-four-preferred)
+for why, and note that team size is one of the Immersion Showcase judging metrics.
+
 Each topic is written so that a team of 3–4 can produce a real result in one semester. Each
 one names the tools, the data or benchmarks, a concrete definition of "done," and a stretch
 goal. None of them is a survey.
@@ -101,7 +104,7 @@ finished the Natural Number Game by the proposal deadline, pick a different topi
 
 ## Topic 3 — Guardrails and automated reasoning: autoformalizing a policy
 
-**Category:** FM4AI + AI4FM · **Difficulty:** ●●○○ · **Team:** 2–3
+**Category:** FM4AI + AI4FM · **Difficulty:** ●●○○ · **Team:** 3–4
 
 Filtering LLM output with another LLM is a heuristic. Amazon's *Automated Reasoning checks* in
 Bedrock take a different route: encode the policy as logic, then use a solver to decide whether a
@@ -117,6 +120,11 @@ rule set, an academic-integrity policy, export-control rules. Write it in Englis
 
 Start from the `vsc_awsbrg` case-study scaffolding from Fall 2025 (`toy_example.py`,
 `case_study.py`); a Fall 2025 team took this route and it worked well.
+
+This is the lightest topic on the menu, so a team of four should take on **two** policy domains
+that differ structurally — one with numeric thresholds, one with mostly categorical rules — and
+compare how each behaves under formalization. That comparison is what turns it from a demo into a
+result.
 
 **Done means:** confusion matrices (true/false positives and negatives — define them precisely; a
 Fall 2025 team lost points for saying "blocked/not blocked" without defining the terms), for at

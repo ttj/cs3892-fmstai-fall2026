@@ -28,14 +28,15 @@ syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@echo "wrote $@"
 
 links:
-	@grep -rhoE 'https?://[^ )>,"`]+' --include='*.md' . \
-	  | sed 's/[.,;:]$$//' | sort -u > .links.txt
+	@grep -rhoE 'https?://[^ )>"`]+' --include='*.md' . \
+	  | sed -E 's/[.,;:]+$$//' | sort -u > .links.txt
 	@echo "$$(wc -l < .links.txt) unique URLs; checking..."
 	@while read -r u; do \
 	  code=$$(curl -sS -o /dev/null -w '%{http_code}' -L --max-time 30 \
 	    -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140.0 Safari/537.36' "$$u"); \
 	  printf '%-6s %s\n' "$$code" "$$u"; \
-	done < .links.txt | tee link-check.txt | grep -v '^200' || true
+	  sleep 0.4; \
+	done < .links.txt | tee link-check.txt | grep -vE '^(200|202|203) ' || true
 	@rm -f .links.txt
 	@echo "full results in link-check.txt (see LINK-AUDIT.md for known bot-blocked hosts)"
 

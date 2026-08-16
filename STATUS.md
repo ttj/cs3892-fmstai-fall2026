@@ -10,7 +10,7 @@ consistent. Below is what still needs a decision or an external confirmation.
 | # | Item | Detail | Who |
 |---|---|---|---|
 | 1 | **Cross-listing with CS 5892** | Only `2026F.1.CS.3892.02` is provisioned in Brightspace (OU 646125, currently empty). The Fall 2025 syllabus was headed "CS3892/CS5892." The materials assume cross-listing and specify differentiated graduate requirements throughout; if the 5892 section is not created, delete §7's graduate paragraph and the grad rows in the rubrics. | Registrar / DGS |
-| 2 | **Immersion Showcase date** | The CS Immersion page states **Thu Dec 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall**. It is single-sourced: no Events@Vanderbilt entry, and the College of Connected Computing page still shows only Spring 2026. It also falls on the **last day of classes**, which is a real scheduling constraint for a project course. | Prof. Robert Tairas (CS Immersion Coordinator) |
+| 2 | ~~**Immersion Showcase date**~~ **— CONFIRMED** | **Thu Dec 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall**, confirmed against the engineering page and the coordinator's pre-semester announcement. Poster/video files due **Thu Dec 3**; 40AU awards $3,500/$1,000/$500. Note it falls on the **last day of classes**. The CCC copy of the page (`computing.vanderbilt.edu/cs-immersion-showcase/`) is stale — still showing Spring 2026 — so do not send students there. | — |
 | 3 | **Room and meeting time** | Syllabus assumes T/R 11:00–12:15, per Fall 2025. Room TBA. | Registrar |
 | 4 | **TA assignment** | Syllabus has a TBA placeholder. Fall 2025 had one TA. | Department |
 | 5 | **Graduate academic calendar** | The registrar's 2026–27 page is the *undergraduate* calendar. The Graduate School publishes a separate one whose add/drop dates may differ for a 5892 section. | Graduate School |
@@ -25,6 +25,28 @@ consistent. Below is what still needs a decision or an external confirmation.
 | 9 | **Quiz question banks** | Coverage and format are specified in `quizzes/README.md`; the actual question banks are not yet written. Five banks of ~12 questions each, to be built in Brightspace. |
 | 10 | **Homework starter repos** | The homework specs reference `ttj/fmaiv` starters, which exist. Whether to fork per-assignment starter repos (GitHub Classroom) or point at FMAIV directly is undecided. Classroom gives autograding; direct pointing is less setup. |
 | 11 | **Textbook for the Lean unit** | Recommendation: *Functional Programming in Lean* as the gentle path, *Hitchhiker's Guide to Logical Verification* (2026 ed.) as the verification-focused one. Neither is required; pick one to assign readings from. |
+
+## Confirmed since the first draft
+
+- **Final exam slot: Mon Dec 14, 2026, 9:00 a.m.** — the registrar's block for an 11:00–12:15 TR
+  course. No exam is planned, but the slot is reserved and the syllabus now names it, along with
+  the condition under which one would be added. Engineering allows three hours and gives no
+  alternate sitting.
+- **Thanksgiving.** The registrar states the range as Nov 22–29, but both endpoints are Sundays;
+  the weekdays actually lost are Mon Nov 23 – Fri Nov 27. For a T/R course that is Nov 24 and
+  Nov 26, which is what the schedule assumes. The earlier syllabus wording implied the
+  university-wide range was two days, which was wrong.
+- **Oct 30** is three coinciding 11:59 p.m. deadlines (withdraw, pass/fail election, pass/fail →
+  graded), plus medical underload at 4:00 p.m. They are independently changeable in future years,
+  so they are listed separately.
+- **Immersion funding: $1,000 per student for Senior Design.** Monthly cycles (Sep 15, Oct 15,
+  Nov 16, Dec 10); the fall cycle closes **Sep 14** per the page's prose, though its own table says
+  Sep 15 — advise Sep 14. A funding workshop is required annually, and money lands 4–6 weeks after
+  notification, so this has to be started in September.
+- **Robert Tairas** is Immersion Coordinator for Computer Science (377 Jacobs Hall).
+- The 40AU award structure, poster deadline, and judging metrics are **not published** on any
+  public Immersion page — they come from the coordinator's instructor announcement. Syllabus §12
+  says so, so nobody wastes time looking for a URL.
 
 ## Not yet written
 

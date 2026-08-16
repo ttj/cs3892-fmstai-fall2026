@@ -85,6 +85,17 @@ that quietly reframes the question so the result looks positive cannot.
 | Documentation | 1 | README covers setup, run, and expected output. |
 | Commit history | 1 | Work distributed across the semester by more than one person. |
 
+### The Showcase poster (within the final presentation score)
+
+The poster or video file due **Thursday December 3** is graded as part of the final presentation
+block, not separately. Full marks means: the problem and the need are legible to a judge from
+outside formal methods in under a minute; there is something *visual* (a counterexample trace, a
+caught-vs-missed comparison, a short screen recording); and the formal result is stated precisely
+rather than vaguely ("nuXmv found a violation at depth 9," not "we verified the system").
+
+A missing poster costs points here **and** removes you from 40AU award consideration entirely —
+see [syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase).
+
 **Never commit:** API keys, `.env` files, cloud credentials, or any dataset you are not licensed
 to redistribute. A committed credential is an automatic deduction and, more importantly, an
 incident — tell me immediately and we will rotate it.

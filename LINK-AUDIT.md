@@ -5,7 +5,10 @@ on two criteria: (a) does it resolve, and (b) does the page actually serve the c
 claims it points to. A 200 that lands on a generic homepage, a soft-404, or a retired-service
 notice counts as a failure.
 
-**Result: 75 URLs checked · 71 good · 4 corrected · 4 bot-blocked but confirmed live.**
+**Result: 170 URLs checked · 4 corrected · 10 bot-blocked · the rest good.**
+
+The count grew from 75 to 170 when the nine discussion packets landed, adding 89 references
+(86 of which were fetch-verified during research).
 
 Re-run before each semester. Several failures below were *silent* — the old URL returned 200 and
 looked healthy.
@@ -39,6 +42,31 @@ checker will keep flagging them.
 | `https://www.ai.mil/…/genai-toolkit-…/` | DoD host blocks datacenter IPs site-wide | Wayback 2026-06-06, HTTP 200, correct CDAO article |
 | <http://mitpress.mit.edu/books/principles-cyber-physical-systems> | Akamai 403 to this network, every path including the homepage | Wayback CDX shows a 301 (not 404) as recently as 2026-07-26, to the Alur CPS ISBN page |
 | <http://mitpress.mit.edu/books/model-checking> | same | Wayback CDX 301 to ISBN 9780262032704, archived title *Model Checking* |
+
+### Added with the discussion packets (2026-08-16)
+
+Academic publishers, legal databases, and some government sites block datacenter IPs. All of the
+following returned 403 or timed out to an automated checker and should be spot-checked in a
+browser, not "fixed":
+
+| URL | Host behaviour |
+|---|---|
+| `https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781307` | JAMA blocks bots; article is open access in a browser |
+| `https://doi.org/10.1073/pnas.2509764123` | PNAS via DOI resolver; 403 to automated fetch |
+| `https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html` | CanLII blocks bots (this is *Moffatt v. Air Canada*) |
+| `https://robodebt.royalcommission.gov.au/publications/report` | Australian Royal Commission site; times out from this network |
+| `https://chatgptiseatingtheworld.com/wp-content/uploads/2025/…` (2 PDFs) | Personal blog hosting court opinions; 403/429 to bots |
+| `https://medium.com/google-cloud/…` | Medium blocks bots |
+
+**One quality note rather than a link problem:** two of the copyright packet's court opinions are
+cited to a personal blog (`chatgptiseatingtheworld.com`) that hosts PDF copies. The citations name
+the case, court, judge, and date, so they are findable — but if you are assigning these, prefer
+the CourtListener or PACER copy, which is a primary source and will outlive the blog.
+
+**A bug in this repo's own link checker, now fixed:** the `make links` target extracted URLs with a
+character class that stopped at commas, so the Therac-25 PDF (whose filename contains
+`Leveson,%20Turner`) was truncated to a nonexistent URL and reported as a 403. It is a healthy 200.
+Any checker you point at these files needs to handle commas and `%20` in paths.
 
 ## Scheme warnings
 
