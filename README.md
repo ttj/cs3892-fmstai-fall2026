@@ -18,6 +18,7 @@ Course materials: syllabus, schedule, homeworks, project topics, and rubrics.
 | [`projects/project-topics.md`](projects/project-topics.md) | **Eight defined project topics** with tools, benchmarks, and success criteria |
 | [`projects/rubrics.md`](projects/rubrics.md) | How each project deliverable is graded |
 | [`assignments/README.md`](assignments/README.md) | The five homeworks |
+| [`discussions/README.md`](discussions/README.md) | **Nine in-class discussion packets** — readings, questions, run sheets |
 | [`quizzes/README.md`](quizzes/README.md) | Quiz format and coverage |
 | [`labs/README.md`](labs/README.md) | Tool setup, zero-install paths, and the Lean version pin |
 | [`LINK-AUDIT.md`](LINK-AUDIT.md) | Every URL in the course materials, checked and dated |
@@ -53,7 +54,15 @@ semester-long team project that satisfies the CS project and Immersion requireme
 | 25–26 | Neural network verification |
 | 27–28 | Final project presentations |
 
-**Grading:** 50% project · 20% homeworks · 10% quizzes · 20% case studies and participation.
+**Grading:** 50% project · 20% homeworks · 10% quizzes · 20% case studies, discussions, and
+participation.
+
+**Nine structured discussions** run inside those sessions — weekly for the first five weeks, then
+every other week, 30 minutes each, think–pair–share. Topics include *Has AI ever killed anyone?*,
+*Are LLMs theft?*, *Can we verify what we cannot specify?* Each packet carries 5–10 fetch-verified
+sources, 3–5 genuinely contested questions, a minute-by-minute run sheet, and a list of widely
+repeated claims the instructor should **not** assert. See
+[`discussions/`](discussions/README.md).
 
 ## Tooling
 
@@ -83,6 +92,8 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 | **Repository required at proposal time** | Repo links used to surface at the milestone or later. |
 | **Theorem proving expanded to four sessions + Cslib** | Deliberate deepening. Cslib did not exist in Fall 2025; it is split across two sessions so the ω-automata material does not get cut live. |
 | **AI-risk unit compressed 4 sessions → 3** | To fund the above. Case studies are folded into the lecture sessions rather than standing alone. |
+| **Nine structured discussions added** | The course had case studies but no scheduled discussion time. 89 verified references across nine contested questions. |
+| **Team size raised to 3–4 (from 2–4)** | ABET teamwork assessment, attrition risk, Showcase logistics — and team size is a Showcase judging metric. |
 | **Currency pass on every citation** | Standards, tool versions, and competition results all moved. See [`LINK-AUDIT.md`](LINK-AUDIT.md). |
 
 ## Repository conventions

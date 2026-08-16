@@ -5,8 +5,8 @@
 **Tuesday / Thursday, 11:00 a.m. – 12:15 p.m.**
 
 > **Draft — pre-semester.** Items marked **[confirm]** are pending institutional confirmation
-> (cross-listing, room, TA assignment, Immersion Showcase date). Everything else is final unless
-> the registrar changes the academic calendar.
+> (cross-listing, room, TA assignment). Everything else is final unless the registrar changes the
+> academic calendar.
 
 ---
 
@@ -113,18 +113,22 @@ change):
 | Wed Aug 26 | First day of classes (our first meeting is Thu Aug 27) |
 | Fri Sep 4 | Last day to add/drop |
 | Thu–Fri Oct 22–23 | Fall Break — no class Thu Oct 22 |
-| Fri Oct 30 | Last day to withdraw; last day for pass/fail election |
-| Sun Nov 22 – Sun Nov 29 | Thanksgiving — no classes Nov 24 or Nov 26 |
+| Fri Oct 30 | Three separate 11:59 p.m. deadlines: last day to **withdraw**; last day to **register for pass/fail**; last day to **change pass/fail back to graded**. (Medical underload requests close the same day at 4:00 p.m.) |
+| Mon Nov 23 – Fri Nov 27 | Thanksgiving holidays, classes do not meet (registrar states the range as Nov 22–29, both Sundays) — **for this course that is Tue Nov 24 and Thu Nov 26** |
+| **Thu Dec 3** | **Showcase poster / video file due** — hard deadline, department pays printing (§12) |
 | Thu Dec 10 | Last day of classes |
-| **Thu Dec 10, 5–7 p.m.** | **CS Immersion Showcase**, Adams Atrium, Featheringill Hall **[confirm]** |
+| **Thu Dec 10, 5–7 p.m.** | **CS Immersion Showcase**, Adams Atrium, Featheringill Hall (§12) |
 | Fri Dec 11, Sun Dec 13 | Reading days |
 | Sat Dec 12, Mon Dec 14 – Sat Dec 19 | Final examination period |
+| *(Mon Dec 14, 9:00 a.m.)* | *Registrar's exam slot for this course — reserved, not currently used (§7)* |
 
-There is **no final exam**. The final project presentation and deliverables take its place.
+**There is no final exam planned**; the final project presentation and deliverables take its place.
+See §7 for the one circumstance in which that could change, and the slot it would occupy.
 
-> **Plan around this:** the Immersion Showcase falls on the last day of classes. If you are using
-> this course for the CS project or Immersion requirement, your poster or demo must be finished
-> *before* Dec 10, not on it.
+> **Plan around this:** the poster deadline is **Thursday December 3**, a week before the event —
+> and the Showcase itself falls on the **last day of classes**, the same day as the second half of
+> final project presentations. Nothing about the last week has slack in it. Build the poster in
+> November.
 
 The full session-by-session schedule, with all homework and project dates, is in
 [`schedule/schedule.md`](../schedule/schedule.md).
@@ -313,19 +317,27 @@ earned sense of what "bounded" versus "unbounded," and "checked" versus "proved,
 | Quizzes (5, lowest dropped) | 10% |
 | Case studies, attendance, and in-class participation | 20% |
 
-The instructor reserves the right to adjust these percentages, and to add assignments, if class
-participation proves insufficient.
+**There is no final exam planned.** The final project presentation and deliverables take its place.
+However — and this is the one place the grade structure can change — **the instructor reserves the
+right to adjust these percentages and to add assignments, including a final examination, if class
+participation and in-class engagement prove insufficient.** This course is built on discussion and
+in-class work; if that does not materialize, the assessment has to move somewhere it can be
+measured. Should a final exam be added, it would be held in the registrar's assigned slot for this
+course: **Monday, December 14, 2026, 9:00 a.m.** (the 11:00–12:15 TR block). School of Engineering
+courses are allotted three hours and **do not** offer an alternate exam sitting. Any such change
+would be announced no later than the withdrawal deadline, Friday October 30.
 
 ### Term project — 50%
 
-The centerpiece. Team-based (2–4 members; a team is **required** for students using this course for
-the CS project requirement). You choose from a menu of eight defined topics, or propose your own
-with approval.
+The centerpiece. **Teams of three or four** — see the team-size rule in §12; a team is **required**
+for students using this course for the CS project requirement. You choose from a menu of eight
+defined topics, or propose your own with approval.
 
 | Deliverable | Share of course grade | When |
 |---|---|---|
 | Proposal — report plus lightning talk | 5% | Thu Oct 1 |
 | Milestone — presentation plus **running artifact** | 10% | Thu Nov 12 |
+| **Showcase poster or video file** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | Dec 8 / Dec 10 and finals period |
 
 Full instructions, the topic menu, and rubrics are in the course repository under `projects/`.
@@ -357,12 +369,29 @@ Five short online quizzes in Brightspace, 10–15 minutes, auto-graded, taken be
 uses the material. **The lowest score is dropped.** They exist so that lecture can assume you have
 done the reading, and so you find out early — cheaply — when you have not.
 
-### Case studies, attendance, and participation — 20%
+### Case studies, discussions, attendance, and participation — 20%
 
-This is a discussion course as much as a lecture course. Each student leads or co-leads one
-in-class case study during the semester: an AI failure, its mechanism, and what formal method (if
-any) would have caught it — including the honest answer "none, and here is why." Participation also
-covers in-class exercises, tool walkthroughs, and peer feedback on project presentations.
+This is a discussion course as much as a lecture course, and the 20% is real.
+
+**Structured discussions.** Nine sessions during the semester devote roughly 30 minutes to a
+structured discussion of a genuinely contested question — weekly for the first five weeks, then
+every other week. Format is **think–pair–share**: you think and write alone, argue it out with one
+partner, then we take it to the room. Topics include: *Has AI ever killed anyone? Are LLMs theft?
+Are AI's environmental impacts real or overstated? If AI writes all our software, do we still need
+to learn to code? Can we verify what we cannot specify?* Each has assigned reading — usually one
+source, under 30 minutes — posted a week ahead on Brightspace. **Come having read it.** The full
+schedule, readings, and questions are in `discussions/` in the course repository.
+
+These are not debate exercises with a house position. Several of them are questions I do not have
+a settled answer to, and the readings deliberately include sources that cut both ways. What is
+graded is whether you engage with the strongest version of the view you disagree with.
+
+**Case studies.** Each student leads or co-leads one in-class case study: an AI or software
+failure, its mechanism, and what formal method — if any — would have caught it, including the
+honest answer "none, and here is why."
+
+**Everything else.** In-class exercises, tool walkthroughs, and peer feedback on project
+presentations.
 
 ### Grading scale
 
@@ -466,15 +495,123 @@ Health Center, the University Counseling Center, and the Office of the Chaplain 
 615-322-7233) has limited confidentiality: staff must report incidents but can do so without
 identifying the person affected.
 
-## 12. CS project requirement and Immersion
+## 12. CS project requirement, Immersion, and the Showcase
 
-For undergraduates using this course to fulfil the **CS Project requirement** and/or Vanderbilt's
-**Immersion** requirement, participation in the **CS Immersion Showcase** is required — Thursday
-December 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall **[confirm]**. Team projects are
-expected. Speak with me early so we can plan appropriately.
+This is the authoritative statement of the Immersion and Showcase rules for this course. The
+project documents in the repository link here rather than restating them, so there is one place to
+update if anything changes.
+
+### The CS Immersion Showcase
+
+**Thursday, December 10, 2026, 5:00–7:00 p.m., Adams Atrium, Featheringill Hall.**
+
+The undergraduate catalog states, under School of Engineering | Degree Programs in Engineering |
+Immersion, that *"Senior design projects in the School of Engineering satisfy the final project
+requirement for Immersion Vanderbilt, with students presenting the results of their design project
+at the school's Design Day or Computer Science Immersion Showcase."* For Computer Science, a
+"senior design project" is a CS project course — this one.
+
+**Who must present:** if you selected **"Senior project design"** as your Immersion experience, you
+must present your project at the Showcase. If you are satisfying Immersion some other way, or are
+not using Immersion at all, presenting is **not required** — but it is strongly encouraged, and
+every team in this course is expected to prepare a poster or video regardless (see below).
+
+**Graduating seniors:** after the event I approve Immersion completion for graduating seniors who
+selected "Senior project design." The Office of Immersion contacts instructors around the time
+final grades are due.
+
+### Team size — minimum three
+
+**Project teams must have at least three members. Four is preferred.** This is a firm rule, for
+three reasons:
+
+1. **ABET requires that we assess your ability to function as a member or leader of a team.** Two
+   people is a stretch of that definition.
+2. **Attrition.** If one member of a three-person team drops the course, you are a pair. If one
+   member of a *pair* drops, you are alone in November with a project scoped for two.
+3. **Showcase logistics.** Fewer, larger teams means each team gets a proper space at the event.
+
+Teams of two, or solo projects, require my approval in advance and are held to the same total
+scope. Students using this course for the CS Project requirement must be on a team.
+
+### Posters — file due Thursday, December 3
+
+**The department pays for poster printing.** To take advantage of that, your poster file must be
+submitted by **Thursday, December 3, 2026** — one week before the event. This deadline is not mine
+and I cannot extend it.
+
+Posters are not strictly required. But read the next section before deciding.
+
+### 40AU awards — $3,500 / $1,000 / $500
+
+The top three projects receive monetary awards of **$3,500, $1,000, and $500**, divided equally
+among team members and deposited into each student's Vanderbilt account.
+
+**Only teams that submit a poster file — or another medium that introduces the project, such as a
+short video — by December 3 will be considered by the judges.** There are too many projects for
+judges to visit them all during a two-hour event, so judging begins beforehand from the submitted
+material. A team without a poster or video is not in the running, however good the work is.
+
+Judging has historically used the following metrics, weighted differently depending on the mix of
+projects in a given semester:
+
+| Metric | What it asks |
+|---|---|
+| Completeness | How complete is the application's functionality |
+| Complexity | How hard is the problem being solved |
+| Ethical implication | How the project may affect people or society, positively or negatively |
+| Interface | How good and user-friendly is the interface |
+| Need identification | Is the need clearly defined — population, problem, impact |
+| Novelty | How new is this relative to what the judge understands as state of the art |
+| Presentation | How well the team presented it |
+| Team size | How many students contributed |
+| Usefulness | How useful would this be in its field |
+
+**A word of advice specific to this course.** Several of those metrics — *interface*, *usefulness*,
+*completeness* — reward things a verification project does not naturally produce. A judge who is
+not a formal-methods person will not be moved by a `sorry`-free Lean file or an `unsat` verdict on
+its own. Build something they can *see*: a visualization of a counterexample trace, a side-by-side
+of what the verifier caught and what testing missed, a short screen recording of the tool finding
+a real bug. The technical work is the substance; the demo is what makes the substance legible.
+Note also that **team size is itself a judging metric**, which is a further argument for four.
+
+### Funding — apply early, this is real money
+
+The Office of Immersion funds Immersion-related projects, and **Senior Design projects are eligible
+for $1,000 per student**. If your project needs cloud credits, compute, hardware, or paid data
+access, this is the route — and topic 3 (AWS Bedrock) and topic 4 (neural network verification) can
+both consume real budget.
+
+Mechanics that matter:
+
+- Applications are evaluated on a **monthly** cycle, deadlines at 11:59 p.m., with decisions about
+  three weeks later. Fall 2026 monthly deadlines: **Sep 15 · Oct 15 · Nov 16 · Dec 10**.
+- The **fall cycle closes Monday, September 14** per the page's own text — note the page also lists
+  a September 15 deadline in its table, so treat **September 14** as the safe date.
+- There are **two separate applications** — Immersion Experience funding and Culminating Project
+  funding — and they must be submitted in sequence, never in the same cycle.
+- A **funding workshop is required every year**, even if you have attended before.
+- Money arrives **four to six weeks after notification**, so September or October, not November.
+
+<https://www.vanderbilt.edu/immersion/funding/>
+
+### Links
 
 - CS Immersion: <https://engineering.vanderbilt.edu/academics/undergraduate/cs-immersion/>
-- Immersion requirement: <https://www.vanderbilt.edu/immersion/>
+  (short form: <http://vu.edu/cs-immersion>)
+- Immersion Vanderbilt: <https://www.vanderbilt.edu/immersion/>
+- Immersion funding: <https://www.vanderbilt.edu/immersion/funding/>
+
+Questions about the Showcase or about Immersion generally can come to me, or directly to
+**Prof. Robert Tairas**, Immersion Coordinator for Computer Science (377 Jacobs Hall).
+
+> **One caution:** the College of Connected Computing copy of the Showcase page at
+> `computing.vanderbilt.edu/cs-immersion-showcase/` was still advertising the *Spring* 2026 event
+> as of August 2026. Use the engineering page above; it is the one that is current.
+
+The award structure, the poster deadline, and the judging metrics in this section come from the CS
+Immersion coordinator's pre-semester announcement to instructors — they are **not** published on
+the public Immersion pages, so do not go looking for them there.
 
 ---
 
