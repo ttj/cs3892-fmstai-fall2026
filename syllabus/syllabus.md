@@ -5,8 +5,8 @@
 **Tuesday / Thursday, 11:00 a.m. – 12:15 p.m.**
 
 > **Draft — pre-semester.** Items marked **[confirm]** are pending institutional confirmation
-> (cross-listing, room, TA assignment). Everything else is final unless the registrar changes the
-> academic calendar.
+> (room, TA assignment). Everything else is final unless the registrar changes the academic
+> calendar.
 
 ---
 
@@ -54,8 +54,9 @@ AI and machine learning, including generative AI and LLMs, is assumed.
 **Recommended course prerequisites:** CS 3251 and CS 3270, plus one of CS 3262, CS 4260, CS 4262,
 CS 4267, or ECE 4363.
 
-**Cross-listing:** CS 3892 (undergraduate) and CS 5892 (graduate) **[confirm]**. Graduate students
-complete additional project components — see §7.
+**Cross-listing:** CS 3892 (undergraduate) and CS 5892 (graduate) are the same course, taught
+together, with the same lectures, schedule, and Brightspace site. Graduate students complete
+additional coursework — see §7.
 
 ### Why this course, and why now
 
