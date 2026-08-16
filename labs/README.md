@@ -1,0 +1,103 @@
+# Tools and setup
+
+**You are never required to install anything to pass this course.** Every tool has a zero-install
+path. Local installation is fully supported as a backup and is worth doing if you plan a
+tool-heavy project.
+
+## Zero-install paths
+
+| Tool | Used in | In the browser, no account | With a GitHub account |
+|---|---|---|---|
+| **Z3** | HW1, Unit 3 | [Z3 Guide](https://microsoft.github.io/z3guide/) — runs Z3 in-browser | Codespaces / [Colab](https://colab.research.google.com/github/ttj/fmaiv/blob/main/notebooks/01_day1_logic_sat_smt.ipynb) |
+| **NuSMV / nuXmv** | HW2, Units 4–6 | [smvis](https://smvis-378135919048.us-central1.run.app/) — NuSMV with state/BDD visualization, accepts your own `.smv` | Codespaces (`NuSMV` preinstalled) |
+| **CBMC** | HW3, Unit 7 | — | Codespaces |
+| **Frama-C** | Unit 7 | — | Local or container |
+| **Lean 4** | HW4, Unit 8 | [Lean web editor](https://live.lean-lang.org/) · [Natural Number Game](https://adam.math.hhu.de/) | Codespaces or local (required for Cslib) |
+| **auto_LiRPA / α,β-CROWN** | HW5, Unit 10 | — | [Colab](https://colab.research.google.com/github/ttj/fmaiv/blob/main/notebooks/05_day4_nn_robustness.ipynb) |
+
+**Container with everything preinstalled:** open [`ttj/fmaiv`](https://github.com/ttj/fmaiv) in
+GitHub Codespaces. It ships `z3`, `cbmc`, `cryptol`, `saw`, `NuSMV`, `lean`, and `smvis`, plus CPU
+`torch` and `auto_LiRPA` for the neural-network notebooks. Free within GitHub's monthly allowance
+(180 core-hours for verified students through GitHub Education — sign up early, verification takes
+a few days).
+
+**nuXmv itself is licence-gated** and cannot be redistributed, so it is not in the container. Use
+smvis or the preinstalled `NuSMV`: the SMV language and the `is true` / `is false` verdicts are the
+same for everything we do. If you want nuXmv locally, register at <https://nuxmv.fbk.eu/>.
+
+## Lean 4 — read this before installing
+
+Lean releases monthly, and there will be two or three releases during the semester. Chasing them
+mid-term will break your project.
+
+**Pin this triple for the whole term:**
+
+```toml
+# lean-toolchain
+leanprover/lean4:v4.33.0
+```
+
+```toml
+# lakefile.toml
+[[require]]
+name = "cslib"
+scope = "leanprover"
+rev = "v4.33.0"
+```
+
+Mathlib is pinned to `v4.33.0` to match.
+
+**Do not follow Cslib's own README.** It instructs you to use `rev = "main"`, and `main` currently
+pins a *release-candidate* toolchain. A student who installs Lean stable and follows that README
+ends up dragging in an RC. The cost of pinning is small: only a handful of files exist on `main`
+and not in `v4.33.0`.
+
+**Install order (the recommended path changed in 2026):**
+
+1. Install [VS Code](https://code.visualstudio.com/Download).
+2. Install the **Lean 4** extension (`leanprover`) from the Extensions panel.
+3. Let the extension run its guided setup — it installs `elan` and the toolchain for you.
+
+Manual `elan-init` is the fallback, not the default.
+
+**The browser Lean editors ship Mathlib only.** `import Cslib` will not work at
+<https://live.lean-lang.org/> or on the HHU mirror. Those are fine for week 1 and for the Natural
+Number Game; Cslib work happens in Codespaces or locally.
+
+**Build cost warning.** Mathlib has a prebuilt object cache (`lake exe cache get`). Cslib's ~200
+files do **not** — they compile locally the first time. Budget for that on your first build, and
+do it before the lab session rather than during it.
+
+**AI assistance in Lean:** use
+[`lean-lsp-mcp`](https://github.com/oOo0oOo/lean-lsp-mcp) — it rides the Lean language server, is
+toolchain-agnostic (so it will not fight the version pin), installs with pip/uvx, needs no GPU, and
+plugs into the MCP clients you already have. It exposes goal states, diagnostics, and hover docs to
+your assistant, which is what actually makes AI useful for proving. Skip LeanCopilot this term (its
+releases lag stable Lean and will conflict with the Cslib pin) and skip LeanAgent (dormant since
+mid-2025).
+
+## The running example
+
+Every tool in this course verifies a variant of the *same* property:
+
+> **P:** a bounded counter's value `x` never exceeds 10.
+
+| Tool | Style | Verdict you should get |
+|---|---|---|
+| Z3 | bounded (SMT, depth ≤ N) | `unsat` — no counterexample within N |
+| NuSMV / nuXmv | unbounded (BDD reachability) | `x <= 10` is `true` |
+| Lean 4 | inductive proof, all N at once | builds, sorry-free |
+| CBMC | bounded, on real C source | `VERIFICATION SUCCESSFUL` |
+
+Five verdicts, five different meanings of the word "verified." Working out precisely how they
+differ — which ones would miss a bug past the bound, which ones force you to supply an inductive
+invariant — is the intellectual point of the homework sequence.
+
+## Getting help
+
+- Course discussion board on Brightspace — first stop, so answers help everyone.
+- Lean: [Lean Zulip](https://leanprover.zulipchat.com/) is welcoming to beginners.
+- Office hours: by appointment, easiest right before or after class.
+
+**If you lose more than an hour to a setup problem, stop and ask.** The zero-install paths exist
+precisely so that no one's grade depends on their laptop.
