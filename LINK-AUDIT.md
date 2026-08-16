@@ -60,8 +60,9 @@ checker will keep flagging them.
 - **`vanderbilt.edu/generative-ai/academic-integrity/` is written for faculty, not students.** It is
   correct for the purpose but should always be paired with `/generative-ai/students/`.
 - **Student Access Services is now just "Student Access."** Wording updated.
-- **NIST AI 100-1 and the AI RMF landing page are the same document** — the Fall 2025 syllabus
-  cited both as if they were two sources. Merged.
+- **NIST AI 100-1 and the AI RMF landing page are the same document.** The Fall 2025 syllabus
+  cited only the landing page (checked against the source `.docx`), so this is a clarification for
+  the Fall 2026 reading list, not a correction to the old one.
 - **The NIST AI RMF page carries a revision banner:** "being revised as part of the White House AI
   Action Plan." The landing page is the right stable link precisely because it tracks the revision.
 - **NIST AI 100-2 E2025:** use the corrected April 2025 PDF plus the June 2025 errata, not a cached

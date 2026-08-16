@@ -39,11 +39,19 @@ consistent. Below is what still needs a decision or an external confirmation.
 
 ## Currency notes to carry into the slides
 
-The Fall 2025 decks need these corrections before reuse. Full detail in the research brief; the
-short list:
+**Scope note.** These apply to the **Fall 2025 lecture decks**, which have not been read
+line-by-line. They are *not* corrections to the Fall 2025 syllabus: that document was extracted and
+checked directly, and it never mentioned the EU AI Act, EASA, NIST AI 100-1, or Cslib at all. What
+it did cite — the NIST AI RMF landing page, AI 600-1, AI 100-2 E2025, ISO/IEC 24029-2, Microsoft's
+failure-modes taxonomy, `lean-lang.org` — was verified still-current, with one exception: the dead
+`rise4fun.com/z3` link. Treat the list below as a checklist to run against the decks, not as a
+record of errors already found in them.
 
-- **EU AI Act** — high-risk obligations moved to Dec 2027 / Aug 2028 by Regulation (EU) 2026/1744.
-  What lands 2 Aug 2026 is **Article 50 transparency**, not high-risk.
+Full detail in the research brief; the short list:
+
+- **EU AI Act** — if any deck dates high-risk obligations from Aug 2026, that is now wrong:
+  Regulation (EU) 2026/1744 moved them to Dec 2027 / Aug 2028. What lands 2 Aug 2026 is
+  **Article 50 transparency**.
 - **NIST AI RMF** — still 1.0, but under revision per the July 2025 AI Action Plan. Teach it as a
   live document. AI 100-1 and the RMF landing page are the same thing.
 - **DoD Responsible AI Toolkit** — renamed the **AI Assurance (AIA) Toolkit**.

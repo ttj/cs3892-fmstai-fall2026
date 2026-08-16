@@ -11,31 +11,31 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 
 | # | Date | Unit | Session | Due |
 |---:|---|---|---|---|
-| 1 | Thu Aug 27 | 0 · Framing | Course intro. What formal methods are and what they guarantee. The verification triple: model + spec → verifier → verdict. FM4AI vs AI4FM. Tour of the semester. | |
-| 2 | Tue Sep 1 | 1 · AI risk | Taxonomy of AI failure modes. Alignment, hallucination, jailbreaking, adversarial perturbation, backdoors, provenance, IP, human factors. | |
-| 3 | Thu Sep 3 | 1 · AI risk | Case studies I: agentic failures. AI-orchestrated intrusion; prompt injection in tool-using agents; the coding agent that deleted a production database. Why per-request filtering cannot express the property that was violated. | |
-| 4 | Tue Sep 8 | 1 · AI risk | Risk frameworks and regulation. NIST AI RMF (and its ongoing revision), NIST AI 100-2 adversarial-ML taxonomy, EU AI Act as amended July 2026, ISO/IEC 24029-2, EASA. | **Quiz 1** |
-| 5 | Thu Sep 10 | 1 · AI risk | Guardrails vs. sound checks. Model-based filtering vs. solver-backed policy checking. AWS Bedrock Automated Reasoning checks: the translate/validate split and where soundness actually lives. Case study II. | |
-| 6 | Tue Sep 15 | 2 · Logic | Sets, set-builder notation, predicates. Propositional logic: syntax, semantics, satisfiability vs. validity. | |
-| 7 | Thu Sep 17 | 2 · Logic | First-order and higher-order logic. Quantifiers. The duality between formulas and sets of states — the idea the rest of the course runs on. | |
-| 8 | Tue Sep 22 | 3 · SAT/SMT | SAT: CNF, DPLL/CDCL, resolution, UNSAT cores. Proving by refutation. | **Quiz 2** |
-| 9 | Thu Sep 24 | 3 · SAT/SMT | SMT: theories (LIA, bit-vectors, EUF), DPLL(T). Z3 from Python and SMT-LIB. Encoding puzzles. Bounded reachability. | **HW1 out** |
-| 10 | Tue Sep 29 | 4 · Modeling | Transition systems `T = (S, S₀, →, AP, L)`. Traces, reachability. Invariants and *inductive* invariants; strengthening. The SMV language. | |
+| 1 | Thu Aug 27 | 0 · Framing | Course intro. What formal methods are and what they guarantee. The verification triple: model + spec → verifier → verdict. FM4AI vs AI4FM. Why the Erdős #728 episode is the argument for this course. | |
+| 2 | Tue Sep 1 | 1 · AI risk | Taxonomy of AI failure modes. Alignment, hallucination, jailbreaking, adversarial perturbation, backdoors, provenance, IP, human factors. **Case studies I: agentic failures.** | |
+| 3 | Thu Sep 3 | 1 · AI risk | Risk frameworks and regulation. NIST AI RMF (and its ongoing revision), NIST AI 100-2 adversarial-ML taxonomy, EU AI Act as amended July 2026, ISO/IEC 24029-2, EASA. | |
+| 4 | Tue Sep 8 | 1 · AI risk | Guardrails vs. sound checks. Model-based filtering vs. solver-backed policy checking. AWS Bedrock Automated Reasoning checks: the translate/validate split and where soundness actually lives. **Case studies II.** | **Quiz 1** |
+| 5 | Thu Sep 10 | 2 · Logic | Sets, set-builder notation, predicates. Propositional logic: syntax, semantics, satisfiability vs. validity. | |
+| 6 | Tue Sep 15 | 2 · Logic | First-order and higher-order logic. Quantifiers. The duality between formulas and sets of states — the idea the rest of the course runs on. | |
+| 7 | Thu Sep 17 | 3 · SAT/SMT | SAT: CNF, DPLL/CDCL, resolution, UNSAT cores. Proving by refutation (`¬φ` UNSAT). | |
+| 8 | Tue Sep 22 | 3 · SAT/SMT | SMT: theories (LIA, bit-vectors, EUF), DPLL(T). Z3 from Python and SMT-LIB. Encoding problems as constraints. Bounded reachability. | **Quiz 2** |
+| 9 | Thu Sep 24 | 4 · Modeling | Transition systems `T = (S, S₀, →, AP, L)`. Traces, reachability. Invariants and *inductive* invariants; strengthening. The SMV language. | **HW1 out** |
+| 10 | Tue Sep 29 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | |
 | 11 | Thu Oct 1 | Project | **Project proposal lightning talks.** 5–10 min per team. | **Proposal due** |
-| 12 | Tue Oct 6 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. | **Quiz 3** |
-| 13 | Thu Oct 8 | 5 · Temporal logic | CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. Temporal properties over *agent traces*. | **HW1 due** |
-| 14 | Tue Oct 13 | 6 · Model checking | Explicit-state and symbolic model checking. BDDs, image computation, fixpoints, quantifier elimination. | |
-| 15 | Thu Oct 15 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | **HW2 out** |
-| 16 | Tue Oct 20 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | |
+| 12 | Tue Oct 6 | 5 · Temporal logic | CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3** |
+| 13 | Thu Oct 8 | 6 · Model checking | Explicit-state and symbolic model checking. BDDs, image computation, fixpoints, quantifier elimination. | **HW1 due** |
+| 14 | Tue Oct 13 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | |
+| 15 | Thu Oct 15 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | **HW2 out** |
+| 16 | Tue Oct 20 | 7 · Programs | Deductive verification: Hoare logic, loop invariants, ACSL and Frama-C. Why the obvious invariant is usually not inductive. | |
 | — | Thu Oct 22 | | **Fall Break — no class** | |
-| 17 | Tue Oct 27 | 7 · Programs | Deductive verification: Hoare logic, loop invariants, ACSL and Frama-C. Why the obvious invariant is usually not inductive. | **Quiz 4** |
-| 18 | Thu Oct 29 | 7 · Programs | Abstract interpretation: abstract domains, Galois connections, widening; what precision is lost at a join. Static, dynamic, and concolic analysis; automated test generation. | **HW2 due · HW3 out** |
-| 19 | Tue Nov 3 | 8 · Theorem proving | Lean 4 I: terms, types, `def`, `theorem`, tactics. Curry–Howard. Induction. Live proving. | |
-| 20 | Thu Nov 5 | 8 · Theorem proving | Lean 4 II: transition systems in Lean. The inductive-invariant pattern — init lemma, step lemma, strengthening. Proving a *parametric* bound a model checker cannot settle. | |
-| 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib**: labelled transition systems, bisimulation, Hennessy–Milner logic and the Hennessy–Milner theorem. ω-languages, Büchi acceptance, DBA ⊊ NBA, closure of ω-regular languages under complementation. And what Cslib does *not* have — no LTL, no LTL→Büchi, no emptiness check — i.e. exactly where "proved" stops and "asserted" begins. | **Quiz 5** |
+| 17 | Tue Oct 27 | 7 · Programs | Abstract interpretation: abstract domains, Galois connections, widening; what precision is lost at a join. Static, dynamic, and concolic analysis; automated test generation. | **Quiz 4** |
+| 18 | Thu Oct 29 | 8 · Theorem proving | **Lean 4 I:** terms, types, `def`, `theorem`, tactics. Curry–Howard. Induction. Live proving. | **HW2 due · HW3 out** |
+| 19 | Tue Nov 3 | 8 · Theorem proving | **Lean 4 II:** transition systems in Lean. The inductive-invariant pattern — init lemma, step lemma, strengthening. Proving a *parametric* bound a model checker cannot settle. | |
+| 20 | Thu Nov 5 | 8 · Theorem proving | **Cslib I — the complete arc.** Labelled transition systems, bisimulation (including the greatest-fixed-point characterization), Hennessy–Milner logic, and the machine-checked Hennessy–Milner theorem: two states satisfy the same HML formulas iff they are bisimilar. A modal logic, a semantics over transition systems, an equivalence, and the theorem tying them together — with no missing pieces. | |
+| 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib II — ω-automata, and the honest gap.** Büchi acceptance; deterministic Büchi automata are strictly weaker than nondeterministic (`not_da_buchi`); the generalized-Büchi intersection construction — literally the intersection step of the pipeline from session 12; closure of ω-regular languages under complementation, which is what makes "check ¬φ" legitimate. Then the four things Cslib does **not** have — no LTL, no LTL→Büchi translation, no emptiness check, no system×property product — i.e. exactly where "proved" stops and "asserted on a slide" begins. | **Quiz 5** |
 | 22 | Thu Nov 12 | Project | **Project milestone presentations.** 8–15 min per team, **live demo of running tooling required.** | **Milestone due · HW3 due · HW4 out** |
-| 23 | Tue Nov 17 | 9 · AI4FM | Autoformalization: English → LTL, → SMV, → ACSL, → Lean. What the measured success rates actually are (semantic correctness is far below syntactic). LLM proof search and the state of AI theorem proving. | |
-| 24 | Thu Nov 19 | 9 · AI4FM | The soundness gap: a machine-checked proof of a machine-generated formalization certifies only that the two agree. Saturated benchmarks. The Erdős #728 episode — where formalization is what separated a real result from a retracted claim. | |
+| 23 | Tue Nov 17 | 9 · AI4FM | Autoformalization: English → LTL, → SMV, → ACSL, → Lean. What the measured success rates actually are — semantic correctness runs far below syntactic, and how you would even measure the difference. | |
+| 24 | Thu Nov 19 | 9 · AI4FM | LLM proof search and the state of AI theorem proving. Saturated benchmarks. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. The Erdős arc, revisited with the machinery to understand it. | |
 | — | Tue Nov 24 | | **Thanksgiving — no class** | |
 | — | Thu Nov 26 | | **Thanksgiving — no class** | |
 | 25 | Tue Dec 1 | 10 · NN verification | Robustness as a formal property. Complete vs. incomplete methods; IBP, CROWN-style linear relaxation, branch-and-bound. ONNX and VNN-LIB 2.0. | **HW5 out** |
@@ -72,13 +72,37 @@ final exam. Exact deadline on Brightspace.
 Quizzes open on Brightspace one week before they close and are due at 11:00 a.m. on the listed
 day — before the class that uses the material. Lowest of the five is dropped.
 
+## Session budget — where the time went, and why
+
+| Unit | Sessions | Note |
+|---|---:|---|
+| 0 · Framing | 1 | |
+| 1 · AI risk, standards, case studies | 3 | Down from four in Fall 2025 — the case studies are folded into the lecture sessions rather than standing alone |
+| 2 · Logic | 2 | |
+| 3 · SAT/SMT | 2 | |
+| 4 · Modeling | 1 | |
+| 5 · Temporal logic | 2 | Büchi automata introduced here, revisited machine-checked in session 21 |
+| 6 · Model checking | 2 | |
+| 7 · Programs | 3 | |
+| **8 · Theorem proving (Lean + Cslib)** | **4** | Up from ~1 in Fall 2025 |
+| 9 · AI4FM | 2 | |
+| 10 · NN verification | 2 | |
+| Project sessions | 4 | Proposal, milestone, two final-presentation days |
+
 ## Planning notes
 
+- **Büchi automata appear twice, on purpose.** Session 12 introduces them as the algorithmic
+  foundation of LTL model checking; session 21 shows the same objects machine-checked in Lean,
+  and then shows exactly which parts of the pipeline are *not* proved. Seeing the gap is the point,
+  and it is a ready-made capstone project.
+- **The Cslib unit is split rather than crammed.** Session 20 is a complete, self-contained,
+  fully machine-checked arc (HML + bisimulation + the Hennessy–Milner theorem). Session 21 is the
+  ω-automata material plus the honest inventory of what is missing. Running them as one session
+  guarantees the second half gets cut live.
 - **Two project gates before the withdraw deadline.** The proposal (Oct 1) lands well before the
   Oct 30 withdrawal deadline, so you will know whether the course suits you while you still have
-  options. The milestone (Nov 12) is deliberately four weeks from the end — late enough to have
-  results, early enough to change course if they are not coming.
-- **Lean gets three sessions and three weeks of homework time.** It is the steepest part of the
-  course and the schedule reflects that. HW4 spans Thanksgiving on purpose.
+  options. The milestone (Nov 12) is deliberately four weeks from the end.
+- **Lean gets four sessions and HW4 gets three weeks**, spanning Thanksgiving on purpose. It is the
+  steepest part of the course.
 - **The last two weeks are compressed.** NN verification gets two sessions and HW5 is deliberately
   the lightest homework, because final projects are landing at the same time.

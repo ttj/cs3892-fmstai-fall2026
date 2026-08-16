@@ -131,10 +131,10 @@ The full session-by-session schedule, with all homework and project dates, is in
 
 ## 5. Topics
 
-**Unit 0 · Framing (week 1).** What formal methods are and what they buy. The verification triple:
+**Unit 0 · Framing (session 1).** What formal methods are and what they buy. The verification triple:
 model + specification → verifier → verdict. FM4AI and AI4FM.
 
-**Unit 1 · AI failure modes, risk, and governance (weeks 2–3).** A taxonomy of failure: alignment,
+**Unit 1 · AI failure modes, risk, and governance (sessions 2–4).** A taxonomy of failure: alignment,
 hallucination, toxicity, jailbreaking, adversarial perturbation, backdoors and trojans, data
 provenance, IP, human factors. Prompt injection and agentic tool-use failures. Case studies from
 the past year. Guardrails, red-teaming, model cards and datasheets. Risk frameworks and regulation
@@ -143,33 +143,33 @@ taxonomy, the EU AI Act as amended in July 2026, ISO/IEC 24029-2, EASA's aviatio
 paper. The central contrast of the course, introduced early: a *filter* that another model
 evaluates, versus a *check* that a solver decides.
 
-**Unit 2 · Logic and preliminaries (week 4).** Sets and set-builder notation; predicates;
+**Unit 2 · Logic and preliminaries (sessions 5–6).** Sets and set-builder notation; predicates;
 propositional, first-order, and higher-order logic; satisfiability versus validity; the duality
 between formulas and sets of states.
 
-**Unit 3 · SAT, SMT, and decision procedures (week 5).** DPLL/CDCL; theories (linear arithmetic,
+**Unit 3 · SAT, SMT, and decision procedures (sessions 7–8).** DPLL/CDCL; theories (linear arithmetic,
 bit-vectors, uninterpreted functions); DPLL(T). Z3 from Python and SMT-LIB. Encoding problems as
 constraints. Bounded reachability. Why SMT is the engine under industrial hallucination checking.
 
-**Unit 4 · Modeling and specification (week 6).** Transition systems `T = (S, S₀, →, AP, L)`;
+**Unit 4 · Modeling and specification (session 9).** Transition systems `T = (S, S₀, →, AP, L)`;
 traces and reachability; invariants and *inductive* invariants; strengthening. The SMV language.
 
-**Unit 5 · Temporal logic (week 7).** LTL and CTL; safety versus liveness; ω-words and ω-regular
+**Unit 5 · Temporal logic (sessions 10, 12).** LTL and CTL; safety versus liveness; ω-words and ω-regular
 languages; Büchi automata and the automata-theoretic view of model checking. Signal temporal logic
 and quantitative robustness. Temporal properties over *agent execution traces* — the specification
 problem that per-request content filtering cannot express.
 
-**Unit 6 · Model checking (week 8).** Explicit-state, symbolic (BDD), and bounded (SAT) model
+**Unit 6 · Model checking (sessions 13–14).** Explicit-state, symbolic (BDD), and bounded (SAT) model
 checking, and when each is the right tool. Image computation, fixpoints, quantifier elimination.
 nuXmv in practice; counterexample-guided debugging; k-induction and IC3.
 
-**Unit 7 · Program analysis (weeks 9–10).** Programs as transition systems over memory states.
+**Unit 7 · Program analysis (sessions 15–17).** Programs as transition systems over memory states.
 Bounded model checking of C with CBMC; loop unwinding and unwinding assertions. Deductive
 verification, Hoare logic, loop invariants, ACSL and Frama-C. Abstract interpretation: abstract
 domains, Galois connections, widening — and what precision is lost at a join. Static, dynamic, and
 concolic analysis; automated test generation.
 
-**Unit 8 · Interactive theorem proving (weeks 11–12).** Lean 4: terms, types, `def`, `theorem`,
+**Unit 8 · Interactive theorem proving (sessions 18–21).** Lean 4: terms, types, `def`, `theorem`,
 tactics. Curry–Howard. Induction. Proving invariants of transition systems, and proving *parametric*
 statements a model checker cannot settle. Then **Cslib** — the Lean library for computer science —
 where the automata-theoretic foundations of Unit 5 are machine-checked: labelled transition
@@ -179,7 +179,7 @@ of ω-regular languages under complementation. We will also look carefully at wh
 yet contain — there is no LTL, no LTL→Büchi translation, and no emptiness check — because the
 boundary between "proved" and "asserted on a slide" is precisely what this course is about.
 
-**Unit 9 · AI for formal methods (week 13).** Autoformalization: English → temporal logic,
+**Unit 9 · AI for formal methods (sessions 23–24).** Autoformalization: English → temporal logic,
 English → SMV, English → ACSL, English → Lean. LLM proof search and the current state of AI
 theorem proving. What is genuinely solved, what is saturated benchmark theater, and the
 **soundness gap**: a machine-checked proof of a machine-generated formalization certifies only
@@ -187,14 +187,14 @@ that the two agree. The Erdős #728 episode — where formalization in Lean is e
 a real result from a retracted claim — is the argument for this entire course, delivered by
 current events.
 
-**Unit 10 · Neural network verification (week 14).** Robustness as a formal property. Incomplete
+**Unit 10 · Neural network verification (sessions 25–26).** Robustness as a formal property. Incomplete
 versus complete methods; interval bound propagation, CROWN-style linear relaxation,
 branch-and-bound. ONNX and VNN-LIB (and the 2.0 revision, which gives the format a formal
 semantics mechanized in Agda). Tools: α,β-CROWN, NNV, n2v, NeuralSAT, PyRAT, Marabou. VNN-COMP
 2026 results as a live dataset. An honest account of the scaling limits, and of certification
 practice in aviation.
 
-**Unit 11 · Project presentations (week 15).**
+**Unit 11 · Project presentations (sessions 27–28).** Proposal talks are session 11 and the milestone is session 22.
 
 ## 6. Materials
 
