@@ -48,9 +48,25 @@ consistent. Below is what still needs a decision or an external confirmation.
   public Immersion page — they come from the coordinator's instructor announcement. Syllabus §12
   says so, so nobody wastes time looking for a URL.
 
+## Repository split (2026-08-16)
+
+This repo is **shared with the class**. Instructor-only material moved to a separate private
+repository, `ttj/cs3892-fmstai-fall2026-instructor`:
+
+- the nine think–pair–share **run sheets** (minute-by-minute choreography, prompt assignment, how to
+  reopen a discussion that converges early),
+- the nine **"do not assert these"** lists,
+- the **Brightspace build plan** for the reflection assignments.
+
+Links to the nine Gamma intro decks live there too. Before merging anything into *this* repo, ask
+whether you would be content for a student to read it.
+
 ## Not yet written
 
 - Quiz question banks (item 9).
+- **The nine Brightspace reflection assignments and their grade items.** Specified in the instructor
+  repo (`brightspace/discussion-setup.md`) but not built — Brightspace auth was deliberately left
+  alone. D1 is on the first day of class, so this needs doing before Aug 27.
 - Individual homework handout files. `assignments/README.md` specifies all five in enough detail to
   write them; each still needs a standalone handout with starter code links and a submission
   checklist.

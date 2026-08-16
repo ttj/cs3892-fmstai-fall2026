@@ -18,7 +18,8 @@ Course materials: syllabus, schedule, homeworks, project topics, and rubrics.
 | [`projects/project-topics.md`](projects/project-topics.md) | **Eight defined project topics** with tools, benchmarks, and success criteria |
 | [`projects/rubrics.md`](projects/rubrics.md) | How each project deliverable is graded |
 | [`assignments/README.md`](assignments/README.md) | The five homeworks |
-| [`discussions/README.md`](discussions/README.md) | **Nine in-class discussion packets** — readings, questions, run sheets |
+| [`discussions/README.md`](discussions/README.md) | **Nine in-class discussion packets** — case-study background, questions, readings |
+| [`discussions/participation.md`](discussions/participation.md) | The reflection you submit after each discussion, and how it is graded |
 | [`quizzes/README.md`](quizzes/README.md) | Quiz format and coverage |
 | [`labs/README.md`](labs/README.md) | Tool setup, zero-install paths, and the Lean version pin |
 | [`LINK-AUDIT.md`](LINK-AUDIT.md) | Every URL in the course materials, checked and dated |
@@ -59,10 +60,14 @@ participation.
 
 **Nine structured discussions** run inside those sessions — weekly for the first five weeks, then
 every other week, 30 minutes each, think–pair–share. Topics include *Has AI ever killed anyone?*,
-*Are LLMs theft?*, *Can we verify what we cannot specify?* Each packet carries 5–10 fetch-verified
-sources, 3–5 genuinely contested questions, a minute-by-minute run sheet, and a list of widely
-repeated claims the instructor should **not** assert. See
-[`discussions/`](discussions/README.md).
+*Are LLMs theft?*, *Can we verify what we cannot specify?*
+
+Each packet opens with a **case-study background** — 400–550 words on what happened, when and
+where, and what the investigation, court, or regulator actually found — written for someone who has
+never heard of it. Then a dated timeline, three to five genuinely contested questions, and 5–10
+fetch-verified sources chosen to include some that cut against the framing. After each session you
+submit a one-paragraph reflection. See [`discussions/`](discussions/README.md) and
+[`participation.md`](discussions/participation.md).
 
 ## Tooling
 
@@ -99,6 +104,9 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 ## Repository conventions
 
 - `main` is the published state. Work lands via pull request.
+- **This repository is shared with the class.** Nothing instructor-only belongs here — no run
+  sheets, no answer keys, no grading internals. Those live in a separate private repository. Before
+  merging anything, ask whether you would be content for a student to read it.
 - No student data, ever — no rosters, no submissions, no grades. This repo is private, but the
   rule holds regardless.
 - No credentials, no `.env`, no cloud keys.

@@ -1,8 +1,51 @@
 # D5 — If AI Writes All Our Software, Do We Still Need to Learn to Code?
 
-**Session 8 · Tue Sep 22 · week 5 · 30 minutes · think–pair–share**
+**Session 8 · Tue Sep 22 · week 5 · 30 minutes in class · think–pair–share**
 
-## Framing
+> **Before class:** read the assigned source (posted on Brightspace) and the background below.
+> **After class:** one paragraph, 150–250 words, due **Thu Sep 24, 11:59 p.m.** — see
+> [participation.md](participation.md).
+
+## Background
+
+### Two experiments that disagree
+
+A **randomized controlled trial (RCT)** assigns participants to conditions by chance rather than by choice — here, "you get the AI tool" or "you don't." Randomization is what licenses a causal claim: because the groups differ only by luck, a gap in outcomes can be credited to the treatment. What it does not do is extend that claim beyond the people and tasks actually in the trial.
+
+Two such trials, both competently run, disagree.
+
+In May–June 2022, Sida Peng (Microsoft Research) with colleagues at GitHub and MIT Sloan recruited 95 freelance programmers on Upwork and asked them to implement an HTTP server in JavaScript as fast as possible. Forty-five got GitHub Copilot; fifty did not. The Copilot group finished **55.8% faster** — 71 minutes on average against 161.
+
+From February to June 2025, the research nonprofit METR ran a trial with **16 experienced open-source maintainers** across **246 real issues** in their own repositories — projects averaging 22,000+ GitHub stars and a million lines of code, where each developer had roughly five years of history. Each issue was randomly assigned to allow or forbid AI tools (mostly Cursor Pro with Claude 3.5/3.7 Sonnet). With AI, they took **19% longer** per task.
+
+### What the trials actually found
+
+Peng et al.'s speedup carries a 95% confidence interval of **21–89%** — a very wide band — and is computed among developers who completed the task. The study did define "correct": the repository shipped a **twelve-check test suite** participants could see but not alter. The Copilot group's success rate was 7 percentage points higher, but that difference was **not statistically significant** (CI −0.11 to 0.25). Speed moved; measured correctness did not detectably move. The paper also reports that *less* experienced developers gained the most.
+
+METR's second result concerns self-report rather than speed. Beforehand, participants forecast AI would make them 24% faster; afterward, measured 19% slower, they still believed it had sped them up by about 20%. The authors explicitly decline the general reading: their work is not evidence that AI fails to speed up many or most developers. It describes veterans, in code they know deeply, with early-2025 tooling.
+
+Notice what each study *could* measure. Peng et al. had a written-down definition of done, so it could report time and correctness. METR's task was "resolve this GitHub issue," which has no ground truth, so wall-clock time was nearly all there was.
+
+### Why it still matters
+
+Beyond the trials: DORA's 2025 report (~5,000 self-selected professionals, correlational) finds a *positive* relationship between AI adoption and delivery throughput, reversing its own 2024 finding, while AI "does continue to have a negative relationship with software delivery stability." A 2022 Stanford lab study (Perry et al., 47 participants, OpenAI's codex-davinci-002) found participants with an AI assistant "wrote significantly less secure code" and were "more likely to believe they wrote secure code."
+
+On jobs: Brynjolfsson, Chandar and Chen, using ADP payroll data through June 2026, place 22–25 year olds in AI-exposed occupations 19% below where employment would be had it kept pace with less-exposed peers, through reduced hiring rather than layoffs. They call these "early, descriptive indicators — canaries in the coal mine — rather than causal estimates," and do not single out software developers. (That 19% and METR's are unrelated quantities that happen to share digits.)
+
+### Timeline
+
+| When | What |
+|---|---|
+| May–June 2022 | Peng et al. run the Copilot RCT: 95 freelance programmers recruited on Upwork, an HTTP-server task in JavaScript, graded by a fixed 12-check test suite participants can see but not alter. |
+| November 2022 | Perry, Srivastava, Kumar and Boneh post "Do Users Write More Insecure Code with AI Assistants?" to arXiv (later CCS '23): 47 analyzed participants, OpenAI codex-davinci-002; assisted participants wrote significantly less secure code and were more likely to believe it was secure. |
+| February 13, 2023 | The Copilot trial is posted to arXiv (2302.06590): 55.8% faster, 95% CI 21–89%, computed among task completers; the treated group's success rate is 7 points higher and not statistically significant. |
+| March 19, 2025 | Simon Willison argues that "vibe coding" — which he characterizes, quoting Karpathy, as forgetting the code exists — has drifted into a label for all AI-assisted programming. |
+| February–June 2025 | METR runs its RCT: 16 veteran open-source maintainers, 246 real issues in repositories they have worked in for about five years, mostly Cursor Pro with Claude 3.5/3.7 Sonnet. |
+| July 10, 2025 | METR publishes: developers took 19% longer per task with AI, having forecast a 24% speedup and still believing afterward they were about 20% faster. |
+| September 23, 2025 | The 2025 DORA report (~5,000 respondents) reports a positive relationship between AI adoption and delivery throughput — reversing its own 2024 finding — while AI "does continue to have a negative relationship with software delivery stability." |
+| August 12, 2026 | Stanford Digital Economy Lab revises "Canaries in the Coal Mine": ADP payroll data through June 2026 places 22–25 year olds in AI-exposed occupations 19% below where employment would be had it kept pace with less-exposed peers, via reduced hiring; the authors call this descriptive, not causal. |
+
+## The question
 
 > In 2022, ninety-five freelance developers were randomized to build an HTTP server with or
 > without GitHub Copilot; the ones with it finished 55.8% faster. In 2025, sixteen experienced
@@ -13,20 +56,9 @@
 > under different definitions of "done." Your job for the next half hour is to work out what
 > someone starting a CS degree in 2026 should actually conclude from that.
 
-## Why this is in a formal-methods course
-
-The one study in this packet that produced a clean, statistically significant effect could do so
-only because someone had written down in advance what "correct" meant: Peng et al. gated
-completion time on an immutable 12-check test suite, whereas METR could measure nothing but
-wall-clock time because "resolve this GitHub issue" has no ground truth, and Perry et al. needed
-human analysts to hand-grade security. The measurement problem running through this entire
-literature is therefore a specification problem — which is precisely this course's subject. And
-note what happened in the one place correctness *was* measured: Copilot's speed effect was
-significant while its 7-percentage-point success-rate advantage was not, which is exactly the
-gap between "produced code faster" and "produced correct code" that verification exists to
-close.
-
 ## Discussion questions
+
+You will be assigned one of these in class. Come having thought about at least two.
 
 **1.** METR's developers mis-estimated their own speed by roughly 39 percentage points, in the
 direction that flattered the tool. Suppose that miscalibration is general. Does that make
@@ -59,25 +91,38 @@ entry-level market shrank because of AI or because of the post-2022 rate environ
 you should personally do this semester — or is the rational response identical under both
 explanations?
 
+## Why this is in a formal-methods course
+
+The one study in this packet that produced a clean, statistically significant effect could do so
+only because someone had written down in advance what "correct" meant: Peng et al. gated
+completion time on an immutable 12-check test suite, whereas METR could measure nothing but
+wall-clock time because "resolve this GitHub issue" has no ground truth, and Perry et al. needed
+human analysts to hand-grade security. The measurement problem running through this entire
+literature is therefore a specification problem — which is precisely this course's subject. And
+note what happened in the one place correctness *was* measured: Copilot's speed effect was
+significant while its 7-percentage-point success-rate advantage was not, which is exactly the
+gap between "produced code faster" and "produced correct code" that verification exists to
+close.
+
 ## Readings
 
-9 sources, 9 verified by direct fetch. Assign one; the rest are for students who want to go further, and for you when a claim gets challenged in the room.
+9 sources, 9 verified by direct fetch. One is assigned; the rest are here if you want to go further, or to check a claim that comes up in the room.
 
 - **Joel Becker, Nate Rush, Elizabeth Barnes, David Rein — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (METR)** (report, 2025)  
   <https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/>  
   The assigned reading (~20 min) and the strongest evidence that AI can slow experts down: 16
   veteran OSS developers, 246 real issues, 19% slower while forecasting a 24% speedup and
   still believing afterward they were 20% faster. Supports the 'still learn to code' side.
-  Direct students to the caveats section — the authors explicitly refuse the generalization
-  most people draw. Fuller version is arXiv:2507.09089.
+  Do not skip the caveats section — the authors explicitly refuse the generalization most
+  people draw from this study. Fuller version is arXiv:2507.09089.
 
 - **Sida Peng (Microsoft Research), Eirini Kalliamvakou & Peter Cihon (GitHub), Mert Demirer (MIT Sloan) — "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot," arXiv:2302.06590** (academic, 2023)  
   <https://arxiv.org/abs/2302.06590>  
-  The deliberate counterweight and the strongest source on the other side: 55.8% faster on an
-  HTTP-server task. Assign the abstract plus Results (~10 min). Three details do the teaching:
-  the 95% CI is a very wide 21–89%, the effect is computed conditioning on task completion,
-  and the paper reports that *less*-experienced developers benefited most — the exact mirror
-  of METR. Two of four authors worked for GitHub, the vendor of the tool studied.
+  The strongest source on the other side: 55.8% faster on an HTTP-server task. The part you
+  need is the abstract plus Results (~10 min). Three details carry the weight here: the 95%
+  CI is a very wide 21–89%, the effect is computed conditioning on task completion, and the
+  paper reports that *less*-experienced developers benefited most — the exact mirror of METR.
+  Two of four authors worked for GitHub, the vendor of the tool studied.
 
 - **Neil Perry, Megha Srivastava, Deepak Kumar, Dan Boneh — "Do Users Write More Insecure Code with AI Assistants?" arXiv:2211.03622 (CCS '23)** (academic, 2022)  
   <https://arxiv.org/abs/2211.03622>  
@@ -89,146 +134,57 @@ explanations?
 
 - **Google Cloud / DORA — "Announcing the 2025 DORA Report: State of AI-assisted Software Development"** (report, 2025)  
   <https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report>  
-  Cuts both ways and is the best antidote to cherry-picking. Across ~5,000 professionals, AI
+  Cuts both ways, and the best antidote to cherry-picking. Across ~5,000 professionals, AI
   adoption is now positively associated with delivery throughput — an explicit reversal of
   DORA's own 2024 finding — while it 'does continue to have a negative relationship with
   software delivery stability.' Read the announcement post rather than the full report; the
-  framing of AI as an 'amplifier' of existing practice is the part students should argue with.
+  framing of AI as an 'amplifier' of existing practice is the part worth arguing with.
 
 - **Stack Overflow — 2025 Developer Survey, AI section** (tool, 2025)  
   <https://survey.stackoverflow.co/2025/ai>  
   Practitioner sentiment at scale: 84% use or plan to use AI tools, yet only 3.1% highly trust
   their accuracy, ~46% actively distrust, and 66% name 'almost right, but not quite' as their
-  top frustration. Skim in 10 minutes. Important limitation to state in class: self-selected,
-  non-probability sample — it measures sentiment among opt-in respondents, not tool quality.
+  top frustration. Skim in 10 minutes. Watch the limitation before you cite any of it: this is
+  a self-selected, non-probability sample — it measures sentiment among opt-in respondents,
+  not tool quality.
 
 - **GitClear — "The Maintainability Gap: 2026 AI Code Quality Research"** (report, 2026)  
   <https://www.gitclear.com/the_ai_code_quality_maintainability_gap>  
   The maintainability case against AI-authored code: 623M changes analyzed 2023–2026, block
   duplication up 81% since 2023, moved/refactored code down from 21% (2022) to 3.8% (2026).
-  Included partly so students can practice *discounting* a source — GitClear sells code-
-  analytics tooling, the moved-vs-copy/paste categories are proprietary definitions, and the
-  report itself claims correlation rather than causation.
+  It is also a good source on which to practice *discounting*: GitClear sells code-analytics
+  tooling, the moved-vs-copy/paste categories are proprietary definitions, and the report
+  itself claims correlation rather than causation.
 
 - **Erik Brynjolfsson, Bharat Chandar, Ruyu Chen — "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence," Stanford Digital Economy Lab (rev. Aug 12, 2026)** (academic, 2026)  
   <https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/>  
   The primary evidence on entry-level hiring: ADP payroll data through June 2026 shows workers
   aged 22–25 in AI-exposed occupations sitting 19% below where they would be had they kept
-  pace with less-exposed peers, driven by reduced hiring rather than separations. Long —
-  assign the six facts and the caveats. Crucially, the authors call these 'early, descriptive
-  indicators... rather than causal estimates,' and the paper does not single out software
-  developers.
+  pace with less-exposed peers, driven by reduced hiring rather than separations. Long — the
+  parts you need are the six facts and the caveats. Crucially, the authors call these 'early,
+  descriptive indicators... rather than causal estimates,' and the paper does not single out
+  software developers.
 
 - **Stanford Digital Economy Lab — "Canaries, Interest Rates, and Timing: More on Recent Drivers of Employment Changes for Young Workers"** (report, 2026)  
   <https://digitaleconomy.stanford.edu/news/canaries-interest-rates-and-timinga-more-on-recent-drivers-of-employment-changes-for-young-workers>  
-  The reference that most complicates the easy story, and from the same lab that produced it.
-  It rebuts the interest-rate explanation (AI-exposed jobs are on average *less* rate-
-  sensitive) but concedes that under firm-time fixed effects the decline is significant only
-  after 2024, and that 'we do not believe that AI is always and everywhere the sole
-  determinant of employment.' Short; assign alongside the Canaries paper.
+  The source that most complicates the easy story, and it comes from the same lab that told
+  the story. It rebuts the interest-rate explanation (AI-exposed jobs are on average *less*
+  rate-sensitive) but concedes that under firm-time fixed effects the decline is significant
+  only after 2024, and that 'we do not believe that AI is always and everywhere the sole
+  determinant of employment.' Short; read it alongside the Canaries paper.
 
 - **Simon Willison — "Not all AI-assisted programming is vibe coding"** (news, 2025)  
   <https://simonwillison.net/2025/Mar/19/vibe-coding/>  
   Establishes what 'vibe coding' actually meant, quoting Karpathy's original framing verbatim
   — 'fully give in to the vibes, embrace exponentials, and forget that the code even exists,'
   for throwaway weekend projects — and argues the term has drifted to cover all AI-assisted
-  work. A 5-minute read that should be assigned first, because letting the definition slide
-  silently decides the debate before it starts. (Karpathy's original post is on X, which
-  cannot be fetched; this is a secondary source quoting it.)
+  work. A 5-minute read, and the one to do first: letting the definition slide silently
+  decides the debate before it starts. (Karpathy's original post is on X, which cannot be
+  fetched; this is a secondary source quoting it.)
 
-## 30-minute run sheet
+## What you submit
 
-0–3 — FRAMING. Before speaking, write four unlabeled numbers on the board: -19%, +55.8%, 66%,
-19%. Read the framing aloud. Tell students that all four are real, all from randomized trials or
-large surveys between 2022 and 2026, and that by the end of class they should be able to say
-what each measures — and why two of them being the same number is a pure coincidence. Assign one
-prompt per table group (Prompts 2, 3, 4, 5 across four groups). Hold Prompt 1 in reserve.
-
-3–8 — THINK (silent, individual, written, no devices). Hand out index cards. Each student writes
-exactly two sentences: (1) their answer to their table's prompt; (2) the specific piece of
-evidence that would change their mind. Say this out loud: "If your second sentence is 'nothing
-would change my mind,' you have a belief, not a position — rewrite it." Circulate, read 5–6
-cards silently, and mark two that disagree sharply for the share-out. While circulating, write
-three column headers on the board: THROUGHPUT / STABILITY / CORRECTNESS.
-
-8–16 — PAIR. Pair students *across* tables so the prompts differ. Each person hands their card
-to their partner, who must argue the other person's position for 60 seconds before responding.
-Then the pair produces one joint written claim in this exact form: "Learning to code will still
-matter in 2031 because/unless ______, and the evidence is ______, which does not measure
-______." The third blank is mandatory — every study in the packet fails to measure something,
-and naming it is the skill being drilled.
-
-16–26 — SHARE. Cold-call by table, one joint claim per pair, about 90 seconds each. Do not
-evaluate claims as right or wrong. Instead, after each, ask the room: "Which column did that
-claim actually provide evidence for?" and write it into THROUGHPUT, STABILITY, or CORRECTNESS.
-Expect heavy clustering in THROUGHPUT. If a sharp student puts something in CORRECTNESS early —
-likely via Perry et al. and security — do not deflect: ask whether "fewer vulnerabilities in a
-hand-graded sample" is a correctness claim or a statistical one, and whether they could write
-that property down formally. Around minute 22, when the CORRECTNESS column is visibly thin, say
-so out loud and drop Prompt 1 on the whole room as the pivot.
-
-26–30 — CLOSE + COLLECT. Do not resolve the question. State the one structural fact the columns
-just exposed: Peng et al. is the only study in the packet with a machine-checkable definition of
-correct, and it got one because somebody wrote 12 tests in advance — yet even there, the speed
-effect was statistically significant while the 7-point success-rate advantage was not. Take a
-show of hands on one question: "Is 'I can tell when the AI is wrong' a coding skill?" Record the
-split on the board and photograph the board. Collect all index cards at the door as the entry
-ticket to the next lecture, where the thin CORRECTNESS column becomes the working definition of
-a specification.
-
-## Do not assert these
-
-Claims that circulate widely about this topic but are wrong, contested, or traceable only to a single weak source. Getting one of these wrong from the front of the room, in a course about verification, costs more than it would anywhere else.
-
-Do not assert any of the following from the front of the room.
-
-1. "METR proved AI makes developers slower." It did not. Sixteen developers, 246 tasks, mature
-repositories they had worked in for about five years, early-2025 tooling. The authors explicitly
-disclaim this exact reading, stating their result is not evidence that AI fails to speed up many
-or most developers. State the effect for that population and setting, not in general.
-
-2. "Copilot makes developers 55% faster." Over-strong in several ways at once: the 95% CI is
-21–89%, the effect is computed *conditioning on completing the task*, participants were Upwork
-freelancers recruited in May 2022 (Codex era, mostly aged 25–34, median income $10–19k), and 95
-were randomized with meaningful attrition before analysis. Two of four authors worked at GitHub
-and one at Microsoft Research. It is still real evidence — just about a narrow, greenfield,
-fully specified task.
-
-3. Never claim Peng et al. did not measure correctness. It did: a 12-check test suite, visible
-but unalterable by participants. The correct point is subtler and stronger — the treated group's
-success rate was only 7 percentage points higher and that difference was *not* statistically
-significant. Speed moved; correctness did not detectably move.
-
-4. Do not connect the two 19% figures. METR's 19% is a task-time slowdown for 16 OSS developers;
-Brynjolfsson et al.'s 19% is a relative employment gap for 22–25 year olds across AI-exposed
-occupations. Identical digits, unrelated quantities. This conflation circulates widely.
-
-5. "AI took entry-level developer jobs." The Canaries authors describe their results as "early,
-descriptive indicators — canaries in the coal mine — rather than causal estimates," and the
-paper does not single out software developers. Their own follow-up concedes that under firm-time
-fixed effects the decline is significant only after 2024, implying other forces drove earlier
-declines. The interest-rate confound is partially rebutted, not eliminated.
-
-6. "DORA shows AI hurts delivery." Stale and directionally wrong for 2025. The 2024 report found
-a negative throughput relationship; the 2025 report explicitly reverses it while maintaining
-that AI "does continue to have a negative relationship with software delivery stability." Get
-both directions right or omit the source. Also note it is a self-selected survey of ~5,000
-respondents — correlational, not experimental.
-
-7. GitClear's duplication and churn figures are vendor research, not peer-reviewed. GitClear
-sells code-analytics tooling, its moved-versus-copy/paste taxonomy is proprietary, and the
-report claims correlation across a window in which many things besides AI changed. Present it as
-a signal worth investigating, never as an established quality effect of AI.
-
-8. "Studies show AI code is X% more insecure." Avoid any specific percentage. Perry et al. is a
-small lab study on a 2022-era model with a narrow task set; the robust finding is the divergence
-between confidence and security, not a magnitude.
-
-9. "Vibe coding" does not mean "using AI to write code." Karpathy's original framing was
-specifically about forgetting the code exists — not reading diffs, accepting all changes, for
-throwaway projects. Using it as a synonym for all AI-assisted development smuggles in the
-conclusion and makes the debate unwinnable for one side.
-
-10. Stack Overflow's survey is self-selected and non-probability. Its trust and sentiment
-numbers describe opt-in respondents, not the developer population, and the 2025 decline in
-positive sentiment is not a measurement of tool quality.
+One paragraph, 150–250 words, by **Thu Sep 24, 11:59 p.m.**, to the `D5` assignment folder on
+Brightspace. Answer three things: where you landed and why, what the strongest argument against you
+was, and what would change your mind. Scored 0–2; lowest of the nine is dropped. Full details and
+the rubric are in [participation.md](participation.md).

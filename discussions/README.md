@@ -1,66 +1,75 @@
 # In-class discussions
 
-Nine structured discussions, ~30 minutes each, inside a 75-minute session. Weekly for the first
-five weeks, then every other week. Format is **think–pair–share**: students think and write alone,
-argue with one partner, then we take it to the room.
+Nine structured discussions, ~30 minutes each, inside a normal 75-minute session. Weekly for the
+first five weeks, then every other week. Format is **think–pair–share**: you think and write alone,
+argue it out with one partner, then we take it to the room.
 
-These are part of the 20% participation grade (see
-[syllabus §7](../syllabus/syllabus.md#7-assignments-and-grading)).
+These are part of the 20% participation grade — see
+**[participation.md](participation.md)** for the reflection prompt, the rubric, and the deadlines.
 
 ## Schedule
 
 | | Session | Date | Week | Question | Packet |
 |---|---:|---|---:|---|---|
-| **D1** | 1 | Thu Aug 27 | 1 | Has AI Ever Killed Anyone? Cause, Contribution, and the Limits of Attribution | [`d1-killed.md`](d1-killed.md) |
-| **D2** | 3 | Thu Sep 3 | 2 | A Survey of Harms: When Software and AI Hurt People | [`d2-harms.md`](d2-harms.md) |
-| **D3** | 4 | Tue Sep 8 | 3 | Are LLMs Theft? Training Data, Copyright, and Fair Use (status as of August 2026) | [`d3-copyright.md`](d3-copyright.md) |
-| **D4** | 6 | Tue Sep 15 | 4 | What Does a Prompt Cost the Planet? Specifying AI's Environmental Impact | [`d4-environment.md`](d4-environment.md) |
-| **D5** | 8 | Tue Sep 22 | 5 | If AI Writes All Our Software, Do We Still Need to Learn to Code? | [`d5-learn-to-code.md`](d5-learn-to-code.md) |
+| **D1** | 1 | Thu Aug 27 | 1 | Has AI ever killed anyone? | [`d1-killed.md`](d1-killed.md) |
+| **D2** | 3 | Thu Sep 3 | 2 | A survey of harms: when software and AI hurt people | [`d2-harms.md`](d2-harms.md) |
+| **D3** | 4 | Tue Sep 8 | 3 | Are LLMs theft? Training data, copyright, and fair use | [`d3-copyright.md`](d3-copyright.md) |
+| **D4** | 6 | Tue Sep 15 | 4 | What does a prompt cost the planet? | [`d4-environment.md`](d4-environment.md) |
+| **D5** | 8 | Tue Sep 22 | 5 | If AI writes all our software, do we still need to learn to code? | [`d5-learn-to-code.md`](d5-learn-to-code.md) |
 | **D6** | 12 | Tue Oct 6 | 7 | Who is liable when AI-assisted software fails? | [`d6-liability.md`](d6-liability.md) |
-| **D7** | 16 | Tue Oct 20 | 9 | Can We Verify What We Cannot Specify? | [`d7-specify.md`](d7-specify.md) |
-| **D8** | 20 | Thu Nov 5 | 11 | Correctness or Design? What Is Left for the Engineer When the Machine Writes Both | [`d8-engineer-role.md`](d8-engineer-role.md) |
+| **D7** | 16 | Tue Oct 20 | 9 | Can we verify what we cannot specify? | [`d7-specify.md`](d7-specify.md) |
+| **D8** | 20 | Thu Nov 5 | 11 | Correctness or design? What is left for the engineer | [`d8-engineer-role.md`](d8-engineer-role.md) |
 | **D9** | 24 | Thu Nov 19 | 13 | Does system architecture still matter in the age of agentic coding? | [`d9-architecture.md`](d9-architecture.md) |
 
 ## What is in each packet
 
-- **Framing** — 2–4 sentences to read aloud. Sets up the tension; does not resolve it.
+- **Background** — 400–550 words of case study: what happened, when and where, what the
+  investigation or court or regulator actually found, and why it still matters. Written for someone
+  who has never heard of any of it. Plus a dated timeline. If you read nothing else, read this.
+- **The question** — the tension, stated without resolving it.
+- **Discussion questions** — three to five, each containing a disagreement that intelligent people
+  actually hold. None is answerable by looking something up. You will be assigned one in class.
 - **Why this is in a formal-methods course** — the connection to the technical spine. These are not
-  ethics interludes bolted onto a verification course; each one bottoms out in a specification
-  problem.
-- **Discussion questions** — 3–5, each containing a disagreement that intelligent people actually
-  hold. None is answerable by looking something up.
-- **Readings** — 5–10 sources per topic, **89 in total, 86 verified by direct fetch**. Mixed
+  ethics interludes bolted onto a verification course. Each one bottoms out in a specification
+  problem: someone had to say precisely what "safe," "fair," "transformative," or "one query's
+  energy" means before anything could be checked, and mostly nobody did.
+- **Readings** — five to ten sources per topic, **89 in total, 86 verified by direct fetch**. Mixed
   academic, primary-document, legal, and journalism, and deliberately including sources that cut
-  against the framing. Assign one per discussion; the rest are for students who want to go further
-  and for you when a claim gets challenged.
-- **30-minute run sheet** — minute-by-minute, specific enough to run cold.
-- **Do not assert these** — widely circulated claims about the topic that are wrong, contested, or
-  traceable to a single weak source.
+  against the framing. One is assigned; the rest are there if you want to go further, or if you want
+  to check a claim someone makes in the room.
+- **What you submit** — the reflection, its deadline, and how it is scored.
 
-## How to run one
+## What you hand in
 
-1. **A week ahead**, post the assigned reading on Brightspace. One source, usually under 30
-   minutes. Say explicitly that students should come having read it.
-2. **In class**, follow the run sheet. The timings are tight on purpose — the failure mode is a
-   think–pair–share that becomes a lecture with pauses.
-3. **Pair, do not group.** Pairs of two. In a group of four, two people can stay silent.
-4. **Do not adjudicate.** Several of these questions do not have an answer the instructor holds
-   confidently, and saying so out loud is the most useful thing you can do. What is graded is
-   whether a student engages with the strongest version of the view they disagree with.
-5. **Collect the cards.** Most run sheets have students write a sentence and a confidence number.
-   Keeping them lets you re-ask the same question later in the semester and show the room how it
-   moved.
+**One paragraph, 150–250 words, due two days after each session**, to that discussion's Brightspace
+assignment folder. Nine of them, scored 0–2, lowest dropped.
 
-## A note on the "do not assert" sections
+Answer three things: where you landed and why, what the strongest argument against you was, and
+what would change your mind. Full rubric and policies:
+**[participation.md](participation.md)**.
 
-Every packet has one, and they are not padding. The research pass found, repeatedly, that the most
-quotable statistic on a topic was the least defensible one — vendor telemetry with no denominator,
-an extrapolation reported as a measurement, a pleading quoted as a finding, a conflated CVE. In a
-course whose entire subject is the difference between *checked* and *asserted*, saying one of these
-from the front of the room would undercut the argument more than any lecture could repair.
+## How to prepare
+
+1. **Read the background** in the packet — dates, findings, outcomes.
+2. **Read the assigned source.** One per discussion, usually under 30 minutes, posted on
+   Brightspace a week ahead.
+3. **Think about two of the questions**, not one. You will be assigned one, and the pair phase goes
+   better if you have already considered a second.
+4. **Be ready to argue a side you do not hold.** You will be asked to, more than once.
+
+## A note on the readings
+
+Every packet's reading list contains at least one source that cuts against the framing of its own
+discussion. That is deliberate. If you find yourself agreeing with everything on a list, you have
+probably not read the one that disagrees.
+
+You will also find, repeatedly, that the most quotable number on a topic is the least defensible
+one — an extrapolation reported as a measurement, a legal pleading quoted as if it were a finding,
+a vendor statistic with no denominator. Noticing that is not a distraction from this course. It is
+the course, arriving early.
 
 ## Attribution
 
-Reading lists were assembled and every URL fetch-verified in August 2026. Three sources could not
-be retrieved from this network and are marked ⚠️ in their packets; they are cited from their
-canonical identifiers and should be spot-checked in a browser before assigning.
+Reading lists were assembled and every URL fetch-verified in August 2026. Three sources could not be
+retrieved from the network used and are marked ⚠️ in their packets; they are cited by their
+canonical identifiers and should be spot-checked before you rely on them.
