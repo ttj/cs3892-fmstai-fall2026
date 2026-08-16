@@ -34,20 +34,24 @@ semester-long team project that satisfies the CS project and Immersion requireme
 
 ## Structure at a glance
 
-| Weeks | Unit |
+28 sessions, Aug 27 – Dec 10:
+
+| Sessions | Unit |
 |---|---|
 | 1 | Framing: the verification triple; FM4AI and AI4FM |
-| 2–3 | AI failure modes, risk frameworks, regulation; guardrails vs. solver-backed checks |
-| 4 | Logic and preliminaries |
-| 5 | SAT, SMT, and decision procedures (Z3) |
-| 6 | Transition systems, invariants, SMV · *proposal talks* |
-| 7 | Temporal logic: LTL, CTL, Büchi automata |
-| 8 | Model checking: explicit, symbolic, bounded (nuXmv) |
-| 9–10 | Program analysis: CBMC, deductive verification, abstract interpretation |
-| 11–12 | Interactive theorem proving: Lean 4 and Cslib · *milestone* |
-| 13 | AI for formal methods: autoformalization, proof search, the soundness gap |
-| 14 | Neural network verification |
-| 15 | Final project presentations |
+| 2–4 | AI failure modes, risk frameworks, regulation; guardrails vs. solver-backed checks |
+| 5–6 | Logic and preliminaries |
+| 7–8 | SAT, SMT, and decision procedures (Z3) |
+| 9 | Transition systems, invariants, SMV |
+| 10, 12 | Temporal logic: LTL, CTL, ω-words, Büchi automata |
+| 11 | *Project proposal talks* |
+| 13–14 | Model checking: explicit, symbolic, bounded (nuXmv) |
+| 15–17 | Program analysis: CBMC, deductive verification, abstract interpretation |
+| **18–21** | **Interactive theorem proving: Lean 4, then Cslib in two parts** |
+| 22 | *Project milestone* |
+| 23–24 | AI for formal methods: autoformalization, proof search, the soundness gap |
+| 25–26 | Neural network verification |
+| 27–28 | Final project presentations |
 
 **Grading:** 50% project · 20% homeworks · 10% quizzes · 20% case studies and participation.
 
@@ -77,8 +81,8 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 | **Five homeworks added** (20%) | Previously project-plus-participation only, so students met the tools for the first time inside their projects. |
 | **Five quizzes added** (10%) | Cheap early signal on whether the reading is landing. |
 | **Repository required at proposal time** | Repo links used to surface at the milestone or later. |
-| **Theorem proving expanded to three sessions + Cslib** | Deliberate deepening; Cslib did not exist in Fall 2025. |
-| **AI-risk unit compressed 3 weeks → 2** | To fund the above, with fresher case studies. |
+| **Theorem proving expanded to four sessions + Cslib** | Deliberate deepening. Cslib did not exist in Fall 2025; it is split across two sessions so the ω-automata material does not get cut live. |
+| **AI-risk unit compressed 4 sessions → 3** | To fund the above. Case studies are folded into the lecture sessions rather than standing alone. |
 | **Currency pass on every citation** | Standards, tool versions, and competition results all moved. See [`LINK-AUDIT.md`](LINK-AUDIT.md). |
 
 ## Repository conventions
@@ -87,7 +91,12 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 - No student data, ever — no rosters, no submissions, no grades. This repo is private, but the
   rule holds regardless.
 - No credentials, no `.env`, no cloud keys.
-- Markdown is the source of truth; PDFs are generated (`make pdf`).
+- Markdown is the source of truth; PDFs are generated. **When you change `syllabus/syllabus.md`,
+  run `make pdf` and commit the regenerated PDF in the same commit** — git does not preserve
+  mtimes, so a stale PDF on `main` will not announce itself.
+- `make links` re-checks every URL in the repo. Run it at the start of each term; see
+  [`LINK-AUDIT.md`](LINK-AUDIT.md) for hosts that block automated checkers but are live in a
+  browser, so you don't "fix" a working link.
 
 ## Licence
 
