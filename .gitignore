@@ -1,0 +1,43 @@
+# ----- Never commit student data -----
+# No rosters, submissions, grades, or feedback. Ever. The repo is private; the rule stands anyway.
+*class-roll*
+roster*
+grades*
+submissions/
+feedback/
+student-data/
+
+# ----- Never commit credentials -----
+.env
+.env.local
+*.pem
+*.key
+credentials
+aws_credentials
+
+# ----- Build intermediates (PDFs are committed; their scaffolding is not) -----
+*.html.tmp
+build/
+.pandoc-tmp/
+
+# ----- Lean -----
+.lake/
+lake-packages/
+*.olean
+
+# ----- Python -----
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# ----- Editor / OS -----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ----- Office lock files -----
+~$*
