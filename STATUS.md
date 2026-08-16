@@ -9,7 +9,7 @@ consistent. Below is what still needs a decision or an external confirmation.
 
 | # | Item | Detail | Who |
 |---|---|---|---|
-| 1 | **Cross-listing with CS 5892** | Only `2026F.1.CS.3892.02` is provisioned in Brightspace (OU 646125, currently empty). The Fall 2025 syllabus was headed "CS3892/CS5892." The materials assume cross-listing and specify differentiated graduate requirements throughout; if the 5892 section is not created, delete §7's graduate paragraph and the grad rows in the rubrics. | Registrar / DGS |
+| 1 | ~~**Cross-listing with CS 5892**~~ **— RESOLVED** | Confirmed by the instructor: 3892 and 5892 are **the same course, taught together, in one Brightspace shell** (OU 646125). The only difference is **extra coursework for the graduate students**. So: no second OU, no separate section, no duplicated grade structure — just the differentiated project components already specified in syllabus §7 and the rubrics. | — |
 | 2 | ~~**Immersion Showcase date**~~ **— CONFIRMED** | **Thu Dec 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall**, confirmed against the engineering page and the coordinator's pre-semester announcement. Poster/video files due **Thu Dec 3**; 40AU awards $3,500/$1,000/$500. Note it falls on the **last day of classes**. The CCC copy of the page (`computing.vanderbilt.edu/cs-immersion-showcase/`) is stale — still showing Spring 2026 — so do not send students there. | — |
 | 3 | **Room and meeting time** | Syllabus assumes T/R 11:00–12:15, per Fall 2025. Room TBA. | Registrar |
 | 4 | **TA assignment** | Syllabus has a TBA placeholder. Fall 2025 had one TA. | Department |
