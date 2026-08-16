@@ -66,11 +66,11 @@ ahead. After each session you submit a one-paragraph reflection — see
 | **D1** | 1 | Thu Aug 27 | 1 | Has AI ever killed anyone? |
 | **D2** | 3 | Thu Sep 3 | 2 | A survey of harms: when software and AI hurt people |
 | **D3** | 4 | Tue Sep 8 | 3 | Are LLMs theft? Training data, copyright, and fair use |
-| **D4** | 6 | Tue Sep 15 | 4 | What are AI's environmental impacts — real, or overstated? |
+| **D4** | 6 | Tue Sep 15 | 4 | What does a prompt cost the planet? |
 | **D5** | 8 | Tue Sep 22 | 5 | If AI writes all our software, do we still need to learn to code? |
 | **D6** | 12 | Tue Oct 6 | 7 | Who is liable when AI-assisted software fails? |
 | **D7** | 16 | Tue Oct 20 | 9 | Can we verify what we cannot specify? |
-| **D8** | 20 | Thu Nov 5 | 11 | The future role of the software engineer: correctness, or design? |
+| **D8** | 20 | Thu Nov 5 | 11 | Correctness or design? What is left for the engineer |
 | **D9** | 24 | Thu Nov 19 | 13 | Does system architecture still matter in the age of agentic coding? |
 
 The technical content of a discussion session is correspondingly lighter; the homework and the
