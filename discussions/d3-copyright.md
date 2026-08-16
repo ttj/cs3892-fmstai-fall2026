@@ -1,8 +1,45 @@
 # D3 — Are LLMs Theft? Training Data, Copyright, and Fair Use (status as of August 2026)
 
-**Session 4 · Tue Sep 8 · week 3 · 30 minutes · think–pair–share**
+**Session 4 · Tue Sep 8 · week 3 · 30 minutes in class · think–pair–share**
 
-## Framing
+> **Before class:** read the assigned source (posted on Brightspace) and the background below.
+> **After class:** one paragraph, 150–250 words, due **Thu Sep 10, 11:59 p.m.** — see
+> [participation.md](participation.md).
+
+## Background
+
+### What happened
+
+Since 2023, authors, news organizations, visual-media companies, and music publishers have sued companies building generative AI models for copyright infringement. The complaints separate three acts; a defendant can lose one and win the others: **acquisition** — how the copies were obtained, and several defendants bulk-downloaded books from pirate "shadow libraries" like LibGen and Anna's Archive; **training** — using the works to fit model weights; and **output** — whether the finished system reproduces protected expression.
+
+The main U.S. defense is **fair use**, a statutory exception (17 U.S.C. § 107) making some unauthorized copying lawful. Courts weigh four factors: the purpose and character of the use, including whether it is "transformative"; the nature of the work; how much was taken; and the effect on the original's market — often decisive. Fair use is a U.S. doctrine; the EU and UK use narrower, enumerated exceptions instead.
+
+### What the courts found
+
+In February 2025, Judge Stephanos Bibas (D. Del.) rejected Ross Intelligence's fair use defense for copying Westlaw headnotes to build a competing legal-research tool — while cautioning that "only non-generative AI is before me today," and revising his own 2023 ruling: "That is why I have changed my mind."
+
+Four months later, one San Francisco courthouse produced two rulings two days apart. Judge William Alsup (*Bartz v. Anthropic*, June 23, 2025) granted Anthropic summary judgment that training was fair use — "exceedingly transformative" — and rejected the authors' market-flooding theory: it is "no different" than complaining "that training schoolchildren to write well would result in an explosion of competing works." But he denied summary judgment on the pirated copies Anthropic kept in a permanent "central library," sending those to trial. Judge Vince Chhabria (*Kadrey v. Meta*, June 25, 2025) reasoned the opposite way on both: Meta's shadow-library downloads shared training's transformative purpose, yet "market dilution will often cause plaintiffs to decisively win the fourth factor." He ruled for Meta only because these thirteen plaintiffs "barely give this issue lip service, and they present no evidence," adding that the ruling "does not stand for the proposition that Meta's use of copyrighted materials to train its language models is lawful."
+
+### Why it still matters
+
+Very little is settled. Anthropic settled the pirated-acquisition claim for $1.5 billion, approved in July 2026 at roughly $3,000 per work — but a settlement is not a judgment, carries no liability finding, and ended the case before appeal. No U.S. appellate court has ruled: the Third Circuit heard argument in Ross on June 11, 2026 and has not decided; the consolidated OpenAI cases before Judge Stein, including The New York Times's, are in summary-judgment briefing into November 2026. In the UK, Getty abandoned its training claim against Stability AI for want of evidence that training happened there — a territoriality failure, not a ruling on whether training infringes — and never alleged the model stores copies.
+
+At stake is the field's cost structure: whether training data must be licensed, what provenance must be logged, what a court could order done to a model. Every contested question — does the model contain the work, do its outputs dilute a market, was this copy used only for training — is a claim about a program that none of these courts had a reproducible way to measure.
+
+### Timeline
+
+| When | What |
+|---|---|
+| Feb 11, 2025 | Judge Bibas (D. Del.) rejects Ross Intelligence's fair use defense in Thomson Reuters v. Ross, revising his own 2023 ruling and noting that "only non-generative AI is before me today." |
+| May 2025 | U.S. Copyright Office releases its pre-publication Part 3 report: AI outputs "can dilute the market for works similar to those found in its training data," and where licensing is feasible that "will disfavor fair use." Non-binding; still not final as of Aug. 2026. |
+| June 23, 2025 | Judge Alsup, Bartz v. Anthropic: training was "exceedingly transformative" and fair use; summary judgment denied as to the pirated central-library copies, which are set for trial. |
+| June 25, 2025 | Judge Chhabria, Kadrey v. Meta: summary judgment for Meta on this record, while holding that market dilution "will often cause plaintiffs to decisively win the fourth factor"; ruling expressly limited to these thirteen plaintiffs. |
+| Nov 4, 2025 | UK High Court, Getty Images v Stability AI: the training and outputs claims are abandoned before judgment, secondary infringement fails, and the trade mark findings are "historic and extremely limited in scope." |
+| June 11, 2026 | Third Circuit hears argument in Thomson Reuters v. Ross (No. 25-2153), the first U.S. appellate argument on AI training and fair use. Undecided. |
+| July 2026 | Judge Martinez-Olguin grants final approval to Anthropic's $1.5B settlement of the pirated-acquisition claim (roughly $3,000 per work). A settlement, not a judgment; no liability finding. |
+| November 2026 (scheduled) | Summary-judgment briefing closes in the consolidated OpenAI cases before Judge Stein (In re OpenAI, No. 1:25-md-03143). No trial date set. |
+
+## The question
 
 > In the last week of June 2025, two judges in the same federal courthouse decided cases about AI
 > companies downloading millions of books from shadow libraries, and reached opposite conclusions
@@ -17,19 +54,9 @@
 > argument on AI training and fair use was heard on June 11, 2026 and is undecided, and summary
 > judgment briefing in the consolidated OpenAI cases does not close until November.
 
-## Why this is in a formal-methods course
-
-Every doctrinal fight in this litigation bottoms out in an unspecified predicate over a program:
-"the model does not contain the work," "these outputs dilute the market," "this copy was used
-only for training." Those have exactly the shape of the properties we spend the semester
-learning to state precisely and then check — yet courts resolve them with duelling expert
-testimony rather than reproducible artifacts, partly because nobody has been required to write
-the specification down. Note the asymmetry we will formalize later: extraction attacks are bug-
-finding and can witness a violation but never its absence; deduplication and DP-SGD are the
-soundness-side claims, with guarantees far weaker than the legal conclusions being hung on them;
-and data provenance is a supply-chain property with no accepted proof obligation attached to it.
-
 ## Discussion questions
+
+You will be assigned one of these in class. Come having thought about at least two.
 
 **1.** ACQUISITION VS. USE. Bartz treats how you got the copy as a separate wrong from what you did
 with it: Anthropic's training was fair use, its pirated library was not. Kadrey says the shadow-
@@ -67,9 +94,21 @@ future models. What exactly would a court have to be shown to believe that a mod
 contains a work, who should be allowed to show it, and would you accept the defendant's own
 evaluation as proof?
 
+## Why this is in a formal-methods course
+
+Every doctrinal fight in this litigation bottoms out in an unspecified predicate over a program:
+"the model does not contain the work," "these outputs dilute the market," "this copy was used
+only for training." Those have exactly the shape of the properties we spend the semester
+learning to state precisely and then check — yet courts resolve them with duelling expert
+testimony rather than reproducible artifacts, partly because nobody has been required to write
+the specification down. Note the asymmetry we will formalize later: extraction attacks are bug-
+finding and can witness a violation but never its absence; deduplication and DP-SGD are the
+soundness-side claims, with guarantees far weaker than the legal conclusions being hung on them;
+and data provenance is a supply-chain property with no accepted proof obligation attached to it.
+
 ## Readings
 
-10 sources, 10 verified by direct fetch. Assign one; the rest are for students who want to go further, and for you when a claim gets challenged in the room.
+10 sources, 10 verified by direct fetch. You will be assigned one; the rest are here if you want to go further, or if you want to check a claim you hear in the room.
 
 - **Bartz v. Anthropic PBC, No. 3:24-cv-05417-WHA, Dkt. 231, "Order on Fair Use" (N.D. Cal. June 23, 2025) (Alsup, J.)** (primary, 2025)  
   <https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.231.0_1.pdf>  
@@ -78,27 +117,27 @@ evaluation as proof?
   for the rights-holder side on acquisition: the pirated central library was not fair use and
   was headed to trial. It also contains the flat rejection of market dilution ("training
   schoolchildren to write well") that the Copyright Office and Judge Chhabria contradict. 32
-  pages; assign only pp. 1-2 (Introduction) and the factor-four passage at p. 30.
+  pages; the part you need is pp. 1-2 (Introduction) and the factor-four passage at p. 30.
 
 - **Kadrey v. Meta Platforms, Inc., No. 3:23-cv-03417-VC, Dkt. 598, Order Denying Plaintiffs' Motion for Partial Summary Judgment and Granting Meta's Cross-Motion (N.D. Cal. June 25, 2025) (Chhabria, J.)** (primary, 2025)  
   <https://chatgptiseatingtheworld.com/wp-content/uploads/2025/06/Judge-Chhabria-Fair-Use-decision-in-Kadrey-v.-Meta-June-25-2025.pdf>  
   Decided two days after Bartz and reasoning the opposite way on both contested points:
   shadow-library downloads ride along with training, but market dilution "will often cause
   plaintiffs to decisively win the fourth factor." Nominally a win for Meta, doctrinally a
-  roadmap for authors — so it supports neither side cleanly, which is why it drives the
-  discussion. 40 pages; pp. 1-5 carry the whole argument. (This is an ECF-stamped copy of Dkt.
-  598 mirrored on a case-tracking blog; I confirmed the caption, case number, docket number,
-  filing stamp and page count from the file itself.)
+  roadmap for authors — it supports neither side cleanly, so read it for the reasoning rather
+  than the outcome. 40 pages; pp. 1-5 carry the whole argument. (This is an ECF-stamped copy
+  of Dkt. 598 mirrored on a case-tracking blog; I confirmed the caption, case number, docket
+  number, filing stamp and page count from the file itself.)
 
 - **Thomson Reuters Enterprise Centre GmbH v. Ross Intelligence Inc., No. 1:20-cv-613-SB, Dkt. 770 (D. Del. Feb. 11, 2025) (Bibas, J.)** (primary, 2025)  
   <https://chatgptiseatingtheworld.com/wp-content/uploads/2025/02/Judge-Bibas-SJ-order-rejects-fair-use-defense.pdf>  
-  The clearest anti-fair-use holding and the best single assigned reading — 23 pages, ~6,700
-  words, plain prose. Supports the rights-holder side, but limits itself expressly ("only non-
-  generative AI is before me today") and openly revises the judge's own 2023 ruling ("That is
-  why I have changed my mind"), which makes it a live test of whether students will
-  distinguish or over-generalize. This is the case argued to the Third Circuit on June 11,
-  2026 and still undecided. (Blog-mirrored ECF-stamped copy; caption, docket number and filing
-  stamp verified from the file.)
+  If you read only one court opinion on this, make it this one — the clearest anti-fair-use
+  holding, 23 pages, ~6,700 words, plain prose. It supports the rights-holder side, but limits
+  itself expressly ("only non-generative AI is before me today") and openly revises the judge's
+  own 2023 ruling ("That is why I have changed my mind"), so distinguish it before you
+  generalize from it. This is the case argued to the Third Circuit on June 11, 2026 and still
+  undecided. (Blog-mirrored ECF-stamped copy; caption, docket number and filing stamp verified
+  from the file.)
 
 - **Getty Images (US) Inc & Ors v Stability AI Ltd [2025] EWHC 2863 (Ch), Case No. IL-2023-000007 (Mrs Justice Joanna Smith DBE, 4 Nov. 2025)** (primary, 2025)  
   <https://www.judiciary.uk/wp-content/uploads/2025/11/Getty-Images-v-Stability-AI.pdf>  
@@ -106,7 +145,7 @@ evaluation as proof?
   and teaches procedure over doctrine. Getty abandoned the training claim for want of evidence
   that training happened in the UK (¶9), abandoned the outputs claim, lost secondary
   infringement, and won only "historic and extremely limited" trade mark findings (¶757) — and
-  ¶11 records that Getty never alleged the model stores copies at all. 199 pages; assign
+  ¶11 records that Getty never alleged the model stores copies at all. 199 pages; read
   ¶¶8-14 and ¶¶757-758 only.
 
 - **U.S. Copyright Office, Copyright and Artificial Intelligence, Part 3: Generative AI Training (Pre-Publication Version), Report of the Register of Copyrights, May 2025** (report, 2025)  
@@ -115,15 +154,14 @@ evaluation as proof?
   circularity problem: outputs "can dilute the market for works similar to those found in its
   training data," and "[w]here licensing options exist or are likely to be feasible, this
   consideration will disfavor fair use." Non-binding, still pre-publication as of Aug 2026.
-  108 pages; assign the Executive Summary plus the market-effects discussion around pp. 60-75.
+  108 pages; read the Executive Summary plus the market-effects discussion around pp. 60-75.
 
 - **Mark A. Lemley & Bryan Casey, "Fair Learning," 99 Texas Law Review 743 (2021)** (academic, 2021)  
   <https://texaslawreview.org/fair-learning/>  
-  The reference that cuts hardest against the framing's implicit sympathy for authors: ML
-  training should be presumptively fair because systems take unprotectable facts and ideas
-  rather than protected expression. Written years before this litigation, so it is free of
-  litigation posture. Pair it with the Copyright Office report and make students locate the
-  exact point where the two disagree about what a model "takes."
+  The strongest argument on the other side: ML training should be presumptively fair because
+  systems take unprotectable facts and ideas rather than protected expression. Written years
+  before this litigation, so it is free of litigation posture. Read it against the Copyright
+  Office report and find the exact point where the two disagree about what a model "takes."
 
 - **Nicholas Carlini, Daphne Ippolito, Matthew Jagielski, Katherine Lee, Florian Tramèr & Chiyuan Zhang, "Quantifying Memorization Across Neural Language Models," ICLR 2023 (arXiv:2202.07646)** (academic, 2022)  
   <https://arxiv.org/abs/2202.07646>  
@@ -139,144 +177,31 @@ evaluation as proof?
   Art. 53(1)(c)-(d) requires a copyright policy that identifies and honors Art. 4(3) DSM text-
   and-data-mining opt-outs "including through state-of-the-art technologies," plus a publicly
   available "sufficiently detailed summary" of training content on an AI Office template —
-  applicable to GPAI providers from 2 Aug. 2025. Use it to ask why the EU regulates provenance
-  disclosure while the US litigates outcomes. (This is an unofficial consolidated
+  applicable to GPAI providers from 2 Aug. 2025. Read it for the contrast: the EU regulates
+  provenance disclosure while the US litigates outcomes. (This is an unofficial consolidated
   presentation; I separately fetched EUR-Lex CELEX 32024R1689 and confirmed the regulation's
   official title and date of 13 June 2024.)
 
 - **JURIST, "Judge approves record $1.5 billion AI copyright settlement involving Anthropic" (July 2026)** (news, 2026)  
   <https://www.jurist.org/news/2026/07/judge-approves-record-1-5-billion-settlement-involving-anthropic/>  
-  Corrects the procedural fact students most reliably get wrong, in a way that cuts against
-  the "authors won" narrative: the $1.5B is a settlement given final approval by Judge
+  The detail most people get wrong here is procedural, and getting it right cuts against the
+  "authors won" narrative: the $1.5B is a settlement given final approval by Judge
   Martínez-Olguín in July 2026 (~$3,000 per work), not a judgment, with no liability finding —
   and it left Alsup's pro-Anthropic training holding standing while ending the case before any
   appellate review of it. Two-minute read.
 
 - **Murray Stassen, "Music publishers file amended lyrics lawsuit against Anthropic — just as AI firm's separate $1.5bn settlement with authors wins court approval," Music Business Worldwide (July 2026)** (news, 2026)  
   <https://www.musicbusinessworldwide.com/music-publishers-file-amended-lyrics-lawsuit-against-anthropic-just-as-ai-firms-separate-1-5b-piracy-settlement-with-authors-wins-court-approval/>  
-  Keeps the Anthropic story from reading as closed, and supplies the remedy question that
-  anchors prompt 5: Judge Eumi Lee denied the publishers' preliminary injunction on training
-  in March 2025 partly over the enforceability of an order governing future models; publishers
-  moved for partial summary judgment against fair use in March 2026 and filed a second amended
-  complaint on 22 July 2026, with a separate January 2026 suit over 20,000+ songs seeking
-  $3B+. Journalism, not a court document — cite it for posture, never for holdings.
+  The Anthropic story is not closed, and this is where discussion question 5 on remedies comes
+  from: Judge Eumi Lee denied the publishers' preliminary injunction on training in March 2025
+  partly over the enforceability of an order governing future models; publishers moved for
+  partial summary judgment against fair use in March 2026 and filed a second amended complaint
+  on 22 July 2026, with a separate January 2026 suit over 20,000+ songs seeking $3B+.
+  Journalism, not a court document — cite it for posture, never for holdings.
 
-## 30-minute run sheet
+## What you submit
 
-PRE-READ (assign at the previous class; ~7 pages, 25 minutes): Bartz Dkt. 231 pp. 1-2
-(Introduction) plus the factor-four passage at p. 30 ("training schoolchildren to write well"),
-and Kadrey Dkt. 598 pp. 1-5. Tell them only this: same district, decided two days apart.
-
-BEFORE CLASS: three column headers on the board — (1) HOW THE COPY WAS OBTAINED, (2) WHAT THE
-MODEL DOES WITH IT, (3) WHAT WOULD SETTLE THIS. Leave (3) blank. Hand each student a blank index
-card at the door.
-
-0-3 — Read the framing aloud. Do not explain it, do not add context. Then write under columns 1
-and 2, one phrase each: Bartz = "pirated library: NOT fair use / training: fair use"; Kadrey =
-"downloads rode along with training." Say nothing about which is correct.
-
-3-9 — Silent individual think, in writing, no talking, no phones. Only the hypothetical from
-prompt 1: the lab that torrents a corpus, trains, publishes the weights, deletes the corpus.
-Each student writes ONE sentence on the card and a letter: A = the acquisition is a separate
-wrong, B = the transformative use covers it. No names on cards.
-
-9-10 — Hands up for A; hands up for B. Write both numbers on the board and circle them. Label
-the circle "BEFORE." Say nothing about the split.
-
-10-20 — Pairs. Instruction: "Find someone whose letter is different from yours." CONTINGENCY: if
-the room is worse than roughly 70/30, skip the search — assign the minority letter to half the
-pairs and require them to argue it. Each pair writes two things on one card: (i) the strongest
-single sentence for the position they did NOT choose, and (ii) one fact about the world — not
-about law — that would change their own mind. Circulate; if a pair is only trading conclusions,
-ask them "what would you have to see?"
-
-20-27 — Share. Call on 4-6 pairs. Ask ONLY for item (ii). Write each answer verbatim in column
-3. Expect: how often models emit verbatim training text; whether a licensing market actually
-clears and at what price; whether readers substitute AI output for the book. Do not evaluate any
-of them, do not correct legal errors yet. If a pair gives a legal answer ("if the Supreme Court
-said X"), push exactly once: "what would you measure?"
-
-27-30 — Re-vote A/B by show of hands; write the new numbers beside the circled BEFORE. Close by
-pointing at column 3: every item in that column is an empirical or formal claim about a software
-system; none of the four courts we have discussed had a reproducible way to measure any of them;
-each of them decided anyway. Collect all index cards at the door — column 3 is the input list
-for the next lecture on writing a specification.
-
-## Do not assert these
-
-Claims that circulate widely about this topic but are wrong, contested, or traceable only to a single weak source. Getting one of these wrong from the front of the room, in a course about verification, costs more than it would anywhere else.
-
-Do not assert any of the following from the front of the room.
-
-1. "A court held that training AI on copyrighted books is legal." No. Alsup's holding covers
-copies that were LAWFULLY ACQUIRED, is one district judge, binds no one, and was never reviewed
-on appeal — the settlement ended the case first. Chhabria's holding resolves the claims of
-thirteen named plaintiffs on their particular record; he says so explicitly ("this ruling does
-not stand for the proposition that Meta's use of copyrighted materials to train its language
-models is lawful").
-
-2. "Anthropic lost / was found liable for $1.5 billion." There is no liability finding.
-Anthropic WON the training question. The $1.5B settlement (preliminary approval by Alsup in
-Sept. 2025; final approval by Judge Martínez-Olguín in July 2026, roughly $3,000 per work,
-class-counsel fees cut far below the requested 12.5%) resolved the pirated-acquisition claim
-before trial. Never call it a judgment or a precedent.
-
-3. "Kadrey rejected market dilution." The opposite: Chhabria wrote that dilution "will often
-cause plaintiffs to decisively win the fourth factor — and thus win the fair use question
-overall — in cases like this," and granted summary judgment because these plaintiffs "barely
-give this issue lip service, and they present no evidence." Kadrey is also still live;
-plaintiffs sought leave for a fourth amended complaint and moved to certify the downloading
-issue for interlocutory appeal (reply filed June 30, 2026). No Ninth Circuit merits decision
-exists.
-
-4. "Thomson Reuters v. Ross settles AI training." Bibas wrote "only non-generative AI is before
-me today"; Ross was a non-generative research tool competing head-on with the plaintiff's own
-product. The Feb. 11, 2025 opinion also REVISES his own 2023 ruling — "That is why I have
-changed my mind" — so citing "the Ross holding" without a date is ambiguous. The Third Circuit
-(No. 25-2153) heard argument on June 11, 2026 and has NOT ruled. Do not state or imply an
-outcome.
-
-5. "Getty lost in the UK, so training is lawful there" / "Getty won." Neither. Getty ABANDONED
-the training claim because it could not show training occurred in the UK — a territoriality
-failure, not a merits ruling — abandoned the outputs claim because Stability had blocked the
-prompts, and lost secondary infringement. Its wins were narrow, historic trade mark findings
-about watermarks. Permission to appeal the secondary-infringement finding was granted.
-
-6. "The UK court found that model weights do not contain copies of training data." Read
-paragraph 11: Getty itself never alleged that Stable Diffusion stores copies. The court decided
-a conceded point, on that record, about those models — not a general technical finding, and not
-a finding about LLMs at all. The memorization literature cuts the other way.
-
-7. "The EU AI Act bans training on copyrighted works" / "requires publishing the training
-dataset." Article 53(1)(c)-(d) requires a copyright policy honoring Art. 4(3) DSM opt-outs and a
-"sufficiently detailed summary" of training content on an AI Office template — a summary, not a
-manifest, and not a ban. There is no fair use doctrine in EU law, so US fair-use reasoning does
-not transfer. Also: the Commission's late-2025 "digital omnibus" package proposed changes to AI
-Act timing and scope; check its current status before asserting any date.
-
-8. "The Copyright Office concluded that AI training is not fair use." It is a PRE-PUBLICATION
-report from May 2025 that was still not final as of Aug. 2026, it is not binding on any court,
-it expressly declines a categorical rule, and its release was followed by upheaval at the Office
-(verify the specifics before recounting them). Cite it as one agency's reasoning under contest,
-not as law.
-
-9. "The New York Times won" / "the Times lost." Judge Stein's April 2025 order largely denying
-the motion to dismiss decided nothing about fair use. The Times and the Authors Guild cases are
-handled together with the other S.D.N.Y. OpenAI actions in the consolidated MDL before Judge
-Stein (In re OpenAI, Inc. Copyright Infringement Litigation, No. 1:25-md-03143); summary
-judgment briefing runs into November 2026 and no trial date is set. There is no merits ruling to
-describe.
-
-10. Dollar figures for AI licensing deals. Reported per-year values are almost always leaks or
-unconfirmed estimates; the agreements themselves are not public. Do not quote a number as fact,
-and do not infer a market rate from one.
-
-11. "Models learn the way humans do" and "it's compression, not copying." Both are analogies
-doing argumentative work, not findings of fact. Alsup's schoolchildren analogy is a rhetorical
-move that Chhabria and the Copyright Office explicitly refuse. Present them as contested
-framings students can attack, never as background truth.
-
-12. Getty's refiled US case: it was voluntarily dismissed in Delaware and refiled in N.D. Cal.
-in August 2025, reportedly adding a dilution theory. The "reportedly" is load-bearing — this
-comes from case-tracking journalism, not from a document I read. Do not characterize its claims
-in detail.
+One paragraph, 150–250 words, by **Thu Sep 10, 11:59 p.m.**, to the `D3` assignment folder on
+Brightspace. Answer three things: where you landed and why, what the strongest argument against you
+was, and what would change your mind. Scored 0–2; lowest of the nine is dropped. Full details and
+the rubric are in [participation.md](participation.md).

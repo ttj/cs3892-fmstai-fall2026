@@ -55,9 +55,11 @@ final exam. Exact deadline on Brightspace.
 ## In-class discussions
 
 Nine sessions give ~30 minutes to a structured discussion of a contested question, run as
-**think–pair–share**. Weekly for the first five weeks, then every other week. Readings, discussion
-questions, and run sheets are in [`discussions/`](../discussions/README.md); each week's reading is
-posted on Brightspace a week ahead.
+**think–pair–share**. Weekly for the first five weeks, then every other week. Case-study
+background, discussion questions, and readings are in
+[`discussions/`](../discussions/README.md); each week's reading is posted on Brightspace a week
+ahead. After each session you submit a one-paragraph reflection — see
+[`participation.md`](../discussions/participation.md).
 
 | | Session | Date | Week | Question |
 |---|---:|---|---:|---|

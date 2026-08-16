@@ -1,8 +1,57 @@
 # D2 — A Survey of Harms: When Software and AI Hurt People
 
-**Session 3 · Thu Sep 3 · week 2 · 30 minutes · think–pair–share**
+**Session 3 · Thu Sep 3 · week 2 · 30 minutes in class · think–pair–share**
 
-## Framing
+> **Before class:** read the assigned source (posted on Brightspace) and the background below.
+> **After class:** one paragraph, 150–250 words, due **Sat Sep 5, 11:59 p.m.** — see
+> [participation.md](participation.md).
+
+## Background
+
+### What happened
+
+**Therac-25 (1985–87).** A computer-controlled radiation therapy machine from Atomic Energy of Canada Limited massively overdosed six patients. Some died; accounts differ on how many.
+
+**Post Office Horizon (UK, from 1999).** The Post Office rolled out Horizon, a branch accounting system from ICL Pathway, later Fujitsu. Where Horizon showed a shortfall, the Post Office held the sub-postmaster — a branch's self-employed operator — personally liable and prosecuted many for theft or false accounting.
+
+**Dutch childcare benefits (from 2013).** The Dutch tax authority used a "risk classification model" to flag childcare-benefit claims as possibly fraudulent. Flagged parents had payments stopped and were told to repay years of benefits at once. Amnesty International says tens of thousands were falsely accused.
+
+**Robodebt (Australia, 2015–19).** The government raised welfare debts by averaging a person's annual tax-office income across fortnights, then asked recipients to disprove it.
+
+**Gender Shades (2018).** Joy Buolamwini and Timnit Gebru audited three commercial systems that guess gender from a photograph.
+
+**COMPAS (2016).** ProPublica obtained risk scores for 7,000+ people arrested in Broward County, Florida, and checked who was charged with a new crime within two years. Race is not among COMPAS's 137 inputs.
+
+### What the investigators found
+
+Nancy Leveson argues the Therac-25 lesson is *not* one concurrency bug: hardware interlocks that backstopped nearly identical software on earlier machines were removed, operators could not interpret the error messages, and no one independently reviewed the safety-critical software.
+
+In *Bates v Post Office* (2019), Mr Justice Fraser tried the reliability question on evidence: Legacy Horizon "was not remotely robust," carrying "a significant and material risk of inaccuracy in branch accounts as a result of bugs, errors and defects." That is a finding about the system, not about anyone's guilt.
+
+Robodebt's averaging computed exactly what policy instructed; the Royal Commission (July 2023) called it "a crude and cruel mechanism, neither fair nor legal." Amnesty found nationality was used as a risk factor in the Dutch model, amounting to racial profiling.
+
+Gender Shades reported error rates up to 34.7% for darker-skinned women against 0.8% for lighter-skinned men — on gender classification, not on identifying who someone is. ProPublica found 44.9% of Black defendants who did not reoffend were labelled higher risk, versus 23.5% of white defendants; Northpointe answered that a given score means the same thing regardless of race. Kleinberg et al. and Chouldechova showed both can be true: when two groups reoffend at different underlying rates, no score can satisfy both criteria at once.
+
+### Why it still matters
+
+Sir Wyn Williams's 2025 inquiry report judges it "likely that approximately 1,000 persons were prosecuted and convicted" UK-wide on Horizon evidence, though he finds it "difficult to be precise"; about 10,000 are eligible for redress. The Post Office named 13 people whose families say Horizon drove them to take their own lives; Sir Wyn wrote he "cannot make a definitive finding" of a causal connection for all 13, but does "not rule it out as a real possibility." In May 2024 Parliament quashed a whole class of convictions by statute, not case by case. The Dutch cabinet resigned in January 2021 over the affair; Australia's Federal Court found Robodebt unlawful in late 2019, ending it.
+
+Therac-25, Horizon and Robodebt involved no machine learning at all.
+
+### Timeline
+
+| When | What |
+|---|---|
+| June 1985 – January 1987 | The Therac-25, a computer-controlled radiation therapy machine made by Atomic Energy of Canada Limited, massively overdoses six patients. |
+| September 1999 | The Post Office begins rolling out the Horizon accounting system to UK branches; rollout completes by early 2002, and prosecutions of sub-postmasters follow. |
+| 23 May 2016 | ProPublica publishes "Machine Bias" on COMPAS; Kleinberg, Mullainathan and Raghavan (2016) and Chouldechova (2017) then prove the competing fairness criteria cannot all hold when base rates differ. |
+| February 2018 | Buolamwini and Gebru present Gender Shades at the first Conference on Fairness, Accountability and Transparency. |
+| 16 December 2019 | In Bates v Post Office (No. 6), Mr Justice Fraser finds Legacy Horizon "was not remotely robust" and carrying a material risk of inaccuracy in branch accounts. |
+| January 2021 | The Dutch cabinet resigns over the childcare-benefits affair. |
+| 7 July 2023 | The Royal Commission into the Robodebt Scheme delivers its final report, calling the scheme "a crude and cruel mechanism, neither fair nor legal." |
+| 24 May 2024 | The Post Office (Horizon System) Offences Act 2024 receives Royal Assent, quashing a whole class of convictions by statute. |
+
+## The question
 
 > Almost every case on today's list in which someone died, went to prison, or lost a house
 > involved no machine learning at all: a radiation therapy machine, a rocket's inertial reference
@@ -15,20 +64,9 @@
 > failures are simply the ones that have finished being adjudicated, and that we are looking at
 > the early photographs of the next Horizon.
 
-## Why this is in a formal-methods course
-
-Most of these cases fail somewhere other than implementation correctness: the Ariane 501 board
-found the Ariane 5 trajectory data had been deliberately left out of the SRI requirements and
-specification and that the offending routine ran on an inherited Ariane 4 timing requirement,
-Robodebt's averaging computed precisely what policy instructed, and the Kleinberg/Chouldechova
-results say the fairness specification students most want to write does not exist for any system
-whose base rates differ across groups. Verification presupposes a specification, so the point of
-this session is to make students feel the gap between 'the code is right' and 'the right thing
-was built' before the course starts teaching them to discharge proof obligations. The exit
-tickets sort the semester's cases into checkable and uncheckable properties, and that sorting is
-the first specification-writing exercise rather than a rhetorical flourish.
-
 ## Discussion questions
+
+You will be assigned one of these in class. Come having thought about at least two.
 
 **1.** Kleinberg et al. and Chouldechova prove that calibration and equal error rates across groups
 cannot all hold when base rates differ. Northpointe's defence was that COMPAS satisfies
@@ -63,60 +101,75 @@ decided 'on the basis of race'? Would you give the same answer if the disparate 
 the opposite direction, and what does that tell you about whether the objection is to the
 mechanism or to the outcome?
 
+## Why this is in a formal-methods course
+
+Most of these cases fail somewhere other than implementation correctness: the Ariane 501 board
+found the Ariane 5 trajectory data had been deliberately left out of the SRI requirements and
+specification and that the offending routine ran on an inherited Ariane 4 timing requirement,
+Robodebt's averaging computed precisely what policy instructed, and the Kleinberg/Chouldechova
+results say the fairness specification students most want to write does not exist for any system
+whose base rates differ across groups. Verification presupposes a specification, so the point of
+this session is to make students feel the gap between 'the code is right' and 'the right thing
+was built' before the course starts teaching them to discharge proof obligations. The exit
+tickets sort the semester's cases into checkable and uncheckable properties, and that sorting is
+the first specification-writing exercise rather than a rhetorical flourish.
+
 ## Readings
 
-10 sources, 8 verified by direct fetch. Assign one; the rest are for students who want to go further, and for you when a claim gets challenged in the room.
+10 sources, 8 verified by direct fetch. One of them will be assigned to you; the rest are here if you want to go further, or if you want to check a claim someone makes in class.
 
 - **Joy Buolamwini and Timnit Gebru, "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification," Proceedings of the 1st Conference on Fairness, Accountability and Transparency, PMLR vol. 81** (academic, 2018)  
   <https://proceedings.mlr.press/v81/buolamwini18a.html>  
-  The audit that founded the field and the best candidate for the assigned reading (~15 pages,
+  The audit that founded the field and the one most likely to be assigned to you (~15 pages,
   undergraduate-readable): error rates up to 34.7% for darker-skinned women against 0.8% for
-  lighter-skinned men on three commercial APIs. Supports the framing's disparity claim, but
-  note it measures gender classification, not identification.
+  lighter-skinned men on three commercial APIs. It supports the claim that these systems fail
+  unevenly across groups, but watch the scope — it measures gender classification, not
+  identification.
 
 - **Patrick Grother, Mei Ngan and Kayee Hanaoka, "Face Recognition Vendor Test (FRVT) Part 3: Demographic Effects," NISTIR 8280, National Institute of Standards and Technology, December 2019** (report, 2019)  
   <https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf>  
-  Cuts against the simple reading: across 189 algorithms from 99 developers and 18.27 million
+  This one argues the other way. Across 189 algorithms from 99 developers and 18.27 million
   images, NIST confirms false-positive differentials of 10x to beyond 100x, but also finds the
   effect reversed on East Asian faces for a number of China-developed algorithms and that the
-  most accurate algorithms produce the smallest differentials. Assign only the four-page
+  most accurate algorithms produce the smallest differentials. Read only the four-page
   Executive Summary.
 
 - **Julia Angwin, Jeff Larson, Surya Mattu and Lauren Kirchner, "Machine Bias," ProPublica, 23 May 2016** (news, 2016)  
   <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing>  
   The journalism that set the terms of the entire fairness debate (44.9% of Black defendants
-  who did not reoffend were labelled higher risk against 23.5% of white defendants), and the
-  specific claim the next two references dispute; about 20 minutes to read.
+  who did not reoffend were labelled higher risk against 23.5% of white defendants). It is
+  also the specific claim the next two sources dispute, so read it before them; about 20
+  minutes.
 
 - **Anthony W. Flores, Kristin Bechtel and Christopher T. Lowenkamp, "False Positives, False Negatives, and False Analyses: A Rejoinder to 'Machine Bias: There's Software Used Across the Country to Predict Future Criminals. And It's Biased Against Blacks,'" Federal Probation 80(2), September 2016** (academic, 2016)  
   <https://www.uscourts.gov/sites/default/files/80_2_6_0.pdf>  
-  The required counterweight and the one to assign alongside ProPublica: argues the analysis
-  was methodologically unsound (COMPAS applied outside the post-disposition population it was
-  built for, pretrial-only sample, unexplained exclusion of probation and parole subjects) and
-  that the honest baseline is unstructured judicial judgment rather than perfection. Short and
-  readable; the authors state they are not endorsing COMPAS.
+  The counterweight to ProPublica; read the two next to each other. It argues the analysis
+  was methodologically unsound (COMPAS applied outside the post-disposition
+  population it was built for, pretrial-only sample, unexplained exclusion of probation and
+  parole subjects) and that the honest baseline is unstructured judicial judgment rather than
+  perfection. Short and readable; the authors state they are not endorsing COMPAS.
 
 - **Jon Kleinberg, Sendhil Mullainathan and Manish Raghavan, "Inherent Trade-Offs in the Fair Determination of Risk Scores," arXiv:1609.05807** (academic, 2016)  
   <https://arxiv.org/abs/1609.05807>  
   The impossibility result in its strongest form: three fairness conditions cannot hold
   simultaneously except in highly constrained special cases. This is what makes the COMPAS
-  dispute unresolvable rather than merely unresolved. Assign the abstract and introduction
+  dispute unresolvable rather than merely unresolved. Read the abstract and introduction
   only; the proofs are graduate-level.
 
 - **Alexandra Chouldechova, "Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments," Big Data 5(2):153-163, 2017 (preprint arXiv:1703.00056)** (academic, 2017)  
   <https://arxiv.org/abs/1703.00056>  
   The undergraduate-readable statement of the same impossibility (when base rates differ,
-  equal predictive value and balanced error rates cannot both hold), and the paper to assign
-  if you assign only one piece of fairness mathematics; under 30 minutes. Published venue
+  equal predictive value and balanced error rates cannot both hold); if you read only one
+  thing on the fairness mathematics, make it this. Under 30 minutes. Published venue
   confirmed via Crossref (DOI 10.1089/big.2016.0047); the arXiv page is the version I
   retrieved.
 
 - **Nancy G. Leveson, "Medical Devices: The Therac-25," Appendix A of Safeware: System Safety and Computers (Addison-Wesley, 1995)** (academic, 1995)  
   <http://sunnyday.mit.edu/papers/therac.pdf>  
-  The canonical body-count case, and the strongest rebuttal in the packet to the 'find the
+  The canonical body-count case, and the strongest rebuttal on this list to the 'find the
   bug' reflex: Leveson's argument is that removed hardware interlocks, software reused from
   machines whose hardware still backstopped it, unusable error reporting and the absence of
-  independent review mattered more than any single race condition. 49 pages; assign the
+  independent review mattered more than any single race condition. 49 pages; read the
   introduction and the East Texas accidents. IMPORTANT: this is the Safeware appendix by
   Leveson alone, routinely miscited as the 1993 IEEE Computer article by Leveson and Turner.
 
@@ -125,8 +178,8 @@ mechanism or to the outcome?
   The rare case where 'is this software reliable?' was actually tried on evidence: Fraser J
   finds Legacy Horizon 'was not remotely robust' and a 'material risk of inaccuracy in branch
   accounts as a result of bugs, errors and defects,' while also finding the 2019 system far
-  more robust. 313 pages; assign paragraphs 1-30 and the Horizon Issues answers (from para.
-  968) only.
+  more robust. 313 pages; the parts you need are paragraphs 1-30 and the Horizon Issues
+  answers (from para. 968).
 
 - **Royal Commission into the Robodebt Scheme, Report (Commissioner Catherine Holmes), delivered 7 July 2023, Commonwealth of Australia** (primary, 2023) ⚠️ *not fetch-verified*  
   <https://robodebt.royalcommission.gov.au/publications/report>  
@@ -136,172 +189,21 @@ mechanism or to the outcome?
   Commissioner's description of the scheme as 'a crude and cruel mechanism, neither fair nor
   legal' were independently confirmed from the Australian Prime Minister's official statement
   of 7 July 2023 (https://www.pm.gov.au/media/final-report-royal-commission-robodebt-scheme),
-  which I did fetch. About 1,000 pages in three volumes; assign the report overview only.
+  which I did fetch. About 1,000 pages in three volumes; read the report overview only.
 
 - **Alexandra Chouldechova and Daniel J. Hemel, "Race-conscious admissions algorithms and the law," Proceedings of the National Academy of Sciences 123(30), 20 July 2026, DOI 10.1073/pnas.2509764123** (academic, 2026) ⚠️ *not fetch-verified*  
   <https://doi.org/10.1073/pnas.2509764123>  
   NOT VERIFIED BY PAGE RETRIEVAL: pnas.org returns 403 to automated clients, so I confirmed
   title, both authors, venue, volume/issue, date and the full abstract from publisher-
   deposited Crossref metadata for this DOI rather than from the landing page. Substantively it
-  is the admissions reference the discussion needs: it maps Students for Fair Admissions v.
+  is the source behind discussion question 5: it maps Students for Fair Admissions v.
   Harvard onto machine learning by distinguishing first- and second-order race consciousness
   at training and at prediction time, which turns 'the model never sees race' from a defence
   into a live legal question.
 
-## 30-minute run sheet
+## What you submit
 
-PREP: on the board draw two columns, 'adjudicated / countable' and 'contested / uncounted'. Have
-an 11-line case card ready (project or print): Therac-25, Ariane 501, Knight Capital, 737 MAX,
-Post Office Horizon, Robodebt, Dutch toeslagenaffaire, UK A-levels 2020, COMPAS, Gender Shades,
-Amazon hiring tool -- one sentence each, no adjectives.
-
-0:00-0:03 Instructor reads the framing aloud once, verbatim, and says nothing else. Hands out
-the case card.
-
-0:03-0:08 SILENT INDIVIDUAL THINK, written, no laptops. Each student picks the single case they
-would call the worst harm and writes exactly two lines: (a) 'This is the worst because ___'; (b)
-'A property that, if written down in advance, would have caught it: ___'. Instructor does not
-circulate or comment.
-
-0:08-0:10 Fast tally. Instructor reads the eleven case names; hands up once each; writes counts
-on the board in BLACK. No discussion, no justification. 90 seconds, hard stop.
-
-0:10-0:18 PAIR. Rule enforced by the instructor: you must pair with someone who chose a
-different case. FALLBACK: Therac-25 will probably dominate the tally; if fewer than four cases
-drew votes, the instructor assigns each pair a second case off the card so every pair still has
-two to rank. Task: rank your two cases against each other and write down the ONE criterion that
-decided it. Instructor circulates and writes overheard criteria in the margin -- expect
-severity, number affected, reversibility, intent, foreseeability, whether anyone was held
-liable, whether a specification existed. Instructor writes the criteria, not the verdicts.
-
-0:18-0:20 Silent re-vote on the same eleven cases with the criteria now visible. Instructor
-writes the new counts in RED next to the black ones. Do not explain the movement; let the two
-colours sit there.
-
-0:20-0:28 SHARE. Call on pairs by criterion, not by case: 'who decided on foreseeability?' --
-take three, then 'who decided on whether anyone was held liable?' -- take two. Then put prompt 1
-(impossibility) to the room and take two volunteers on opposite sides, three minutes total. Then
-prompt 2 (Ariane and Robodebt: where exactly did the failure live?) and take two more. The
-instructor does not adjudicate and does not summarise; if the room converges, the instructor
-argues the vacated side. EXPECTED CHALLENGE: someone will point out that the Dutch
-toeslagenaffaire is on the card, involved an automated risk-classification system, and destroyed
-families -- which cuts directly against the framing's opening line. Take it, say so, and put it
-on the board; the framing says 'almost every', and a student who punctures it in thirty seconds
-has done the session's work for you.
-
-0:28-0:30 CLOSE AND COLLECT. Exit ticket, collected at the door: 'Name one property from today's
-cases you could state precisely enough for a machine to check, and one you could not. One
-sentence each.' Instructor says only that these become the first specification-writing exercise,
-and leaves the two-colour tally on the board for the next session.
-
-## Do not assert these
-
-Claims that circulate widely about this topic but are wrong, contested, or traceable only to a single weak source. Getting one of these wrong from the front of the room, in a course about verification, costs more than it would anywhere else.
-
-Do not assert any of the following from the front of the room.
-
-1. 'Gender Shades proved face recognition misidentifies Black people.' It measured GENDER
-CLASSIFICATION on three commercial APIs -- not one-to-one verification and not one-to-many
-identification. The identification evidence is NISTIR 8280, and it is more textured: false-
-positive differentials of 10x to beyond 100x, but reversed on East Asian faces for a number of
-China-developed algorithms, larger for women than men but by less than the race effect, and
-smallest in the most accurate algorithms. 'Bias is a property of face recognition' is not what
-either document says.
-
-2. 'COMPAS uses race as an input.' It does not, and ProPublica never claimed it did. The dispute
-is about outcome measures, not features.
-
-3. 'ProPublica proved COMPAS is racist' or 'Northpointe was debunked.' Both parties are
-arithmetically correct about different quantities; that is the content of the impossibility
-results. Flores, Bechtel and Lowenkamp raise concrete methodological objections (pretrial-only
-sample, unexplained exclusion of probation and parole subjects, instrument used outside its
-intended decision point). Present as unresolved, not as one side winning. If you quote
-Northpointe's own rebuttal (Dieterich, Mendoza and Brennan, 2016) rather than paraphrasing
-predictive parity, source that document directly -- it is not in this packet's verified set.
-
-4. 'Dressel and Farid showed COMPAS is no better than untrained people on Mechanical Turk.'
-Contested. That study (Science Advances, 2018) used a seven-feature subset, and Lin, Jung, Goel
-and Skeem (Science Advances, 2020) argue the result is sensitive to the information and feedback
-conditions. Flag as disputed; do not build an argument on it.
-
-5. 'Amazon's AI rejected women's resumes.' Every specific detail traces to a single Reuters
-story by Jeffrey Dastin (October 2018) built on anonymous sources. The tool was experimental,
-reportedly never the operative screen, was never externally audited, and no artefact was ever
-published. It is a single-weak-source claim, which is itself the useful teaching point -- do not
-present it as an audited finding.
-
-6. 'The 2020 A-level fiasco was an AI failure' / 'the mutant algorithm.' Ofqual's direct centre-
-level performance approach was statistical standardisation over historical centre results and
-prior attainment, not machine learning. 'Mutant algorithm' was a politician's phrase, not a
-technical description. And Ofqual did run model testing and a centre-level equalities analysis
-before selecting its approach, and set both out in its interim report -- the failure was not an
-absence of testing, which is precisely why the case is hard. (The interim report itself appeared
-at results time, so do not claim the analysis was published in advance.)
-
-7. 'Robodebt was a software bug.' The finding was about a policy and legal choice -- raising
-debts by averaging annual tax-office income across fortnights and reversing the onus onto
-recipients -- not a coding defect. Also treat the human toll carefully: the harm is documented
-and grave, but attributing specific deaths to the scheme is a causal claim the Commission
-handled with care, and the instructor should not sharpen it.
-
-8. 'Therac-25 was a race condition that killed six people.' Leveson's own argument is that
-reducing it to one concurrency bug is the wrong lesson; she emphasises removed hardware
-interlocks, software carried over from Therac-6/20 where hardware still backstopped it, unusable
-error reporting, no independent review, and a manufacturer and regulator response that let it
-recur. Her text describes six massive overdoses; the death count is variously given as three or
-four depending on attribution, so do not state a crisp number.
-
-9. 'Horizon was broken software that convicted hundreds.' Fraser J's findings are time-sliced:
-Legacy Horizon 'was not remotely robust', HNG-X only slightly better, and the 2019 system
-'relatively robust'. He found a material risk of inaccuracy in branch accounts from bugs, errors
-and defects -- that is a finding about the system, not a per-claimant or per-conviction
-attribution, which has been handled through separate appeals, the statutory inquiry and
-subsequent legislation. Do not state a settled count of convictions caused by the software.
-
-10. 'Knight Capital lost $440 million because of a bug.' The SEC order (Release 34-70694, 16 Oct
-2013) describes controls failures: dead 'Power Peg' code left callable, a flag repurposed
-instead of the old code deleted, a deployment that reached seven of eight servers with no
-second-technician review and no written procedure requiring one, and 97 automated 'Power Peg
-disabled' reject e-mails that were never designed as alerts and were not read. Note also that
-the order states a loss of more than $460 million while $440 million circulates from Knight's
-own disclosure -- say which document your number came from.
-
-11. 'Vendor X's admissions or hiring tool is unbiased / bias-audited.' Claims of this form are
-marketing unless a specific audit is public. Pyle and Andalibi (Proc. ACM Human-Computer
-Interaction, CSCW, 2025) document exactly this gap between admissions-technology vendors'
-claimed benefits and applicants' perceived harms. Relatedly, do not tell students that AI in
-college admissions is currently 'illegal' or 'legal' -- Chouldechova and Hemel treat it as an
-open question that courts have not yet resolved, and the U.S. disparate-impact regulatory
-picture has been unstable enough that any confident statement of current law should be checked
-against the date you are teaching.
-
-12. 'Ariane 5 was a unit-conversion error' or 'Ariane 5 proves the code was fine and only the
-spec was wrong.' The units story is the Mars Climate Orbiter. The Lions board found an Operand
-Error converting a 64-bit float to a 16-bit signed integer in the horizontal-bias variable BH;
-three of seven at-risk variables were left unprotected on a margin argument that 'in the case of
-the variable BH turned out to be faulty'; the routine was still running forty seconds into
-flight on an Ariane 4 timing requirement; and the board nonetheless called it 'a systematic
-software design error.' The clean 'code correct, spec wrong' story is contestable on the board's
-own text, which is why it makes a good prompt rather than a good assertion.
-
-13. '737 MAX was a software bug' or 'MCAS was badly coded.' Do not say this. The contested
-ground is requirements and safety assessment -- what the system was permitted to command, what
-sensor input it was allowed to rely on, what crew recognition and response was assumed -- and
-the certification and delegation process around them. Specific hazard classifications, assumed
-response times and delegation details are matters of record in the accident and congressional
-reports; cite whichever report you use rather than asserting them from memory. No 737 MAX
-document is in this packet's verified set.
-
-14. 'An algorithm brought down the Dutch government.' The Rutte cabinet did resign in January
-2021 over the childcare-benefits affair, but the findings faulted institutional conduct across
-the tax administration, the courts and parliament, with the risk-classification system one
-component of a much larger failure. The verified narrow claim is that nationality was used as a
-risk factor in assessing benefit applications (Amnesty International, 'Xenophobic Machines:
-Discrimination through unregulated use of algorithms in the Dutch childcare benefits scandal',
-EUR 35/4686/2021, 25 October 2021 -- fetched and confirmed, but not in the reference list
-above). If you want to call the system 'self-learning' or 'machine learning', source that
-separately; this packet did not verify it.
-
-15. Selection bias in the survey itself. Any list of harms, this one included, is a convenience
-sample of incidents that were noticed, litigated, or reported in English. Do not let the class
-treat the absence of a case from the list as evidence that no harm occurred there.
+One paragraph, 150–250 words, by **Sat Sep 5, 11:59 p.m.**, to the `D2` assignment folder on
+Brightspace. Answer three things: where you landed and why, what the strongest argument against you
+was, and what would change your mind. Scored 0–2; lowest of the nine is dropped. Full details and
+the rubric are in [participation.md](participation.md).
