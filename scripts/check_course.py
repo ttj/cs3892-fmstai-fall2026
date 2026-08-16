@@ -210,30 +210,65 @@ def check_reflection_spec(m):
     return problems
 
 
+def _section(text: str, start: str, end: str) -> str | None:
+    try:
+        return text[text.index(start):text.index(end)]
+    except ValueError:
+        return None
+
+
 def check_readings_invariant(m):
-    """URL and unverified-mark counts across the packets are unchanged.
+    """Each packet's reading-list size matches its entry in course.yml.
 
     Two rewrites have passed through these files. Both times this count was the
-    thing that proved nothing had been silently dropped.
+    thing that proved nothing had been silently dropped. Per-discussion rather
+    than one global total, so that adding a source is a local edit to that
+    packet's number instead of a recomputed magic constant.
     """
     problems = []
-    urls = marks = 0
     for d in m["discussions"]:
         rel = f"discussions/{d['file']}"
         if not os.path.exists(os.path.join(ROOT, rel)):
             continue
-        s = read(rel)
-        try:
-            body = s[s.index("## Readings"):s.index("## What you submit")]
-        except ValueError:
+        body = _section(read(rel), "## Readings", "## What you submit")
+        if body is None:
             problems.append(f"{rel} has no Readings / What you submit boundary")
             continue
-        urls += len(re.findall(r"<(https?://[^>]+)>", body))
-        marks += body.count("⚠️")
-    if urls != m["readings"]["total_urls"]:
-        problems.append(f"reading URLs: manifest says {m['readings']['total_urls']}, found {urls}")
-    if marks != m["readings"]["unverified_marks"]:
-        problems.append(f"unverified marks: manifest says {m['readings']['unverified_marks']}, found {marks}")
+        urls = len(re.findall(r"<(https?://[^>]+)>", body))
+        marks = body.count("⚠️")
+        if urls != d["urls"]:
+            problems.append(f"{rel} has {urls} reading URLs, course.yml says {d['urls']}")
+        if marks != d["unverified"]:
+            problems.append(f"{rel} has {marks} unverified marks, course.yml says {d['unverified']}")
+    return problems
+
+
+def check_prompt_counts(m):
+    """Each packet has exactly the number of discussion questions course.yml
+    records.
+
+    The instructor run sheets assign specific prompts to specific rows by
+    number ("rows 1-2 take Prompt 2"). Renumbering or deleting a question here
+    silently breaks a run sheet over there, so the count is pinned in the
+    manifest and the instructor repo checks its references against it.
+    """
+    problems = []
+    for d in m["discussions"]:
+        rel = f"discussions/{d['file']}"
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            continue
+        body = _section(read(rel), "## Discussion questions",
+                        "## Why this is in a formal-methods course")
+        if body is None:
+            problems.append(f"{rel} has no Discussion questions section")
+            continue
+        nums = [int(n) for n in re.findall(r"^\*\*(\d+)\.\*\* ", body, re.M)]
+        if nums != list(range(1, d["prompts"] + 1)):
+            problems.append(
+                f"{rel} prompts are numbered {nums}, course.yml says there are "
+                f"{d['prompts']} numbered 1..{d['prompts']}. If you changed them, update "
+                f"course.yml AND check the run sheet in the instructor repo, which "
+                f"references prompts by number.")
     return problems
 
 
@@ -340,21 +375,41 @@ def check_decks_present(m):
     return problems
 
 
-def check_due_offsets(m):
-    """Reflection due dates are the stated offset after class, unless the entry
-    carries a `note` explaining why not."""
+def _parse_day(label: str, value: str, year: int, problems: list):
+    """Parse 'Thu Aug 27' and verify the weekday actually matches the date.
+
+    strptime will happily accept a wrong weekday, which is exactly the drift
+    worth catching: a syllabus that says "Wed Aug 27" for a Thursday is wrong
+    in the way students notice.
+    """
     import datetime
+    try:
+        parsed = datetime.datetime.strptime(f"{value} {year}", "%a %b %d %Y").date()
+    except ValueError as exc:
+        problems.append(f"{label} = {value!r} is not a parsable date: {exc}")
+        return None
+    stated = value.split()[0]
+    actual = parsed.strftime("%a")
+    if stated != actual:
+        problems.append(f"{label} = {value!r} but {parsed.isoformat()} is a {actual}, not a {stated}")
+        return None
+    return parsed
+
+
+def check_due_offsets(m):
+    """Dates are internally consistent, and reflection due dates are the stated
+    offset after class unless the entry carries a `note` explaining why not."""
     problems = []
-    year = 2026
+    year = m["meta"]["year"]
     for d in m["discussions"]:
-        try:
-            cls = datetime.datetime.strptime(f"{d['date']} {year}", "%a %b %d %Y").date()
-            due = datetime.datetime.strptime(f"{d['due']} {year}", "%a %b %d %Y").date()
-        except ValueError as exc:
-            problems.append(f"{d['id']} has an unparsable date: {exc}")
+        cls = _parse_day(f"{d['id']} date", d["date"], year, problems)
+        due = _parse_day(f"{d['id']} due", d["due"], year, problems)
+        if cls is None or due is None:
             continue
         delta = (due - cls).days
-        if delta != m["reflection"]["due_offset_days"] and "note" not in d:
+        if delta < 0:
+            problems.append(f"{d['id']} reflection is due {abs(delta)} days BEFORE the session")
+        elif delta != m["reflection"]["due_offset_days"] and "note" not in d:
             problems.append(
                 f"{d['id']} due {delta} days after class, expected "
                 f"{m['reflection']['due_offset_days']}; add a `note:` to course.yml if deliberate")
@@ -369,13 +424,14 @@ CHECKS = [
     ("manifest dates appear in the syllabus", check_dates_in_syllabus),
     ("grading weights consistent", check_grading),
     ("reflection spec stated consistently", check_reflection_spec),
-    ("reading URL / unverified counts unchanged", check_readings_invariant),
+    ("per-packet reading counts match course.yml", check_readings_invariant),
+    ("prompt counts match course.yml", check_prompt_counts),
     ("no instructor-only content", check_no_instructor_content),
     ("no scratch or draft files", check_no_forbidden_paths),
     ("syllabus.pdf built from current syllabus.md", check_pdf_fresh),
     ("internal links resolve", check_internal_links),
     ("every discussion has a deck", check_decks_present),
-    ("reflection due dates follow the stated offset", check_due_offsets),
+    ("dates parse, weekdays match, due offsets hold", check_due_offsets),
 ]
 
 
