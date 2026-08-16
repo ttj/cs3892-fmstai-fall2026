@@ -1,0 +1,259 @@
+# CS 3892 / 5892 — Fall 2026
+# ============================================================================
+# SINGLE SOURCE OF TRUTH for every fact that appears in more than one place,
+# in this repo or in the private instructor repo.
+#
+# Edit here first, then run `make check` (or let CI tell you what disagrees).
+# Both repos validate their markdown against this file, so a date changed in
+# one place and not another is a build failure rather than a surprise in
+# November.
+#
+# The instructor repo vendors a copy of this file; its CI fails if the copy
+# has drifted from this one. See scripts/check_course.py for what is enforced.
+# ============================================================================
+
+meta:
+  code: "CS 3892 / CS 5892"
+  title: "Formal Methods: Safe and Trustworthy Artificial Intelligence"
+  term: "Fall 2026"
+  meeting: "Tuesday / Thursday, 11:00 a.m. – 12:15 p.m."
+  sessions: 28
+  class_repo: "ttj/cs3892-fmstai-fall2026"
+  instructor_repo: "ttj/cs3892-fmstai-fall2026-instructor"
+
+# Dates that appear in the syllabus AND the schedule. Strings are matched
+# literally against the markdown, so keep the formatting the documents use.
+dates:
+  first_day_of_classes: "Wed Aug 26"
+  first_meeting: "Thu Aug 27"
+  add_drop_ends: "Fri Sep 4"
+  fall_break: "Thu–Fri Oct 22–23"
+  withdraw_deadline: "Fri Oct 30"
+  thanksgiving_no_class: ["Tue Nov 24", "Thu Nov 26"]
+  poster_due: "Thu Dec 3"
+  last_day_of_classes: "Thu Dec 10"
+  showcase: "Thu Dec 10, 5–7 p.m."
+  showcase_venue: "Adams Atrium, Featheringill Hall"
+  reading_days: "Fri Dec 11, Sun Dec 13"
+  exam_period: "Sat Dec 12, Mon Dec 14 – Sat Dec 19"
+  final_exam_slot: "Monday, December 14, 2026, 9:00 a.m."
+  grades_due: "Mon Dec 21"
+
+# Must sum to 100. Checked against the syllabus table and participation.md.
+grading:
+  project: 50
+  homeworks: 20
+  quizzes: 10
+  participation: 20
+
+participation_split:
+  discussion_reflections: 10
+  case_study_lead: 5
+  engagement_and_peer_feedback: 5
+
+reflection:
+  words_min: 150
+  words_max: 250
+  score_max: 2
+  count: 9
+  dropped: 1
+  due_offset_days: 2
+
+# ---------------------------------------------------------------------------
+# The nine discussions. `short` is the label used in every table; `title` is
+# the H1 of the packet and of the instructor guide. Both are enforced.
+# ---------------------------------------------------------------------------
+discussions:
+  - id: D1
+    key: killed
+    file: d1-killed.md
+    session: 1
+    date: "Thu Aug 27"
+    week: 1
+    due: "Sat Aug 29"
+    short: "Has AI ever killed anyone?"
+    title: "Has AI Ever Killed Anyone? Cause, Contribution, and the Limits of Attribution"
+    deck: "https://gamma.app/docs/D1-Has-AI-ever-killed-anyone-CS-3892-Fall-2026-1i23tjanq24qdcd"
+
+  - id: D2
+    key: harms
+    file: d2-harms.md
+    session: 3
+    date: "Thu Sep 3"
+    week: 2
+    due: "Sat Sep 5"
+    short: "A survey of harms: when software and AI hurt people"
+    title: "A Survey of Harms: When Software and AI Hurt People"
+    deck: "https://gamma.app/docs/D2-A-survey-of-harms-CS-3892-Fall-2026-cd966i99gq5ea0a"
+
+  - id: D3
+    key: copyright
+    file: d3-copyright.md
+    session: 4
+    date: "Tue Sep 8"
+    week: 3
+    due: "Thu Sep 10"
+    short: "Are LLMs theft? Training data, copyright, and fair use"
+    title: "Are LLMs Theft? Training Data, Copyright, and Fair Use (status as of August 2026)"
+    deck: "https://gamma.app/docs/D3-Are-LLMs-theft-CS-3892-Fall-2026-vhn4nwxwerne00r"
+
+  - id: D4
+    key: environment
+    file: d4-environment.md
+    session: 6
+    date: "Tue Sep 15"
+    week: 4
+    due: "Thu Sep 17"
+    short: "What does a prompt cost the planet?"
+    title: "What Does a Prompt Cost the Planet? Specifying AI's Environmental Impact"
+    deck: "https://gamma.app/docs/D4-What-does-a-prompt-cost-the-planet-CS-3892-Fall-2026-e6dyhhajxb46qtm"
+
+  - id: D5
+    key: learn-to-code
+    file: d5-learn-to-code.md
+    session: 8
+    date: "Tue Sep 22"
+    week: 5
+    due: "Thu Sep 24"
+    short: "If AI writes all our software, do we still need to learn to code?"
+    title: "If AI Writes All Our Software, Do We Still Need to Learn to Code?"
+    deck: "https://gamma.app/docs/D5-Do-we-still-need-to-learn-to-code-CS-3892-Fall-2026-eduydurfceyl099"
+
+  - id: D6
+    key: liability
+    file: d6-liability.md
+    session: 12
+    date: "Tue Oct 6"
+    week: 7
+    due: "Thu Oct 8"
+    short: "Who is liable when AI-assisted software fails?"
+    title: "Who is liable when AI-assisted software fails?"
+    deck: "https://gamma.app/docs/D6-Who-is-liable-CS-3892-Fall-2026-mkc9wygeybxb5rb"
+
+  - id: D7
+    key: specify
+    file: d7-specify.md
+    session: 16
+    date: "Tue Oct 20"
+    week: 9
+    due: "Mon Oct 26"
+    short: "Can we verify what we cannot specify?"
+    title: "Can We Verify What We Cannot Specify?"
+    deck: "https://gamma.app/docs/D7-Can-we-verify-what-we-cannot-specify-CS-3892-Fall-2026-hoho47rcwaiuumk"
+    note: "Due date is NOT the usual +2 days: Thu Oct 22 is Fall Break, so it moves to Mon Oct 26."
+
+  - id: D8
+    key: engineer-role
+    file: d8-engineer-role.md
+    session: 20
+    date: "Thu Nov 5"
+    week: 11
+    due: "Sat Nov 7"
+    short: "Correctness or design? What is left for the engineer"
+    title: "Correctness or Design? What Is Left for the Engineer When the Machine Writes Both"
+    deck: "https://gamma.app/docs/D8-Correctness-or-design-CS-3892-Fall-2026-xm85z8rhk32ym50"
+
+  - id: D9
+    key: architecture
+    file: d9-architecture.md
+    session: 24
+    date: "Thu Nov 19"
+    week: 13
+    due: "Sat Nov 21"
+    short: "Does system architecture still matter in the age of agentic coding?"
+    title: "Does system architecture still matter in the age of agentic coding?"
+    deck: "https://gamma.app/docs/D9-Does-architecture-still-matter-CS-3892-Fall-2026-l7cp7ee2iyq5czb"
+
+# Reading-list invariants. Two rewrites have passed through these files; both
+# times the count was the thing that proved nothing had been silently dropped.
+readings:
+  total_urls: 89
+  unverified_marks: 3
+
+# Sections every student packet must contain, in this order.
+packet_sections:
+  - "Background"
+  - "The question"
+  - "Discussion questions"
+  - "Why this is in a formal-methods course"
+  - "Readings"
+  - "What you submit"
+
+# Sections every instructor guide must contain.
+instructor_guide_sections:
+  - "30-minute run sheet"
+  - "Do not assert these"
+
+# ---------------------------------------------------------------------------
+# Content that must NEVER appear in the class-facing repo. This repo is shared
+# with students; these patterns are the ones that actually leaked during
+# drafting, plus the obvious categories.
+# ---------------------------------------------------------------------------
+forbidden_in_class_repo:
+  instructor_apparatus:
+    - "30-minute run sheet"
+    - "Do not assert these"
+    - "landmine"
+    - "answer key"
+    - "grading key"
+    - "marking scheme"
+  instructor_voice:
+    - "assign only"
+    - "if you assign"
+    - "the instructor must"
+    - "students will bring"
+    - "students most reliably"
+    - "tell the students to"
+  # Matched case-sensitively: the all-caps stage-direction label is the problem,
+  # not the ordinary phrase "cuts against the framing", which is fine in prose
+  # addressed to a student.
+  instructor_voice_exact:
+    - "CUTS AGAINST THE FRAMING"
+    - "TODO"
+    - "FIXME"
+  secrets:
+    - "BEGIN RSA PRIVATE KEY"
+    - "BEGIN OPENSSH PRIVATE KEY"
+    - "AKIA"
+    - "aws_secret_access_key"
+  student_data:
+    - "class-roll"
+    - "classlist"
+
+# Files that must never exist in either repo (agent scratch, editor leftovers).
+forbidden_paths:
+  - "*-draft.md"
+  - "*-scratch.md"
+  - "*.tmp"
+  - "Untitled*"
+  - "*.orig"
+  - "*.rej"
+
+# Hosts that block datacenter IPs. Live in a browser; a link checker must not
+# fail on them. Documented in LINK-AUDIT.md.
+link_allowlist:
+  - "iso.org"
+  - "ai.mil"
+  - "mitpress.mit.edu"
+  - "jamanetwork.com"
+  - "doi.org"
+  - "canlii.org"
+  - "robodebt.royalcommission.gov.au"
+  - "chatgptiseatingtheworld.com"
+  - "medium.com"
+  - "businessinsider.com"
+  - "wsj.com"
+  - "sciencedirect.com"
+  - "tandfonline.com"
+  - "springer.com"
+  - "ieeexplore.ieee.org"
+  - "dl.acm.org"
+  - "nature.com"
+  - "reuters.com"
+  - "ft.com"
+  - "economist.com"
+  - "bloomberg.com"
+  - "nytimes.com"
+  - "noma.security"
+  - "invariantlabs.ai"
+  - "thehackernews.com"

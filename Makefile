@@ -11,7 +11,13 @@
 PANDOC  ?= pandoc
 CHROME  ?= $(shell command -v google-chrome || command -v chromium || command -v chromium-browser)
 
-.PHONY: pdf links clean
+.PHONY: check pdf links clean
+
+## check: validate every cross-referenced fact against course.yml, and that
+## nothing instructor-only has leaked into this class-facing repo.
+check:
+	@python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
+	@python3 scripts/check_course.py
 
 pdf: syllabus/syllabus.pdf
 
@@ -25,7 +31,10 @@ syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	  --no-pdf-header-footer --print-to-pdf=$@ \
 	  file://$(CURDIR)/.pandoc-tmp/syllabus.html
 	@rm -rf .pandoc-tmp
-	@echo "wrote $@"
+	@# Stamp the source hash. git does not preserve mtimes, so this is what
+	@# lets CI tell a stale committed PDF from a fresh one.
+	@sha256sum syllabus/syllabus.md | cut -d' ' -f1 > syllabus/.syllabus.md.sha256
+	@echo "wrote $@ (+ source stamp)"
 
 links:
 	@grep -rhoE 'https?://[^ )>"`]+' --include='*.md' . \

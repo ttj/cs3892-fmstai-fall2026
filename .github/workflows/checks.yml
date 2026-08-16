@@ -1,0 +1,136 @@
+name: checks
+
+# This repo is shared with the class and its facts are mirrored in the private
+# instructor repo. These checks exist so that a date changed in one place and
+# not another is a build failure rather than a surprise in November.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Mondays 08:00 UTC — catches external link rot between edits.
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  consistency:
+    name: consistency and leak checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
+
+      - name: validate against course.yml
+        run: python3 scripts/check_course.py
+
+      - name: summary
+        if: always()
+        run: |
+          {
+            echo "### Consistency checks"
+            echo
+            python3 scripts/check_course.py 2>&1 | sed 's/^/    /'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  pdf-freshness:
+    name: syllabus PDF matches its markdown
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # git does not preserve mtimes, so a stale committed PDF is otherwise
+      # silent. `make pdf` writes a hash of the source next to it.
+      - name: compare committed stamp against syllabus.md
+        run: |
+          want=$(sha256sum syllabus/syllabus.md | cut -d' ' -f1)
+          got=$(cut -d' ' -f1 < syllabus/.syllabus.md.sha256)
+          if [ "$want" != "$got" ]; then
+            echo "::error file=syllabus/syllabus.pdf::syllabus.pdf is stale."
+            echo "syllabus.md has changed since the last \`make pdf\`."
+            echo "  expected $want"
+            echo "  stamped  $got"
+            echo "Run 'make pdf' and commit the PDF and the .sha256 stamp together."
+            exit 1
+          fi
+          echo "syllabus.pdf is current."
+
+  links:
+    name: external links
+    # Link rot is not a code defect, so only on demand and on the weekly cron.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pyyaml
+
+      - name: check every cited URL
+        id: links
+        run: python3 scripts/check_links.py | tee link-report.txt
+
+      - name: summary
+        if: always()
+        run: |
+          {
+            echo "### External links"
+            echo
+            echo '```'
+            cat link-report.txt || echo "(no report produced)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  notify-instructor-repo:
+    name: tell the instructor repo the manifest moved
+    needs: consistency
+    # Only when course.yml actually changed on main, and only if a token is
+    # configured. Without it the instructor repo still picks the change up on
+    # its own daily cron — this just makes it immediate.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: did course.yml change?
+        id: changed
+        run: |
+          if git diff --name-only HEAD~1 HEAD | grep -qx 'course.yml'; then
+            echo "yes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "yes=false" >> "$GITHUB_OUTPUT"
+            echo "course.yml unchanged; nothing to notify."
+          fi
+
+      - name: dispatch to instructor repo
+        if: steps.changed.outputs.yes == 'true' && env.TOKEN != ''
+        env:
+          TOKEN: ${{ secrets.INSTRUCTOR_DISPATCH_TOKEN }}
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/ttj/cs3892-fmstai-fall2026-instructor/dispatches" \
+            -d '{"event_type":"course-manifest-updated"}'
+          echo "Notified the instructor repo."
+
+      - name: note when no token is configured
+        if: steps.changed.outputs.yes == 'true' && env.TOKEN == ''
+        env:
+          TOKEN: ${{ secrets.INSTRUCTOR_DISPATCH_TOKEN }}
+        run: |
+          echo "::notice::course.yml changed but INSTRUCTOR_DISPATCH_TOKEN is not set." \
+               "The instructor repo will pick this up on its daily sync instead."

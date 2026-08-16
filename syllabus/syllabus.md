@@ -120,6 +120,7 @@ change):
 | **Thu Dec 10, 5–7 p.m.** | **CS Immersion Showcase**, Adams Atrium, Featheringill Hall (§12) |
 | Fri Dec 11, Sun Dec 13 | Reading days |
 | Sat Dec 12, Mon Dec 14 – Sat Dec 19 | Final examination period |
+| Mon Dec 21 | Final grades due |
 | *(Mon Dec 14, 9:00 a.m.)* | *Registrar's exam slot for this course — reserved, not currently used (§7)* |
 
 **There is no final exam planned**; the final project presentation and deliverables take its place.
@@ -374,7 +375,8 @@ done the reading, and so you find out early — cheaply — when you have not.
 This is a discussion course as much as a lecture course, and the 20% is real.
 
 **Structured discussions.** Nine sessions during the semester devote roughly 30 minutes to a
-structured discussion of a genuinely contested question — weekly for the first five weeks, then
+structured discussion of a genuinely contested question, each followed by a short written
+reflection of **150–250 words** — weekly for the first five weeks, then
 every other week. Format is **think–pair–share**: you think and write alone, argue it out with one
 partner, then we take it to the room. Topics include: *Has AI ever killed anyone? Are LLMs theft?
 Are AI's environmental impacts real or overstated? If AI writes all our software, do we still need

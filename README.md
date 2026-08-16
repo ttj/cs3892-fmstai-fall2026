@@ -23,6 +23,7 @@ Course materials: syllabus, schedule, homeworks, project topics, and rubrics.
 | [`quizzes/README.md`](quizzes/README.md) | Quiz format and coverage |
 | [`labs/README.md`](labs/README.md) | Tool setup, zero-install paths, and the Lean version pin |
 | [`LINK-AUDIT.md`](LINK-AUDIT.md) | Every URL in the course materials, checked and dated |
+| [`course.yml`](course.yml) | **Single source of truth** — dates, weights, the nine discussions. Edit here first |
 
 ## The course in one paragraph
 
@@ -100,6 +101,37 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 | **Nine structured discussions added** | The course had case studies but no scheduled discussion time. 89 verified references across nine contested questions. |
 | **Team size raised to 3–4 (from 2–4)** | ABET teamwork assessment, attrition risk, Showcase logistics — and team size is a Showcase judging metric. |
 | **Currency pass on every citation** | Standards, tool versions, and competition results all moved. See [`LINK-AUDIT.md`](LINK-AUDIT.md). |
+
+## Keeping this repo and the instructor repo in step
+
+Every fact that appears in more than one place — a date, a weight, a discussion title, a due date —
+lives once in [`course.yml`](course.yml). The markdown is checked against it rather than trusted.
+
+```
+make check     # 14 consistency and leak checks (fast, no network)
+make links     # every cited URL; fails only on conclusively dead ones
+make pdf       # rebuild the syllabus PDF and stamp its source hash
+```
+
+**`make check` enforces:** packet headers, section order, and both index tables match `course.yml`;
+the 💬 markers sit on the right sessions; manifest dates appear in the syllabus; grading weights sum
+to 100 and agree across the syllabus and `participation.md`; the reflection spec is worded
+identically everywhere; the reading-list invariant (89 URLs, 3 unverified marks) is intact; internal
+links resolve; the committed PDF was built from the current markdown; no scratch or draft files; and
+**nothing instructor-only has leaked into this repo** — run sheets, answer keys, instructor voice
+("assign only pp. 1–2"), secrets, or student data.
+
+That last one is not theoretical. During drafting, four agent scratch files and 89 instructor-voice
+reading annotations reached this repo before being caught by hand. The check exists so the next one
+is caught by CI.
+
+**CI** runs the consistency and PDF checks on every push and PR, and the link check weekly.
+The private instructor repo vendors a copy of `course.yml`, validates its guides against it, and
+opens a sync PR to itself when this file changes. See that repo's README for the one-time token
+setup.
+
+**If you change a date:** edit `course.yml`, run `make check`, fix whatever it names, and commit.
+The instructor repo will follow within a day, or immediately if the dispatch token is configured.
 
 ## Repository conventions
 
