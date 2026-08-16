@@ -64,9 +64,22 @@ Manual `elan-init` is the fallback, not the default.
 <https://live.lean-lang.org/> or on the HHU mirror. Those are fine for week 1 and for the Natural
 Number Game; Cslib work happens in Codespaces or locally.
 
-**Build cost warning.** Mathlib has a prebuilt object cache (`lake exe cache get`). Cslib's ~200
-files do **not** — they compile locally the first time. Budget for that on your first build, and
-do it before the lab session rather than during it.
+**Build cost — measured, so you can plan.** Mathlib ships a prebuilt object cache
+(`lake exe cache get`, ~8 s). Cslib's ~200 files have **no** such cache and compile locally the
+first time. On a 24-core reference machine the cold build is **1 m 34 s** (2,803 jobs, ~17
+CPU-minutes, peak RSS 3.1 GB); dependency fetch adds about 1 m 45 s. On a typical 4-core laptop
+expect **roughly 5–10 minutes of compilation, ~10 minutes end to end**.
+
+That is fine. What is *not* automatic:
+
+- **Disk: budget ~11 GB** — about 7.8 GB for the project's `.lake` directory plus 2.9 GB for the
+  Lean toolchain. This is the constraint that actually bites, not time.
+- **RAM: keep ~4 GB free** during the build.
+- **Do it before the lab session**, not during it. Run `lake build` once at home in week 9 and
+  confirm it finishes; if it does not, come to office hours with the error rather than losing the
+  session.
+
+If your machine cannot spare 11 GB, use Codespaces — the container has everything prebuilt.
 
 **AI assistance in Lean:** use
 [`lean-lsp-mcp`](https://github.com/oOo0oOo/lean-lsp-mcp) — it rides the Lean language server, is
