@@ -2,11 +2,11 @@
 ## Formal Methods: Safe and Trustworthy Artificial Intelligence
 
 **Vanderbilt University · Fall 2026 · 3 credits**\
-**Tuesday / Thursday, 11:00 a.m. – 12:15 p.m.**
+**Tuesday / Thursday, 11:00 a.m. – 12:15 p.m. · Featheringill Hall (FGH) 209**
 
-> **Draft — pre-semester.** Items marked **[confirm]** are pending institutional confirmation
-> (room, TA assignment). Everything else is final unless the registrar changes the academic
-> calendar.
+> **Pre-semester version.** The teaching assistant has not yet been assigned; that line will be
+> filled in before classes begin. Everything else is final unless the registrar changes the
+> academic calendar.
 
 ---
 
@@ -18,7 +18,7 @@ Email: <taylor.johnson@vanderbilt.edu> · Web: <https://www.taylortjohnson.com>
 **Office hours:** by appointment — email to schedule. Easiest immediately before or after class;
 my office is in ISIS.
 
-**Teaching assistant:** TBA **[confirm]** · TA office hours: TBA
+**Teaching assistant:** to be assigned · TA office hours: to be announced
 
 Course materials and announcements: **Brightspace**. Code, assignment starters, and slides:
 the course GitHub repository (link on Brightspace).
@@ -102,9 +102,9 @@ By the end of the course you will be able to:
 
 ## 4. Course format and calendar
 
-Two 75-minute meetings per week, Tuesday and Thursday, 11:00 a.m.–12:15 p.m. Room TBA
-**[confirm]**. Sessions mix lecture, live tool demonstrations, in-class case-study discussion, and
-project checkpoints. **Bring a laptop.**
+Two 75-minute meetings per week, Tuesday and Thursday, 11:00 a.m.–12:15 p.m., in **Featheringill
+Hall (FGH) 209**. Sessions mix lecture, live tool demonstrations, in-class case-study discussion,
+and project checkpoints. **Bring a laptop.**
 
 Key Fall 2026 dates (Vanderbilt Registrar, 2026–27 academic calendar; calendars are subject to
 change):
@@ -132,8 +132,8 @@ See §7 for the one circumstance in which that could change, and the slot it wou
 > final project presentations. Nothing about the last week has slack in it. Build the poster in
 > November.
 
-The full session-by-session schedule, with all homework and project dates, is in
-[`schedule/schedule.md`](../schedule/schedule.md).
+The full session-by-session schedule — every topic, homework, quiz, and project deadline — is
+posted on Brightspace and in the course repository.
 
 ## 5. Topics
 
@@ -342,7 +342,8 @@ defined topics, or propose your own with approval.
 | **Showcase poster or video file** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | Dec 8 / Dec 10 and finals period |
 
-Full instructions, the topic menu, and rubrics are in the course repository under `projects/`.
+Full instructions, the eight-topic menu, and the grading rubrics are posted on Brightspace and
+in the course repository.
 
 **A change from previous years, stated plainly.** Topics are now provided rather than open, and the
 milestone is a *gate*: by Nov 12 you must have a verifier that runs and produces output. Last year
@@ -359,7 +360,7 @@ happen by accident.
 Five homeworks, roughly biweekly, 4% each. One tool per homework: Z3, then nuXmv, then CBMC and
 abstract interpretation, then Lean 4, then neural network verification. Each has an AI component in
 which you use an assistant and then *check its work with the tool* — which is the one setting where
-you can actually find out whether it was right. See `assignments/README.md`.
+you can actually find out whether it was right. Full descriptions are posted on Brightspace.
 
 **Late policy:** four late days for the semester, whole-day units, at most two per homework, no
 questions asked. After that, 20% per day. Late days do not apply to project deliverables, which are
@@ -383,7 +384,7 @@ partner, then we take it to the room. Topics include: *Has AI ever killed anyone
 Are AI's environmental impacts real or overstated? If AI writes all our software, do we still need
 to learn to code? Can we verify what we cannot specify?* Each has assigned reading — usually one
 source, under 30 minutes — posted a week ahead on Brightspace. **Come having read it.** The full
-schedule, readings, and questions are in `discussions/` in the course repository.
+schedule, readings, and questions are posted on Brightspace and in the course repository.
 
 These are not debate exercises with a house position. Several of them are questions I do not have
 a settled answer to, and the readings deliberately include sources that cut both ways. What is

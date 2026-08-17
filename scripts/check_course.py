@@ -170,6 +170,19 @@ def check_dates_in_syllabus(m):
     return problems
 
 
+def check_room(m):
+    """The room in the manifest appears in the syllabus.
+
+    Compared with whitespace normalized, because markdown wraps prose and a
+    room name can land across two lines.
+    """
+    want = " ".join(m["meta"]["room"].split())
+    got = " ".join(read("syllabus/syllabus.md").split())
+    if want not in got:
+        return [f"syllabus/syllabus.md never states the room {m['meta']['room']!r}"]
+    return []
+
+
 def check_grading(m):
     """Weights sum to 100, the split sums to the participation share, and the
     syllabus table matches."""
@@ -422,6 +435,7 @@ CHECKS = [
     ("schedule + index tables match course.yml", check_tables),
     ("inline discussion markers on the right sessions", check_inline_schedule_markers),
     ("manifest dates appear in the syllabus", check_dates_in_syllabus),
+    ("room stated in the syllabus", check_room),
     ("grading weights consistent", check_grading),
     ("reflection spec stated consistently", check_reflection_spec),
     ("per-packet reading counts match course.yml", check_readings_invariant),
