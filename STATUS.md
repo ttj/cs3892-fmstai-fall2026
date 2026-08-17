@@ -1,6 +1,6 @@
 # Status and open items
 
-Last updated: **2026-08-16**
+Last updated: **2026-08-16** · syllabus is share-ready; both repos green
 
 The syllabus, schedule, homework specs, project topics, and rubrics are drafted and internally
 consistent. Below is what still needs a decision or an external confirmation.
@@ -11,8 +11,8 @@ consistent. Below is what still needs a decision or an external confirmation.
 |---|---|---|---|
 | 1 | ~~**Cross-listing with CS 5892**~~ **— RESOLVED** | Confirmed by the instructor: 3892 and 5892 are **the same course, taught together, in one Brightspace shell** (OU 646125). The only difference is **extra coursework for the graduate students**. So: no second OU, no separate section, no duplicated grade structure — just the differentiated project components already specified in syllabus §7 and the rubrics. | — |
 | 2 | ~~**Immersion Showcase date**~~ **— CONFIRMED** | **Thu Dec 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall**, confirmed against the engineering page and the coordinator's pre-semester announcement. Poster/video files due **Thu Dec 3**; 40AU awards $3,500/$1,000/$500. Note it falls on the **last day of classes**. The CCC copy of the page (`computing.vanderbilt.edu/cs-immersion-showcase/`) is stale — still showing Spring 2026 — so do not send students there. | — |
-| 3 | **Room and meeting time** | Syllabus assumes T/R 11:00–12:15, per Fall 2025. Room TBA. | Registrar |
-| 4 | **TA assignment** | Syllabus has a TBA placeholder. Fall 2025 had one TA. | Department |
+| 3 | ~~**Room and meeting time**~~ **— RESOLVED** | T/R 11:00–12:15 in **Featheringill Hall (FGH) 209**. In the syllabus header, §4, and `course.yml` (checked). | — |
+| 4 | **TA assignment** | Still unassigned. The syllabus says "to be assigned" rather than carrying a placeholder marker, so it is safe to share as-is; fill in §1 when known. | Department |
 | 5 | **Graduate academic calendar** | The registrar's 2026–27 page is the *undergraduate* calendar. The Graduate School publishes a separate one whose add/drop dates may differ for a 5892 section. | Graduate School |
 
 ## Decisions still open
@@ -25,6 +25,32 @@ consistent. Below is what still needs a decision or an external confirmation.
 | 9 | **Quiz question banks** | Coverage and format are specified in `quizzes/README.md`; the actual question banks are not yet written. Five banks of ~12 questions each, to be built in Brightspace. |
 | 10 | **Homework starter repos** | The homework specs reference `ttj/fmaiv` starters, which exist. Whether to fork per-assignment starter repos (GitHub Classroom) or point at FMAIV directly is undecided. Classroom gives autograding; direct pointing is less setup. |
 | 11 | **Textbook for the Lean unit** | Recommendation: *Functional Programming in Lean* as the gentle path, *Hitchhiker's Guide to Logical Verification* (2026 ed.) as the verification-focused one. Neither is required; pick one to assign readings from. |
+
+## Where to pick up
+
+**Both repos are green, `main` only, nothing unpushed.** The anti-drift CI is live and the
+`COURSE_SYNC_TOKEN` is working (verified 2026-08-16; **expires 2027-01-31**).
+
+Deliberately paused, at the instructor's request, until the course sequence and syllabus have been
+reviewed in detail:
+
+- quiz question banks (5 × ~12 questions)
+- individual homework handout files
+- project proposal / milestone / final handout documents
+- the currency pass over the ~20 Fall 2025 lecture decks — the largest remaining job; the
+  correction list is under *Currency notes to carry into the slides* below
+
+Time-sensitive and independent of that review:
+
+- **The nine Brightspace reflection assignments** — D1 is the first day of class, **Aug 27**. Spec
+  is in the instructor repo at `brightspace/discussion-setup.md`; build once, one shell (OU 646125).
+- **Immersion funding** — fall cycle closes **Sep 14**; $1,000/student for Senior Design.
+- **AWS credits** — needed before project topic 3 is viable.
+- **Sharing this repo with the class** — still private with one collaborator. If it is made public,
+  `COURSE_SYNC_TOKEN` becomes unnecessary.
+
+**Any change to a date, weight, title, or due date starts in `course.yml`**, then `make check`.
+That is what keeps the two repos from drifting.
 
 ## Confirmed since the first draft
 
@@ -44,6 +70,9 @@ consistent. Below is what still needs a decision or an external confirmation.
   Sep 15 — advise Sep 14. A funding workshop is required annually, and money lands 4–6 weeks after
   notification, so this has to be started in September.
 - **Robert Tairas** is Immersion Coordinator for Computer Science (377 Jacobs Hall).
+- **Room: Featheringill Hall (FGH) 209.**
+- **CS 3892 and CS 5892 are one course in one Brightspace shell**; graduate students differ only in
+  extra coursework.
 - The 40AU award structure, poster deadline, and judging metrics are **not published** on any
   public Immersion page — they come from the coordinator's instructor announcement. Syllabus §12
   says so, so nobody wastes time looking for a URL.
