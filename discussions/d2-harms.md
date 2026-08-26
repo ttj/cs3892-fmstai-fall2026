@@ -165,7 +165,9 @@ the first specification-writing exercise rather than a rhetorical flourish.
   retrieved.
 
 - **Nancy G. Leveson, "Medical Devices: The Therac-25," Appendix A of Safeware: System Safety and Computers (Addison-Wesley, 1995)** (academic, 1995)  
-  <http://sunnyday.mit.edu/papers/therac.pdf>  
+  <https://web.archive.org/web/20260820015352/http://sunnyday.mit.edu/papers/therac.pdf>  
+  (MIT's copy at `sunnyday.mit.edu` stopped answering in August 2026; this is the Internet
+  Archive's snapshot of the same PDF.)  
   The canonical body-count case, and the strongest rebuttal on this list to the 'find the
   bug' reflex: Leveson's argument is that removed hardware interlocks, software reused from
   machines whose hardware still backstopped it, unusable error reporting and the absence of
