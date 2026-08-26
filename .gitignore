@@ -1,11 +1,22 @@
 # ----- Never commit student data -----
 # No rosters, submissions, grades, or feedback. Ever. The repo is private; the rule stands anyway.
+# Case- and separator-insensitive. NB: gitignore's `?` matches EXACTLY one
+# character, so a "maybe a separator" pattern needs both spellings, not `?`.
 *class-roll*
+*[Cc]lass[Rr]oll*
+*[Cc]lass?[Rr]oll*
 roster*
+*[Rr]oster*
 grades*
+*[Gg]rade*[Ee]xport*
 submissions/
 feedback/
 student-data/
+# Brightspace's own export filenames, which are capitalised and space/underscored
+# and would slip past the lowercase globs above.
+*[Gg]rades*.csv
+*[Ss]ubmission*.csv
+*[Ff]eedback*.csv
 
 # ----- Never commit credentials -----
 .env
@@ -14,6 +25,12 @@ student-data/
 *.key
 credentials
 aws_credentials
+# Brightspace token caches. The toolkit writes these CWD-relative, so running any
+# toolkit command from this directory drops a live JWT here. This repo is the one
+# that gets shared with students — it must never carry one.
+.brightspace_session.json
+.brightspace_bearer.json
+.brightspace_tokens.json
 
 # ----- Build intermediates (PDFs are committed; their scaffolding is not) -----
 *.html.tmp
@@ -38,6 +55,11 @@ __pycache__/
 Thumbs.db
 *.swp
 *~
+.claude/
+
+# ----- Conflict leftovers (can carry pre-redaction content) -----
+*.orig
+*.rej
 
 # ----- Office lock files -----
 ~$*

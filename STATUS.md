@@ -12,7 +12,7 @@ consistent. Below is what still needs a decision or an external confirmation.
 | 1 | ~~**Cross-listing with CS 5892**~~ **— RESOLVED** | Confirmed by the instructor: 3892 and 5892 are **the same course, taught together, in one Brightspace shell** (OU 646125). The only difference is **extra coursework for the graduate students**. So: no second OU, no separate section, no duplicated grade structure — just the differentiated project components already specified in syllabus §7 and the rubrics. | — |
 | 2 | ~~**Immersion Showcase date**~~ **— CONFIRMED** | **Thu Dec 10, 2026, 5–7 p.m., Adams Atrium, Featheringill Hall**, confirmed against the engineering page and the coordinator's pre-semester announcement. Poster/video files due **Thu Dec 3**; 40AU awards $3,500/$1,000/$500. Note it falls on the **last day of classes**. The CCC copy of the page (`computing.vanderbilt.edu/cs-immersion-showcase/`) is stale — still showing Spring 2026 — so do not send students there. | — |
 | 3 | ~~**Room and meeting time**~~ **— RESOLVED** | T/R 11:00–12:15 in **Featheringill Hall (FGH) 209**. In the syllabus header, §4, and `course.yml` (checked). | — |
-| 4 | **TA assignment** | Still unassigned. The syllabus says "to be assigned" rather than carrying a placeholder marker, so it is safe to share as-is; fill in §1 when known. | Department |
+| 4 | ~~**TA assignment**~~ **— RESOLVED** | **Michaela Winfree** (michaela.winfree@vanderbilt.edu), the same TA as Fall 2025. Named in syllabus §1. TA office hours still to be announced. | — |
 | 5 | **Graduate academic calendar** | The registrar's 2026–27 page is the *undergraduate* calendar. The Graduate School publishes a separate one whose add/drop dates may differ for a 5892 section. | Graduate School |
 
 ## Decisions still open

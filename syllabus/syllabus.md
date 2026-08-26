@@ -18,7 +18,8 @@ Email: <taylor.johnson@vanderbilt.edu> · Web: <https://www.taylortjohnson.com>
 **Office hours:** by appointment — email to schedule. Easiest immediately before or after class;
 my office is in ISIS.
 
-**Teaching assistant:** to be assigned · TA office hours: to be announced
+**Teaching assistant:** Michaela Winfree\
+Email: <michaela.winfree@vanderbilt.edu> · TA office hours: to be announced
 
 Course materials and announcements: **Brightspace**. Code, assignment starters, and slides:
 the course GitHub repository (link on Brightspace).
