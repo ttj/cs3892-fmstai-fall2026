@@ -84,7 +84,7 @@ testing-missed comparison, a 60-second screen recording of the tool finding a re
 The poster is folded into the final-deliverable grade (see [rubrics](rubrics.md)); it is not a
 separate percentage.
 
-### Proposal — ~Week 6
+### Proposal — Thursday October 1 (week 6)
 
 **Report (1–3 pages).** Must contain, explicitly labelled:
 
@@ -109,7 +109,7 @@ on a toy input, and be able to show the output. This is not a demo; it is proof 
 toolchain exists on your machine and that you will not discover in November that it does not
 build.
 
-### Milestone — ~Week 11
+### Milestone — Thursday November 12 (week 12)
 
 ~8 slides, 8–15 minutes, live. Structure (from the Fall 2025 template, which worked):
 

@@ -31,11 +31,11 @@ read by a human.
 
 | # | Out | Due | Topic | Primary tool | Zero-install path |
 |---|---|---|---|---|---|
-| HW1 | Week 3 | Week 4 | Logic, SAT/SMT, bounded reachability | Z3 (Python + SMT-LIB) | Colab / Codespaces |
-| HW2 | Week 5 | Week 7 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
-| HW3 | Week 7 | Week 9 | Program analysis: BMC and abstract interpretation | CBMC (+ Frama-C or the course abstract interpreter) | Codespaces |
-| HW4 | Week 10 | Week 12 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
-| HW5 | Week 12 | Week 14 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
+| HW1 | Thu Sep 24 | Thu Oct 8 | Logic, SAT/SMT, bounded reachability | Z3 (Python + SMT-LIB) | Colab / Codespaces |
+| HW2 | Thu Oct 15 | Thu Oct 29 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
+| HW3 | Thu Oct 29 | Thu Nov 12 | Program analysis: BMC and abstract interpretation | CBMC (+ Frama-C or the course abstract interpreter) | Codespaces |
+| HW4 | Thu Nov 12 | Thu Dec 3 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
+| HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
 
 Due dates are on the [course schedule](../schedule/schedule.md); submission is through Brightspace.
 
@@ -48,7 +48,7 @@ deliverables, which are presented in class and therefore cannot slip.
 ## The five homeworks
 
 ### HW1 — Logic, SAT/SMT, and bounded reachability
-*Out week 3, due week 4. Tool: Z3.*
+*Out Thu Sep 24, due Thu Oct 8. Tool: Z3.*
 
 1. **Logic warm-up.** Translate five English statements into propositional and first-order logic;
    for each, decide satisfiability and validity by hand, then confirm with Z3. (Confirming by hand
@@ -67,7 +67,7 @@ deliverables, which are presented in class and therefore cannot slip.
 [Colab](https://colab.research.google.com/github/ttj/fmaiv/blob/main/notebooks/01_day1_logic_sat_smt.ipynb)
 
 ### HW2 — Temporal logic and model checking
-*Out week 5, due week 7. Tool: nuXmv / NuSMV.*
+*Out Thu Oct 15, due Thu Oct 29. Tool: nuXmv / NuSMV.*
 
 1. **Read a model.** Given an SMV file, identify its initial states, transition relation, and
    state space size, and predict each property's verdict *before* running the tool. Then run it.
@@ -88,7 +88,7 @@ deliverables, which are presented in class and therefore cannot slip.
 [smvis in-browser](https://bit.ly/fmaiv_smvis)
 
 ### HW3 — Program analysis: bounded model checking and abstract interpretation
-*Out week 7, due week 9. Tools: CBMC, plus Frama-C or the course abstract interpreter.*
+*Out Thu Oct 29, due Thu Nov 12. Tools: CBMC, plus Frama-C or the course abstract interpreter.*
 
 1. **CBMC.** Verify the counter in C. Then weaken the assertion, read the counterexample trace,
    and explain the role of `--unwind` and `--unwinding-assertions`. Say what an unwinding
@@ -110,7 +110,7 @@ deliverables, which are presented in class and therefore cannot slip.
 Fall 2025 abstract-interpretation demo (interval/sign domains, five annotated C examples)
 
 ### HW4 — Interactive theorem proving in Lean 4
-*Out week 10, due week 12. Tool: Lean 4.*
+*Out Thu Nov 12, due Thu Dec 3. Tool: Lean 4.*
 
 1. **Warm-up.** Finish the tactic ladder (`CounterLadder.lean`) — six rungs from `rfl` to the
    counter's base case. If you have not played the Natural Number Game, do that first.
@@ -133,7 +133,7 @@ checked for automatically.
 [Lean web editor](https://live.lean-lang.org/) · [Natural Number Game](https://adam.math.hhu.de/)
 
 ### HW5 — Neural-network verification
-*Out week 12, due week 14. Tools: α,β-CROWN / Marabou / auto_LiRPA.*
+*Out Tue Dec 1, due Thu Dec 10. Tools: α,β-CROWN / Marabou / auto_LiRPA.*
 
 1. **Robustness as a query.** For a small MNIST network, state local robustness at a given input
    and `ε` as a formal property, and verify it. Report verified / falsified / timeout.
