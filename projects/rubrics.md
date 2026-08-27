@@ -1,6 +1,6 @@
 # Project rubrics — CS 3892 / 5892, Fall 2026
 
-Point totals are out of 50, matching the project's 50% share of the course grade.
+Point totals are out of 50, matching the project's 50% share of the course grade: proposal 5, milestone 10, and the final 35 &mdash; report 15, presentation and demo 10, artifact quality 10.
 
 These rubrics are published in advance because you should be able to predict your grade. If you
 can read the rubric and cannot tell what you would score, tell me and I will fix the rubric.
@@ -44,19 +44,22 @@ properly. This is stated plainly here so that nobody is surprised in December.
 
 ---
 
-## Final report — 20 points
+## Final report — 15 points
 
 | Criterion | Pts | What full marks looks like |
 |---|---:|---|
-| Problem and motivation | 2 | Why this matters, for someone who is not in this class. |
-| Background | 2 | Enough for a reader to follow; correct; cited. |
-| Approach | 4 | FM and AI components clearly delineated. Design choices justified, including the ones that did not work out. |
-| Implementation | 2 | What you actually built, at a level of detail that lets someone rebuild it. |
-| **Evaluation** | 5 | Quantitative results against the success criterion from the proposal. Baselines where meaningful. Negative results reported, not buried. Enough runs to distinguish signal from noise. |
-| Related work | 2 | Positioned, not listed. (Graduate students: 8–12 papers making an argument.) |
+| Problem and motivation | 1 | Why this matters, for someone who is not in this class. |
+| Background | 1 | Enough for a reader to follow; correct; cited. |
+| **Approach** | 4 | FM and AI components clearly delineated. Design choices justified, including the ones that did not work out. |
+| Implementation | 1 | What you actually built, at a level of detail that lets someone rebuild it. |
+| **Evaluation** | 4 | Quantitative results against the success criterion from the proposal. Baselines where meaningful. Negative results reported, not buried. Enough runs to distinguish signal from noise. |
+| Related work | 1 | Positioned, not listed. (Graduate students: 8–12 papers making an argument.) |
 | Threats to validity | 1 | What could make your conclusion wrong. Graduate students test at least one. |
 | Writing and format | 1 | ACM or IEEE conference format, 6–10 pages, readable figures, correct citations. |
 | Responsibilities + AI disclosure | 1 | Both present and specific. |
+
+*Approach and Evaluation carry more than half of the report between them, deliberately: they are
+where the FM half and the AI half either meet or do not.*
 
 A report that reports a *negative* result honestly and analyzes why can score full marks. A report
 that quietly reframes the question so the result looks positive cannot.

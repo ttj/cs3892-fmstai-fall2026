@@ -429,6 +429,57 @@ def check_due_offsets(m):
     return problems
 
 
+
+def check_project_points(m):
+    """Rubric section totals sum to 50, each section's rows sum to its heading, and
+    the final block matches the syllabus's 35%.
+
+    This is unguarded territory: course.yml carries only the four top-level weights,
+    so the project SUB-split drifted to 55-out-of-50 with `make check` green, and
+    projects/README.md printed a 'share of the 50%' column summing to 110%.
+    """
+    import re as _re
+    problems = []
+    t = read("projects/rubrics.md")
+
+    total = 0.0
+    sections = {}
+    for mm in _re.finditer(r"^## (.+?) — (\d+) points$", t, _re.M):
+        name, pts = mm.group(1), int(mm.group(2))
+        body = t[mm.end():]
+        if "\n## " in body:
+            body = body[:body.index("\n## ")]
+        rows = sum(float(x) for x in
+                   _re.findall(r"^\|[^|]+\|\s*([0-9]+(?:\.[0-9]+)?)\s*\|", body, _re.M))
+        if abs(rows - pts) > 1e-6:
+            problems.append(
+                f"projects/rubrics.md: '{name}' heading says {pts} but its rows sum to {rows:g}")
+        sections[name] = pts
+        total += pts
+
+    if abs(total - 50) > 1e-6:
+        problems.append(f"projects/rubrics.md section totals sum to {total:g}, not 50")
+
+    # The final is three sections and must equal the syllabus's 35% of the course.
+    final = sum(v for k, v in sections.items()
+                if k.startswith(("Final", "Artifact")))
+    if sections and abs(final - 35) > 1e-6:
+        problems.append(
+            f"projects/rubrics.md: the final block (report + presentation + artifact) "
+            f"is {final:g} pts, but syllabus §7 puts the final at 35% of the course")
+
+    # projects/README.md's percentage column must sum to 100% of the project.
+    r = read("projects/README.md")
+    blk = _re.search(r"## Grading weights within the project.*?\n\n(\|.*?)\n\n", r, _re.S)
+    if blk:
+        pcts = [float(x) for x in _re.findall(r"\|\s*(\d+)%\s*\(", blk.group(1))]
+        if pcts and abs(sum(pcts) - 100) > 1e-6:
+            problems.append(
+                f"projects/README.md 'Grading weights within the project' sums to "
+                f"{sum(pcts):g}%, not 100%")
+    return problems
+
+
 CHECKS = [
     ("packet headers match course.yml", check_packet_headers),
     ("packet sections present and ordered", check_packet_sections),
@@ -437,6 +488,7 @@ CHECKS = [
     ("manifest dates appear in the syllabus", check_dates_in_syllabus),
     ("room stated in the syllabus", check_room),
     ("grading weights consistent", check_grading),
+    ("project rubric points add up", check_project_points),
     ("reflection spec stated consistently", check_reflection_spec),
     ("per-packet reading counts match course.yml", check_readings_invariant),
     ("prompt counts match course.yml", check_prompt_counts),
@@ -447,6 +499,7 @@ CHECKS = [
     ("every discussion has a deck", check_decks_present),
     ("dates parse, weekdays match, due offsets hold", check_due_offsets),
 ]
+
 
 
 def main() -> int:

@@ -163,9 +163,13 @@ that section is the single source of truth, so check it there rather than relyin
 |---|---|
 | Proposal | 10% (5 pts of 50) |
 | Milestone | 20% (10 pts of 50) |
-| Final report | 40% (20 pts of 50) |
+| Final report | 30% (15 pts of 50) |
 | Final presentation and demo | 20% (10 pts of 50) |
 | Artifact quality and reproducibility | 20% (10 pts of 50) |
+
+These sum to 100% of the project, and the last three sum to the **35%** the final is worth in
+[syllabus §7](../syllabus/syllabus.md#7-assignments-and-grading), which is what the Brightspace
+gradebook pays.
 
 Detailed rubrics: [rubrics.md](rubrics.md).
 
