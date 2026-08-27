@@ -651,10 +651,6 @@ Mechanics that matter:
 Questions about the Showcase or about Immersion generally can come to me, or directly to
 **Prof. Robert Tairas**, Immersion Coordinator for Computer Science (377 Jacobs Hall).
 
-> **One caution:** the College of Connected Computing copy of the Showcase page at
-> `computing.vanderbilt.edu/cs-immersion-showcase/` was still advertising the *Spring* 2026 event
-> as of August 2026. Use the engineering page above; it is the one that is current.
-
 The award structure, the poster deadline, and the judging metrics in this section come from the CS
 Immersion coordinator's pre-semester announcement to instructors — they are **not** published on
 the public Immersion pages, so do not go looking for them there.

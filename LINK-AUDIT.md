@@ -81,10 +81,15 @@ Any checker you point at these files needs to handle commas and `%20` in paths.
 ## Content notes worth carrying into the syllabus
 
 - **CS Immersion Showcase, Fall 2026: Thursday December 10, 2026, 5:00–7:00 p.m., Adams Atrium,
-  Featheringill Hall.** Confirmed in the raw HTML of the CS Immersion page. Still marked
-  **[confirm]** because it is single-sourced — no Events@Vanderbilt entry exists and the College of
-  Connected Computing page still shows only Spring 2026. Note it falls on the **last day of
-  classes**.
+  Featheringill Hall.** Confirmed in the raw HTML of the CS Immersion page, and corroborated by the
+  coordinator's pre-semester announcement to instructors. No Events@Vanderbilt entry exists. Note it
+  falls on the **last day of classes**.
+  **Correction (2026-08-26):** an earlier pass here recorded the College of Connected Computing copy
+  at `computing.vanderbilt.edu/cs-immersion-showcase/` as stale because a text fetch of it still
+  showed Spring 2026. That was wrong — **the Fall 2026 date on that page is rendered inside an
+  image**, which text extraction cannot see. The page is current and fine to send students to. A
+  useful general lesson for this audit: a text-only fetch cannot falsify a date that lives in an
+  image, so "the page still says the old thing" is not a finding unless you have looked at it.
 - **`vanderbilt.edu/generative-ai/academic-integrity/` is written for faculty, not students.** It is
   correct for the purpose but should always be paired with `/generative-ai/students/`.
 - **Student Access Services is now just "Student Access."** Wording updated.
