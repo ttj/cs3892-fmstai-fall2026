@@ -57,16 +57,21 @@ Exact dates are on the [course schedule](../schedule/schedule.md).
 
 ### The Showcase poster — Thursday December 3
 
-Every team prepares a poster file (or a short video) by **Thursday December 3**. This is a week
-before the CS Immersion Showcase and the deadline is **not extendable** — it is set by the
-department, which pays for the printing.
+**Every undergraduate team must produce a poster file (or a short video) by Thursday December 3.**
+This holds whether or not anyone on your team is using the course for Immersion, and whether or not
+you present at the Showcase — it is part of the final deliverable. Graduate teams are encouraged to
+produce one but are not required to.
+
+The date is a week before the CS Immersion Showcase and is **not extendable** — it is set by the
+department, which pays for the printing. Miss it and you can still satisfy the requirement, but you
+pay for your own printing.
 
 Two reasons it matters beyond your course grade, both detailed in
 [syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase):
 
 1. **Presenting at the Showcase is required** if you selected "Senior project design" as your
    Immersion experience.
-2. **The 40AU awards — $3,500 / $1,000 / $500** (as announced for Fall 2026; amounts could change)
+2. **The 40AU awards — $3,500 / $1,000 / $500** (set by the donor, and subject to change)
    — are judged from the submitted posters and videos, starting *before* the event, because there
    are too many projects to visit in two hours. **A team that does not submit by December 3 is not
    eligible**, regardless of how good the work is.

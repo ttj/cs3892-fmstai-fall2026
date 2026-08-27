@@ -344,7 +344,7 @@ defined topics, or propose your own with approval.
 | **Early pitch** — team, topic, one slide, five minutes | (counts as participation) | *Tentative:* Thu Sep 17 |
 | Proposal — report plus lightning talk | 5% | *Tentative:* Thu Oct 1 |
 | Milestone — presentation plus **running artifact** | 10% | *Tentative:* Thu Nov 12 |
-| **Showcase poster or video file** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
+| **Showcase poster or video file** — **required of undergraduate teams** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | *Tentative:* Dec 8 / Dec 10 and finals period |
 
 > **Which of these dates can move, and which cannot.** The four presentation dates marked
@@ -557,8 +557,9 @@ at the school's Design Day or Computer Science Immersion Showcase."* For Compute
 
 **Who must present:** if you selected **"Senior project design"** as your Immersion experience, you
 must present your project at the Showcase. If you are satisfying Immersion some other way, or are
-not using Immersion at all, presenting is **not required** — but it is strongly encouraged, and
-every team in this course is expected to prepare a poster or video regardless (see below).
+not using Immersion at all, *presenting at the Showcase* is **not required** — though it is
+strongly encouraged. The **poster itself is a separate matter and is required of every
+undergraduate team regardless** (see below).
 
 **Graduating seniors:** after the event I approve Immersion completion for graduating seniors who
 selected "Senior project design." The Office of Immersion contacts instructors around the time
@@ -580,18 +581,23 @@ scope. Students using this course for the CS Project requirement must be on a te
 
 ### Posters — file due Thursday, December 3
 
-**The department pays for poster printing.** To take advantage of that, your poster file must be
-submitted by **Thursday, December 3, 2026** — one week before the event. This deadline is not mine
-and I cannot extend it.
+**A poster is required of every undergraduate team in this course**, whether or not anyone on the
+team is using the course for Immersion, and whether or not the team presents at the Showcase. It is
+part of the final deliverable. Graduate teams are encouraged to produce one and are not required to.
 
-Posters are not strictly required. But read the next section before deciding.
+**The department pays for poster printing**, but only if your file is in on time: it must be
+submitted by **Thursday, December 3, 2026**, one week before the event. That deadline is not mine
+and I cannot extend it. A team that misses it can still satisfy the requirement, but pays for its
+own printing — or submits a short video instead, which is an accepted substitute.
+
+Read the next section before deciding how much effort to put in: the poster is also the only thing
+that puts you in front of the award judges.
 
 ### 40AU awards — $3,500 / $1,000 / $500
 
 The top three projects receive monetary awards of **$3,500, $1,000, and $500**, divided equally
-among team members and deposited into each student's Vanderbilt account. *(Amounts as announced by
-the department for Fall 2026; they are set by the donor and could change — confirm before counting
-on a number.)*
+among team members and deposited into each student's Vanderbilt account. The amounts are set by the
+donor and can change from year to year.
 
 **Only teams that submit a poster file — or another medium that introduces the project, such as a
 short video — by December 3 will be considered by the judges.** There are too many projects for
@@ -632,8 +638,8 @@ Mechanics that matter:
 
 - Applications are evaluated on a **monthly** cycle, deadlines at 11:59 p.m., with decisions about
   three weeks later. Fall 2026 monthly deadlines: **Sep 15 · Oct 15 · Nov 16 · Dec 10**.
-- The **fall cycle closes Monday, September 14** per the page's own text — note the page also lists
-  a September 15 deadline in its table, so treat **September 14** as the safe date.
+- The **fall cycle closes Monday, September 14.** The funding page is inconsistent about this and
+  also shows September 15 — treat **September 14** as the deadline.
 - There are **two separate applications** — Immersion Experience funding and Culminating Project
   funding — and they must be submitted in sequence, never in the same cycle.
 - A **funding workshop is required every year**, even if you have attended before.
@@ -650,10 +656,6 @@ Mechanics that matter:
 
 Questions about the Showcase or about Immersion generally can come to me, or directly to
 **Prof. Robert Tairas**, Immersion Coordinator for Computer Science (377 Jacobs Hall).
-
-The award structure, the poster deadline, and the judging metrics in this section come from the CS
-Immersion coordinator's pre-semester announcement to instructors — they are **not** published on
-the public Immersion pages, so do not go looking for them there.
 
 ---
 
