@@ -118,8 +118,8 @@ safety property down in the first place.
   outlier in its approach to L2 technology by mismatching a weak driver engagement system with
   Autopilot's permissive operating capabilities.' It supports 'the design contributed' — but
   watch ODI's own counterfactual, that those crashes 'would have been avoidable by attentive
-  drivers,' which pushes back the other way. ~11 pp, 20 min; if you read only one thing on
-  this list, make it this one.
+  drivers,' which pushes back the other way. 6 pp, 15 min; if you read only one thing on this
+  list, make it this one.
 
 - **Joint Authorities Technical Review (JATR), "Boeing 737 MAX Flight Control System: Observations, Findings, and Recommendations," submitted to the FAA, 11 October 2019** (primary, 2019)  
   <https://www.faa.gov/sites/faa.gov/files/2021-08/Final_JATR_Submittal_to_FAA_Oct_2019.pdf>  
@@ -164,6 +164,12 @@ safety property down in the first place.
   important here: it attributes no death to the model anywhere. It supports 'deployment far
   outran validation' while refusing 'medical AI killed people.' 6 pp — the shortest and
   easiest reading on this list (15 min).
+  **Read the correction with it.** *Errors in Table 2 and Results*, JAMA Internal Medicine
+  181(8):1144, doi:10.1001/jamainternmed.2021.3907 — "the number needed to evaluate that is
+  presented in Table 2 and the Results should be **8, not 15**." The figure quoted above is the
+  corrected one; the version of Table 2 you will see if you skim the original PDF is not. That
+  is worth two minutes of your attention in a course about the difference between a number that
+  is checked and a number that is repeated.
 
 - **UN Security Council, Letter dated 8 March 2021 from the Panel of Experts on Libya established pursuant to resolution 1973 (2011), S/2021/229, paragraph 63** (primary, 2021)  
   <https://digitallibrary.un.org/record/3905159/files/S_2021_229-EN.pdf>  

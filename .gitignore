@@ -66,3 +66,6 @@ Thumbs.db
 
 # build artifact from `make links`
 link-check.txt
+
+# Generated bibliographies — rebuild with bib/make_bibliographies.py
+bib/build/

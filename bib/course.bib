@@ -1,0 +1,287 @@
+% =====================================================================
+%  CS 3892 / CS 5892 — Formal Methods: Safe and Trustworthy AI
+%  Vanderbilt University · Fall 2026
+%
+%  Programmatic reference list for the course. Every entry here was
+%  verified against a primary source, not a search result:
+%
+%    * journal articles  — resolved through doi.org content negotiation
+%                          (CSL-JSON) and cross-checked against PubMed
+%    * reports and court filings
+%                        — the PDF was downloaded and the quoted text
+%                          located inside it with pdftotext
+%
+%  Verified 2026-08-26. `note` fields record what was checked and any
+%  live caveat (errata, author conflicts, paywalls).
+%
+%  Build:  pdflatex main && bibtex main && pdflatex main && pdflatex main
+%  Style:  plain / abbrv / IEEEtran all work; no external .bst needed.
+%
+%  Key convention:  <firstauthor><year><shorttopic>
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% D1 — Has AI ever killed anyone?  (Session 1, Thu Aug 27)
+% ---------------------------------------------------------------------
+
+@techreport{ntsb2019tempe,
+  keywords    = {d1, week01, unit1, primary},
+  author      = {{National Transportation Safety Board}},
+  title       = {Collision Between Vehicle Controlled by Developmental
+                 Automated Driving System and Pedestrian, {Tempe}, {Arizona},
+                 March 18, 2018},
+  institution = {National Transportation Safety Board},
+  type        = {Highway Accident Report},
+  number      = {NTSB/HAR-19/03},
+  address     = {Washington, DC},
+  year        = {2019},
+  month       = nov,
+  url         = {https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1903.pdf},
+  note        = {Adopted 19 November 2019. 78 pp. Verified: the report contains
+                 ``the system design did not include consideration for jaywalking
+                 pedestrians,'' the one-second ``action suppression'' window, the
+                 5.6-second first detection, the probable-cause finding of an
+                 operator ``visually distracted throughout the trip by her personal
+                 cell phone,'' and the counterfactual that an attentive operator
+                 ``would likely have had sufficient time'' to avoid the collision}
+}
+
+@techreport{nhtsa2024autopilot,
+  keywords    = {d1, week01, unit1, primary},
+  author      = {{National Highway Traffic Safety Administration, Office of
+                 Defects Investigation}},
+  title       = {Additional Information Regarding {EA22002}},
+  institution = {National Highway Traffic Safety Administration},
+  type        = {Engineering Analysis closing resume},
+  number      = {EA22002},
+  year        = {2024},
+  month       = apr,
+  url         = {https://static.nhtsa.gov/odi/inv/2022/INCR-EA22002-14496.pdf},
+  note        = {25 April 2024. 6 pp---not the 11 pp often cited. Verified verbatim:
+                 ``The 211 crashes considered as part of this analysis resulted in
+                 13 fatal crashes leading to 14 deaths and 49 injuries,'' drawn from
+                 956 total crashes reviewed; and the defect finding that Tesla is an
+                 ``industry outlier in its approach to L2 technology by mismatching a
+                 weak driver engagement system with Autopilot's permissive operating
+                 capabilities.'' Note the counterfactual in the same document, that
+                 the crashes ``would have been avoidable by attentive drivers''}
+}
+
+@article{leveson1993therac,
+  keywords    = {d1, week01, unit1, academic},
+  author  = {Leveson, Nancy G. and Turner, Clark S.},
+  title   = {An Investigation of the {Therac-25} Accidents},
+  journal = {Computer},
+  volume  = {26},
+  number  = {7},
+  pages   = {18--41},
+  year    = {1993},
+  month   = jul,
+  doi     = {10.1109/MC.1993.274940},
+  note    = {DOI resolves to exactly this journal, volume, issue and page range.
+             Source of the sentence the whole discussion turns on: ``To attribute a
+             single cause to an accident is usually a serious mistake''}
+}
+
+@techreport{jatr2019mcas,
+  keywords    = {d1, week01, unit1, primary},
+  author      = {{Joint Authorities Technical Review}},
+  title       = {{Boeing 737 MAX} Flight Control System: Observations, Findings,
+                 and Recommendations},
+  institution = {Submitted to the Federal Aviation Administration},
+  year        = {2019},
+  month       = oct,
+  url         = {https://www.faa.gov/sites/faa.gov/files/2021-08/Final_JATR_Submittal_to_FAA_Oct_2019.pdf},
+  note        = {11 October 2019. 71 pp. The non-AI control case. Verified: MCAS
+                 ``was not evaluated as a complete and integrated function in the
+                 certification documents''; it rested on data and assumptions
+                 ``reused from a previous aircraft configuration''; and the cover
+                 letter's ``evolution of MCAS from a relatively benign system to a
+                 much more aggressive system.'' This is specification drift, not a
+                 system faithfully executing an analysed spec}
+}
+
+@misc{garcia2025order,
+  keywords    = {d1, week01, unit1, legal},
+  author       = {{Conway, Anne C., United States District Judge}},
+  title        = {Order on Motions to Dismiss, {Garcia v. Character Technologies,
+                  Inc.}, {No. 6:24-cv-1903-ACC-UAM} ({M.D. Fla.}), {Doc. 115}},
+  howpublished = {United States District Court, Middle District of Florida,
+                  Orlando Division},
+  year         = {2025},
+  month        = may,
+  url          = {https://storage.courtlistener.com/recap/gov.uscourts.flmd.433581/gov.uscourts.flmd.433581.115.0.pdf},
+  note         = {Signed 20 May 2025, filed 21 May 2025. 49 pp. Docket header verified
+                 as ``Case 6:24-cv-01903-ACC-UAM Document 115 Filed 05/21/25.''
+                 The court is ``not prepared to hold that Character A.I.'s output is
+                 speech,'' and treats the app as ``a product.'' Crucially the order
+                 states the facts ``are taken as true for the purposes of this
+                 Order''---so it supports ``courts are starting to treat models as
+                 products'' and flatly refutes ``a court found the chatbot killed him''}
+}
+
+@misc{raine2025complaint,
+  keywords    = {d1, week01, unit1, legal},
+  author       = {{Raine, Matthew and Raine, Maria}},
+  title        = {Complaint, {Raine v. OpenAI, Inc.} and {Samuel Altman}},
+  howpublished = {Superior Court of the State of California,
+                  County of San Francisco. Filed by Edelson PC and the
+                  Tech Justice Law Project},
+  year         = {2025},
+  month        = aug,
+  url          = {https://www.courthousenews.com/wp-content/uploads/2025/08/raine-vs-openai-et-al-complaint.pdf},
+  note         = {Filed 26 August 2025. 39 pp. Verified: exactly seven causes of
+                 action, beginning with strict product liability (design defect).
+                 A PLEADING, NOT A FINDING---no ruling of any kind. The chat
+                 excerpts quoted throughout the press are exhibits to this document
+                 and are not adjudicated facts}
+}
+
+@article{wong2021sepsis,
+  keywords    = {d1, week01, unit1, academic},
+  author  = {Wong, Andrew and Otles, Erkin and Donnelly, John P. and Krumm, Andrew
+             and McCullough, Jeffrey and DeTroyer-Cooley, Olivia and Pestrue, Justin
+             and Phillips, Marie and Konye, Judy and Penoza, Carleen and
+             Ghous, Muhammad and Singh, Karandeep},
+  title   = {External Validation of a Widely Implemented Proprietary Sepsis
+             Prediction Model in Hospitalized Patients},
+  journal = {JAMA Internal Medicine},
+  volume  = {181},
+  number  = {8},
+  pages   = {1065--1070},
+  year    = {2021},
+  month   = aug,
+  doi     = {10.1001/jamainternmed.2021.2626},
+  note    = {AUC 0.63 (95\% CI 0.62--0.64) over 38{,}455 hospitalizations, against the
+             developer's reported 0.76--0.83. Attributes no death to the model
+             anywhere. \textbf{See the correction, \texttt{wong2021sepsis-erratum}:
+             the number needed to evaluate is 8, not the 15 printed in the original
+             Table 2.} Cite the corrected figure}
+}
+
+@article{wong2021sepsis-erratum,
+  keywords    = {d1, week01, unit1, academic, erratum},
+  author  = {{JAMA Internal Medicine}},
+  title   = {Errors in {Table 2} and {Results}},
+  journal = {JAMA Internal Medicine},
+  volume  = {181},
+  number  = {8},
+  pages   = {1144},
+  year    = {2021},
+  month   = aug,
+  doi     = {10.1001/jamainternmed.2021.3907},
+  note    = {Correction to \texttt{wong2021sepsis}. Verbatim: ``the number needed to
+             evaluate that is presented in Table 2 and the Results should be 8, not
+             15.'' A student who downloads the original PDF will see 15}
+}
+
+@techreport{un2021libya,
+  keywords    = {d1, week01, unit1, primary},
+  author      = {{United Nations Security Council, Panel of Experts on Libya}},
+  title       = {Letter dated 8 March 2021 from the {Panel of Experts on Libya}
+                 established pursuant to resolution 1973 (2011) addressed to the
+                 {President of the Security Council}},
+  institution = {United Nations Security Council},
+  number      = {S/2021/229},
+  year        = {2021},
+  month       = mar,
+  url         = {https://digitallibrary.un.org/record/3905159/files/S_2021_229-EN.pdf},
+  note        = {548 pp; the passage is paragraph 63, on PDF page 17. The actual text
+                 behind the endlessly repeated ``first AI kill'': lethal autonomous
+                 weapons systems such as the STM Kargu-2 ``were programmed to attack
+                 targets without requiring data connectivity between the operator and
+                 the munition: in effect, a true `fire, forget and find' capability.''
+                 That is a statement about CAPABILITY. No casualty is attributed to
+                 autonomous engagement anywhere in the paragraph}
+}
+
+@article{kusano2024waymo,
+  keywords    = {d1, week01, unit1, academic},
+  author  = {Kusano, Kristofer D. and Scanlon, John M. and Chen, Yin-Hsiu and
+             McMurry, Timothy L. and Chen, Ruoshu and Gode, Tilia and Victor, Trent},
+  title   = {Comparison of {Waymo} Rider-Only Crash Data to Human Benchmarks at
+             7.1 Million Miles},
+  journal = {Traffic Injury Prevention},
+  volume  = {25},
+  number  = {sup1},
+  pages   = {S66--S77},
+  year    = {2024},
+  doi     = {10.1080/15389588.2024.2380786},
+  note    = {Verified against PubMed 39485678: 7.14 million rider-only miles;
+             any-injury-reported 0.60 vs 2.80 incidents per million miles (80\%
+             reduction); police-reported 2.1 vs 4.68 (55\% reduction).
+             TWO CAVEATS TO CARRY WITH THOSE NUMBERS: every author is affiliated with
+             Waymo LLC, and the dataset contains no fatalities at all---so it is
+             statistically silent on the question D1 actually asks}
+}
+
+@techreport{kalra2016miles,
+  keywords    = {d1, week01, unit1, report},
+  author      = {Kalra, Nidhi and Paddock, Susan M.},
+  title       = {Driving to Safety: How Many Miles of Driving Would It Take to
+                 Demonstrate Autonomous Vehicle Reliability?},
+  institution = {RAND Corporation},
+  type        = {Research Report},
+  number      = {RR-1478-RC},
+  address     = {Santa Monica, CA},
+  year        = {2016},
+  url         = {https://www.rand.org/content/dam/rand/pubs/research_reports/RR1400/RR1478/RAND_RR1478.pdf},
+  note        = {15 pp. Verified: 275 million failure-free miles merely to show a
+                 fatality rate better than the human 1.09 per 100 million miles, and
+                 ``hundreds of billions of miles'' to demonstrate small improvements.
+                 Cuts against both sides at once---neither the vendors claiming lives
+                 saved nor the critics counting deaths have the miles to support a
+                 statistical claim. rand.org blocks some command-line fetchers;
+                 it opens normally in a browser}
+}
+
+% ---------------------------------------------------------------------
+% Session 1 — course framing
+% ---------------------------------------------------------------------
+
+@techreport{dijkstra1970notes,
+  keywords    = {session01, week01, unit0, foundational},
+  author      = {Dijkstra, Edsger W.},
+  title       = {Notes on {Structured Programming}},
+  institution = {Technological University Eindhoven},
+  type        = {EWD},
+  number      = {249},
+  year        = {1970},
+  url         = {https://www.cs.utexas.edu/~EWD/ewd02xx/EWD249.PDF},
+  note        = {Section 3, ``On the Reliability of Mechanisms.'' The sentence is
+                 EXACTLY: ``Program testing can be used to show the presence of bugs,
+                 but never to show their absence!'' The widely circulated short form
+                 drops ``to show'' --- quote the original}
+}
+
+@misc{sothanaphan2026erdos728,
+  keywords    = {session01, week01, unit0, unit9, academic},
+  author       = {Sothanaphan, Nat},
+  title        = {Resolution of {Erd\H{o}s} Problem \#728: a Writeup of
+                  {Aristotle}'s {Lean} Proof},
+  howpublished = {arXiv preprint arXiv:2601.07421},
+  year         = {2026},
+  month        = jan,
+  doi          = {10.48550/arXiv.2601.07421},
+  url          = {https://arxiv.org/abs/2601.07421},
+  note         = {Submitted 12 January 2026. The AI-assisted resolution came from
+                 GPT-5.2 Pro together with Harmonic's Aristotle; the deliverable was
+                 a Lean proof, later rendered into informal mathematics. This is the
+                 course's opening argument: the result survived scrutiny because a
+                 proof assistant checked it mechanically, all the way down}
+}
+
+@misc{aws2025automatedreasoning,
+  keywords    = {session01, week01, unit1, unit3, industry},
+  author       = {{Amazon Web Services}},
+  title        = {{Automated Reasoning} Checks in {Amazon Bedrock Guardrails}},
+  howpublished = {AWS documentation},
+  year         = {2025},
+  month        = aug,
+  url          = {https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html},
+  note         = {Generally available 6 August 2025. The cleanest available
+                 illustration of where soundness does and does not live: an LLM
+                 translates natural language into formal logic---a step AWS's own
+                 documentation says ``may contain errors''---and only then does a
+                 mathematically sound step decide it}
+}

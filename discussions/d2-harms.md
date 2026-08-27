@@ -193,7 +193,7 @@ the first specification-writing exercise rather than a rhetorical flourish.
   of 7 July 2023 (https://www.pm.gov.au/media/final-report-royal-commission-robodebt-scheme),
   which I did fetch. About 1,000 pages in three volumes; read the report overview only.
 
-- **Alexandra Chouldechova and Daniel J. Hemel, "Race-conscious admissions algorithms and the law," Proceedings of the National Academy of Sciences 123(30), 20 July 2026, DOI 10.1073/pnas.2509764123** (academic, 2026) ⚠️ *not fetch-verified*  
+- **Alexandra Chouldechova and Daniel J. Hemel, "Race-conscious admissions algorithms and the law," Proceedings of the National Academy of Sciences 123(30), 20 July 2026, DOI 10.1073/pnas.2509764123** (academic, 2026) ⚠️ *citation confirmed via DOI resolution — title, authors, journal, volume and date all match; full text not fetch-verified, PNAS 403s automated fetchers*  
   <https://doi.org/10.1073/pnas.2509764123>  
   NOT VERIFIED BY PAGE RETRIEVAL: pnas.org returns 403 to automated clients, so I confirmed
   title, both authors, venue, volume/issue, date and the full abstract from publisher-

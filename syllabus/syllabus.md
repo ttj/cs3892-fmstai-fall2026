@@ -8,7 +8,8 @@
 
 ## 1. Instructor and course staff
 
-**Instructor:** Taylor T. Johnson, PhD, PE\
+**Instructor:** Taylor T. Johnson, PhD, PE — Professor of Computer Science, Computer Engineering,
+and Electrical Engineering\
 Email: <taylor.johnson@vanderbilt.edu> · Web: <https://www.taylortjohnson.com>
 
 **Office hours:** by appointment — email to schedule. Easiest immediately before or after class;
