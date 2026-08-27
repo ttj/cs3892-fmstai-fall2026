@@ -341,10 +341,25 @@ defined topics, or propose your own with approval.
 
 | Deliverable | Share of course grade | When |
 |---|---|---|
-| Proposal — report plus lightning talk | 5% | Thu Oct 1 |
-| Milestone — presentation plus **running artifact** | 10% | Thu Nov 12 |
+| **Early pitch** — team, topic, one slide, five minutes | (counts as participation) | *Tentative:* Thu Sep 17 |
+| Proposal — report plus lightning talk | 5% | *Tentative:* Thu Oct 1 |
+| Milestone — presentation plus **running artifact** | 10% | *Tentative:* Thu Nov 12 |
 | **Showcase poster or video file** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
-| Final — report, presentation, demo, artifacts | 35% | Dec 8 / Dec 10 and finals period |
+| Final — report, presentation, demo, artifacts | 35% | *Tentative:* Dec 8 / Dec 10 and finals period |
+
+> **Which of these dates can move, and which cannot.** The four presentation dates marked
+> *tentative* are **course-internal and provisional** — they are set by me, and I may shift them by a
+> session or two once I see how team formation and the tool sequence actually go. Any change will be
+> announced in class and on Brightspace with as much notice as I can give, and the **weights will not
+> change** with them. What is **not** tentative is anything set by the department or the registrar:
+> the **December 3 poster deadline**, the **December 10 Showcase**, add/drop, and the withdrawal
+> deadline. Plan against those as fixed.
+
+**The early pitch is new this year, and it is deliberately low-stakes.** Five minutes, one slide, no
+report: who is on your team, which topic you are taking, and what your FM half and AI half are. It
+is not separately weighted — it counts within participation. Its only job is to make you commit to a
+team and a topic in September rather than late October, because the second most common problem in
+Fall 2025 was teams starting the formal work too late to recover.
 
 Full instructions, the eight-topic menu, and the grading rubrics are posted on Brightspace and
 in the course repository.
@@ -439,8 +454,9 @@ the project rubrics, both posted on Brightspace and in the course repository.
 
 Attendance is expected. If you cannot attend, tell me in advance — much of the value of the course
 is in the in-class activities and discussions, and they cannot be made up asynchronously.
-Attendance on project presentation days (Oct 1, Nov 12, Dec 8, Dec 10) is required; peer feedback
-on those days is part of the participation grade.
+Attendance on project presentation days — tentatively Sep 17, Oct 1, Nov 12, Dec 8 and Dec 10, per
+the table in §7 — is required; peer feedback on those days is part of the participation grade. If
+one of those dates moves, the attendance requirement moves with it.
 
 ## 9. Generative AI policy
 
