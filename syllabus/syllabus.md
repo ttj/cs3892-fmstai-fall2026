@@ -4,10 +4,6 @@
 **Vanderbilt University · Fall 2026 · 3 credits**\
 **Tuesday / Thursday, 11:00 a.m. – 12:15 p.m. · Featheringill Hall (FGH) 209**
 
-> **Pre-semester version.** The teaching assistant has not yet been assigned; that line will be
-> filled in before classes begin. Everything else is final unless the registrar changes the
-> academic calendar.
-
 ---
 
 ## 1. Instructor and course staff
@@ -57,7 +53,8 @@ CS 4267, or ECE 4363.
 
 **Cross-listing:** CS 3892 (undergraduate) and CS 5892 (graduate) are the same course, taught
 together, with the same lectures, schedule, and Brightspace site. Graduate students complete
-additional coursework — see §7.
+additional coursework — see **§7, *Graduate students (CS 5892)***, which is where the difference
+is spelled out.
 
 ### Why this course, and why now
 
@@ -216,7 +213,7 @@ course, though you are welcome to.
 | Tool | Use | Zero-install |
 |---|---|---|
 | **Z3** | SMT solving | Z3 Guide, in-browser: <https://microsoft.github.io/z3guide/> · repo: <https://github.com/Z3Prover/z3> |
-| **nuXmv / NuSMV** | Model checking | smvis, in-browser: <https://smvis-378135919048.us-central1.run.app/> · nuXmv is licence-gated, so we use NuSMV where needed |
+| **nuXmv / NuSMV** | Model checking | smvis, in-browser: <https://smvis-378135919048.us-central1.run.app/> · nuXmv is license-gated, so we use NuSMV where needed |
 | **Lean 4** | Interactive theorem proving | <https://live.lean-lang.org/> · Natural Number Game: <https://adam.math.hhu.de/> |
 | **Cslib** | CS structures in Lean | <https://github.com/leanprover/cslib> — note the org is `leanprover`, **not** `leanprover-community` |
 | **CBMC** | Bounded model checking of C | GitHub Codespaces (course container) · <https://github.com/diffblue/cbmc> |
@@ -318,7 +315,13 @@ earned sense of what "bounded" versus "unbounded," and "checked" versus "proved,
 | **Term project** | **50%** |
 | Homeworks (5) | 20% |
 | Quizzes (5, lowest dropped) | 10% |
-| Case studies, attendance, and in-class participation | 20% |
+| Discussion reflections (9, lowest dropped) | 10% |
+| Leading one in-class case study | 5% |
+| In-class engagement and peer feedback | 5% |
+
+The last three rows are the 20% for case studies, attendance, and participation, itemized. These
+six rows are exactly the six categories you will see in the Brightspace gradebook, so the number
+you see there is the number this table describes.
 
 **There is no final exam planned.** The final project presentation and deliverables take its place.
 However — and this is the one place the grade structure can change — **the instructor reserves the
@@ -379,9 +382,11 @@ This is a discussion course as much as a lecture course, and the 20% is real.
 
 **Structured discussions.** Nine sessions during the semester devote roughly 30 minutes to a
 structured discussion of a genuinely contested question, each followed by a short written
-reflection of **150–250 words** — weekly for the first five weeks, then
-every other week. Format is **think–pair–share**: you think and write alone, argue it out with one
-partner, then we take it to the room. Topics include: *Has AI ever killed anyone? Are LLMs theft?
+reflection of **150–250 words**, due 11:59 p.m. two days after the session — weekly for the first
+five weeks, then every other week. Each reflection is scored **0–2**, and **the lowest of the nine
+is dropped**, so eight count. That drop covers one absence with no explanation needed. Format is
+**think–pair–share**: you think and write alone, argue it out with one partner, then we take it to
+the room. Topics include: *Has AI ever killed anyone? Are LLMs theft?
 Are AI's environmental impacts real or overstated? If AI writes all our software, do we still need
 to learn to code? Can we verify what we cannot specify?* Each has assigned reading — usually one
 source, under 30 minutes — posted a week ahead on Brightspace. **Come having read it.** The full
@@ -403,14 +408,32 @@ presentations.
 A ≥ 93 · A− ≥ 90 · B+ ≥ 87 · B ≥ 83 · B− ≥ 80 · C+ ≥ 77 · C ≥ 73 · C− ≥ 70 · D+ ≥ 67 · D ≥ 63 ·
 D− ≥ 60 · F < 60. The instructor may curve upward; never downward.
 
-### Graduate students (CS 5892)
+### Graduate students (CS 5892) — additional required work
 
-Graduate students are held to a higher standard throughout, and carry additional project
-components: a related-work survey of 8–12 papers that makes an argument rather than a list; a
-second independent evaluation axis (a second dataset, tool family, or ablation); an explicit
-threats-to-validity analysis with at least one experiment testing it; and a final report written
-to the standard of a workshop submission. In mixed teams, graduate members own these components,
-stated in the responsibility breakdown.
+CS 3892 and CS 5892 meet together and share one Brightspace site, one schedule, one set of
+lectures, and the same homeworks and quizzes. **The difference is the term project.** Graduate
+students carry four additional components, and are held to a higher standard on every rubric row.
+These are required, not extra credit, and a project without them is incomplete at the graduate
+level regardless of how good the rest of it is.
+
+| Additional requirement | What it means | Where it is graded |
+|---|---|---|
+| **Related-work survey** | 8–12 papers that make an *argument* about where your approach sits — not a list of summaries | Final report — related work |
+| **A second, independent evaluation axis** | A second dataset, a second tool family, or an ablation that isolates one design choice | Final report — evaluation |
+| **Threats to validity** | An explicit section naming what could make your conclusion wrong, plus **at least one experiment designed to test it** | Final report — threats |
+| **Publication-shaped writing** | A credible **8–10 page workshop submission in ACM/IEEE format**, not a class report | Final report — writing |
+
+**A higher standard throughout.** Graduate work is assessed on the same rubrics as undergraduate
+work, with a higher expectation at every level. A proposal, milestone, or final report that would
+earn full marks in CS 3892 does not automatically earn them in CS 5892.
+
+**Mixed teams are allowed, and normal.** In a mixed undergraduate/graduate team the graduate
+members **own** these components, and that ownership must be stated explicitly in the team's
+responsibility breakdown. Being on a team where somebody else wrote the survey does not satisfy
+the requirement.
+
+Full detail — including how each component maps onto the rubric — is in the project topic menu and
+the project rubrics, both posted on Brightspace and in the course repository.
 
 ## 8. Attendance
 
@@ -426,9 +449,9 @@ course about the trustworthiness of AI-produced artifacts; declining to use the 
 be beside the point. Two conditions:
 
 1. **Disclose it.** Every homework and every project deliverable has an AI-use section. Say what
-   you used and for what. Nobody is penalized for using AI; failing to disclose is an honour-code
+   you used and for what. Nobody is penalized for using AI; failing to disclose is an honor-code
    matter.
-2. **You are accountable for what you submit.** "The model produced it" is not a defence. In this
+2. **You are accountable for what you submit.** "The model produced it" is not a defense. In this
    course it is a particularly weak one, because for nearly everything we do there is a decision
    procedure available that will tell you whether the model was right. Run it.
 
