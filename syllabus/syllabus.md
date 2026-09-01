@@ -2,7 +2,7 @@
 ## Formal Methods: Safe and Trustworthy Artificial Intelligence
 
 **Vanderbilt University · Fall 2026 · 3 credits**\
-**Tuesday / Thursday, 11:00 a.m. – 12:15 p.m. · Featheringill Hall (FGH) 209**
+**Tuesday / Thursday, 11:00 a.m. – 12:15 p.m. · Featheringill Hall (FGH) 306**
 
 ---
 
@@ -102,7 +102,7 @@ By the end of the course you will be able to:
 ## 4. Course format and calendar
 
 Two 75-minute meetings per week, Tuesday and Thursday, 11:00 a.m.–12:15 p.m., in **Featheringill
-Hall (FGH) 209**. Sessions mix lecture, live tool demonstrations, in-class case-study discussion,
+Hall (FGH) 306**. Sessions mix lecture, live tool demonstrations, in-class case-study discussion,
 and project checkpoints. **Bring a laptop.**
 
 Key Fall 2026 dates (Vanderbilt Registrar, 2026–27 academic calendar; calendars are subject to
