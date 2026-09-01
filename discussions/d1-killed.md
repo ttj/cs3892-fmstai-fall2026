@@ -26,7 +26,7 @@ NTSB's *probable cause* — a statutory finding, not a criminal charge — was "
 
 In March 2019 Arizona prosecutors found "no basis for criminal liability" for Uber. Safety driver Rafaela Vasquez was indicted for negligent homicide in September 2020, pleaded guilty in July 2023 to a lesser charge of endangerment, and got three years' probation. No engineer or executive was charged. Uber later changed the ADS to keep tracking history across reclassifications, brake hard for mitigation, and leave Volvo's emergency braking on; NTSB asked NHTSA to require developer safety self-assessments.
 
-**Therac-25**: six patients received massive radiation overdoses between June 1985 and January 1987 from a machine that relied on software where earlier models had hardware interlocks; three died. **Tesla**: closing its Autopilot investigation in April 2024, NHTSA found 211 crashes where a Tesla's front struck something in its path (13 fatal, 14 deaths) and made a safety defect finding: Tesla was an "industry outlier ... mismatching a weak driver engagement system with Autopilot's permissive operating capabilities." Yet those crashes "would have been avoidable by attentive drivers." **Chatbots**: in *Garcia v. Character Technologies*, after 14-year-old Sewell Setzer III's death, a federal judge in May 2025 let claims proceed treating the app as a defective product and declined to hold its output protected speech — while taking the plaintiff's account "as true for the purposes of this Order." Nothing has been proved.
+**Therac-25**: six patients received massive radiation overdoses between June 1985 and January 1987 from a machine that relied on software where earlier models had hardware interlocks; three died. **Tesla**: closing its Autopilot investigation in April 2024, NHTSA found 211 crashes where a Tesla's front struck something in its path (13 fatal, 14 deaths) and called Tesla an "industry outlier ... mismatching a weak driver engagement system with Autopilot's permissive operating capabilities." Note what the agency did *not* do: it issued no defect determination. Tesla had filed the recall (23V838) itself in December 2023, and NHTSA closed the investigation on the strength of it. Note too that those crashes "would have been avoidable by attentive drivers." **Chatbots**: in *Garcia v. Character Technologies*, after 14-year-old Sewell Setzer III's death, a federal judge in May 2025 let claims proceed treating the app as a defective product and declined to hold its output protected speech — while taking the plaintiff's account "as true for the purposes of this Order." Nothing has been proved.
 
 ### Timeline
 
@@ -38,7 +38,7 @@ In March 2019 Arizona prosecutors found "no basis for criminal liability" for Ub
 | 19 November 2019 | NTSB adopts HAR-19/03. Probable cause: the vehicle operator's failure to monitor the road while visually distracted by her personal cell phone. Uber ATG's safety culture is listed only as contributing. |
 | September 2020 | A Maricopa County grand jury indicts safety driver Rafaela Vasquez on one count of negligent homicide. |
 | July 2023 | Vasquez pleads guilty to one count of endangerment, a reduced charge, and is sentenced to three years' probation. |
-| 25 April 2024 | NHTSA closes its Tesla Autopilot engineering analysis (EA22002): 956 crashes reviewed, 211 frontal-plane crashes, 13 fatal, 14 deaths; the safety defect finding calls Tesla an "industry outlier" in driver engagement. |
+| 25 April 2024 | NHTSA closes its Tesla Autopilot engineering analysis (EA22002): 956 crashes reviewed, 211 frontal-plane crashes, 13 fatal, 14 deaths; ODI calls Tesla an "industry outlier" in driver engagement. No defect determination is issued — Tesla had filed Recall 23V838 in December 2023, and ODI closes on that basis while opening a recall query (RQ24009) to test the remedy. |
 | 21 May 2025 | In Garcia v. Character Technologies, a federal judge lets product-liability claims proceed and declines to hold that chatbot output is protected speech — while expressly taking all of the plaintiff's facts as alleged. |
 
 ## The question
@@ -56,7 +56,7 @@ You will be assigned one of these in class. Come having thought about at least t
 
 **1.** NTSB put probable cause on the Uber safety driver's phone use and listed the company's safety
 culture as merely 'contributing.' NHTSA, looking at a structurally identical arrangement at
-Tesla — a supervising human, permissive automation — landed on a defect finding in the driver-
+Tesla — a supervising human, permissive automation — pointed at the driver-
 engagement design. Same shape, opposite attribution. Which agency drew the line in the right
 place, and what principle separates 'the human failed' from 'the design made human failure
 predictable'?
