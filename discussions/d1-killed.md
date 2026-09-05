@@ -43,6 +43,8 @@ In March 2019 Arizona prosecutors found "no basis for criminal liability" for Ub
 
 ## The question
 
+**Has AI ever killed anyone?**
+
 > On 18 March 2018 an Uber test vehicle struck and killed Elaine Herzberg in Tempe. The NTSB found
 > that the automated driving system detected her 5.6 seconds before impact, never once classified
 > her as a pedestrian, and then suppressed its own braking for a full second — not as a bug, but

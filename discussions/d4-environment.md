@@ -43,6 +43,8 @@ Data centres are just over 1% of global electricity by Carbon Brief's count, abo
 
 ## The question
 
+**Does anyone know what a prompt costs the planet?**
+
 > Global data centres used about 485 TWh of electricity in 2025, and the IEA expects that to
 > roughly double to 950 TWh by 2030, with 15 to 27 GW of on-site gas generation possibly attached
 > to them, mostly in the United States. Measuring inside its own production fleet, Google reports

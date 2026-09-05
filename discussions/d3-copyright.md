@@ -41,6 +41,8 @@ At stake is the field's cost structure: whether training data must be licensed, 
 
 ## The question
 
+**Does deleting the pirated books after training make it okay?**
+
 > In the last week of June 2025, two judges in the same federal courthouse decided cases about AI
 > companies downloading millions of books from shadow libraries, and reached opposite conclusions
 > on overlapping facts. Judge Alsup held that Anthropic's training was "exceedingly

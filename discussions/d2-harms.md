@@ -53,6 +53,8 @@ Therac-25, Horizon and Robodebt involved no machine learning at all.
 
 ## The question
 
+**Are the worst software harms still the ones with no AI?**
+
 > Almost every case on today's list in which someone died, went to prison, or lost a house
 > involved no machine learning at all: a radiation therapy machine, a rocket's inertial reference
 > unit, a Post Office accounting package, a welfare debt calculator that averaged annual income

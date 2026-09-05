@@ -43,6 +43,8 @@ Rice's theorem is the floor: no single procedure decides a non-trivial semantic 
 
 ## The question
 
+**Is writing the property harder than proving it?**
+
 > At AWS, engineers from entry level to Principal taught themselves TLA+ from scratch and got
 > useful results in two to three weeks; across ten large production systems they found bugs that
 > had survived design reviews, code reviews, and months of testing, including one whose shortest

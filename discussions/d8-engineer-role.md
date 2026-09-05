@@ -45,6 +45,8 @@ Whether specification-writing pays is unsettled among experts: on 28 March 2026 
 
 ## The question
 
+**Is a specification just a higher-level programming language?**
+
 > Since 2011 AWS engineers have model-checked their hardest distributed algorithms in TLA+, and by
 > 2022 AWS was answering roughly a billion SMT queries a day about customer access policies —
 > formal correctness became a shipped product feature, not a research curiosity. The same decade

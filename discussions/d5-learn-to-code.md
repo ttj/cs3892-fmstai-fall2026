@@ -47,6 +47,8 @@ On jobs: Brynjolfsson, Chandar and Chen, using ADP payroll data through June 202
 
 ## The question
 
+**Is knowing when the AI is wrong a coding skill?**
+
 > In 2022, ninety-five freelance developers were randomized to build an HTTP server with or
 > without GitHub Copilot; the ones with it finished 55.8% faster. In 2025, sixteen experienced
 > open-source developers were randomized across 246 real issues in repositories they had

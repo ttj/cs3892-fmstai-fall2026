@@ -2,9 +2,10 @@
 
 **CS 3892 / 5892, Fall 2026 · 5% of the course grade · one per student**
 
-Each of you leads or co-leads **one** in-class case study: roughly **10 minutes**, early in a
+Each of you leads or co-leads **one** in-class case study: **5–10 minutes**, early in a
 session, on a real failure of software or an AI system. Sign-up opens **Thursday August 27** and
-closes **Friday September 4**, the add/drop deadline. Anything unclaimed by then I assign.
+closes **Tuesday September 8** — extended from the add/drop deadline. Anything unclaimed by then
+I assign, and I will pair up anyone still on their own.
 
 ## What a case study has to do
 
@@ -87,9 +88,15 @@ many places are left, so you can see what is still open.
 - **One topic per student.** If you join and change your mind, leave the old group first.
 - **Co-leading is fine and often better** — agree between you who covers mechanism and who covers
   the formal-methods question.
-- **Closes Friday September 4, 11:59 p.m.** After that I assign what is left.
-- **Proposing your own:** email me the incident and one primary source before September 4, and I
+- **Closes Tuesday September 8.** After that I assign what is left, and pair up whoever is still
+  on their own.
+- **Proposing your own:** email me the incident and one primary source before September 8, and I
   will add it to the list so you can claim it.
 
-Your session will be scheduled to sit near the relevant unit — the Therac-25 and Ariane failures
-belong early, the neural-network cases belong in November. I will confirm dates once sign-up closes.
+**Working in a pair is the default.** You may work alone, but pairs are what I will aim for when
+I assign the leftovers — the topic is easier to cover well when one of you takes the mechanism and
+the other takes the formal-methods question.
+
+Presentations run **one or two per class** across the rest of the semester, and your session will
+be scheduled to sit near the relevant unit — the Therac-25 and Ariane failures belong early, the
+neural-network cases belong in November. I will confirm dates once sign-up closes.

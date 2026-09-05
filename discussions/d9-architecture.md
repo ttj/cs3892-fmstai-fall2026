@@ -43,6 +43,8 @@ A business was offline for over a day; two research teams showed private reposit
 
 ## The question
 
+**If no permission was exceeded, did anything fail?**
+
 > Since May 2025, agentic systems have leaked private repositories twice, deleted a production
 > database and its backups in nine seconds, and turned one click on a link into code execution on
 > a developer's own machine. In every case the recommended fix was architectural and entirely

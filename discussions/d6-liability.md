@@ -45,6 +45,8 @@ That same month two US federal judges withdrew orders from their own dockets: Ju
 
 ## The question
 
+**Does a second reviewer prevent failures, or just assign blame?**
+
 > In February 2024 a small-claims tribunal in British Columbia made Air Canada pay $812.02 because
 > its website chatbot described a refund policy the airline did not have. In October 2025 two US
 > federal judges told the Senate Judiciary Committee that staff in their chambers had used

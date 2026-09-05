@@ -285,6 +285,54 @@ def check_prompt_counts(m):
     return problems
 
 
+def check_marquee_questions(m):
+    """Every discussion has a marquee question, and the packet leads with it.
+
+    D2 is why this check exists. Session 3's discussion fell flat, and the
+    instructor's own diagnosis afterwards was "it doesn't have a super concrete
+    question. It's just mostly like read and thought about it." Measured across
+    the nine packets at the time: exactly one - D1 - had a question mark
+    anywhere in its "The question" section. The other eight ended on declarative
+    framing, which is good writing that a room cannot answer.
+
+    So course.yml now pins one interrogative sentence per discussion, and the
+    packet must open its "The question" section with that sentence in bold. The
+    same string goes on the slide. A discussion whose headline is a topic label
+    rather than a question is the failure mode being prevented here.
+    """
+    problems = []
+    for d in m["discussions"]:
+        q = d.get("question")
+        if not q:
+            problems.append(f"course.yml {d['id']} has no `question:`")
+            continue
+        if not q.endswith("?"):
+            problems.append(f"course.yml {d['id']} question does not end in '?': {q!r}")
+        words = len(q.split())
+        if words > 14:
+            problems.append(
+                f"course.yml {d['id']} question is {words} words; keep it under 14 so it "
+                f"fits one slide line: {q!r}")
+
+        rel = f"discussions/{d['file']}"
+        if not os.path.exists(os.path.join(ROOT, rel)):
+            continue
+        body = _section(read(rel), "## The question", "## Discussion questions")
+        if body is None:
+            problems.append(f"{rel} has no 'The question' section")
+            continue
+        lines = [ln.strip() for ln in body.split("\n") if ln.strip()]
+        if lines and lines[0].startswith("## "):
+            lines = lines[1:]
+        first = lines[0] if lines else ""
+        if first != f"**{q}**":
+            problems.append(
+                f"{rel} does not open 'The question' with the course.yml marquee question\n"
+                f"            want: **{q}**\n"
+                f"            got:  {first!r}")
+    return problems
+
+
 def _markdown_files():
     for dirpath, dirnames, filenames in os.walk(ROOT):
         dirnames[:] = [d for d in dirnames if d not in {".git", ".github", "node_modules"}]
@@ -492,6 +540,7 @@ CHECKS = [
     ("reflection spec stated consistently", check_reflection_spec),
     ("per-packet reading counts match course.yml", check_readings_invariant),
     ("prompt counts match course.yml", check_prompt_counts),
+    ("every discussion has a marquee question", check_marquee_questions),
     ("no instructor-only content", check_no_instructor_content),
     ("no scratch or draft files", check_no_forbidden_paths),
     ("syllabus.pdf built from current syllabus.md", check_pdf_fresh),
