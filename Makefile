@@ -19,7 +19,7 @@ check:
 	@python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
 	@python3 scripts/check_course.py
 
-pdf: syllabus/syllabus.pdf
+pdf: syllabus/syllabus.pdf assignments/hw1.pdf
 
 syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@mkdir -p .pandoc-tmp
@@ -34,6 +34,19 @@ syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@# Stamp the source hash. git does not preserve mtimes, so this is what
 	@# lets CI tell a stale committed PDF from a fresh one.
 	@sha256sum syllabus/syllabus.md | cut -d' ' -f1 > syllabus/.syllabus.md.sha256
+	@echo "wrote $@ (+ source stamp)"
+
+assignments/hw1.pdf: assignments/hw1.md tools/print.css
+	@mkdir -p .pandoc-tmp
+	$(PANDOC) -f gfm -t html5 --standalone \
+	  --metadata pagetitle="HW1 — Logic, SAT/SMT, and bounded reachability — CS 3892/5892" \
+	  --css tools/print.css --embed-resources \
+	  -o .pandoc-tmp/hw1.html $<
+	$(CHROME) --headless=new --disable-gpu --no-sandbox \
+	  --no-pdf-header-footer --print-to-pdf=$@ \
+	  file://$(CURDIR)/.pandoc-tmp/hw1.html
+	@rm -rf .pandoc-tmp
+	@sha256sum assignments/hw1.md | cut -d' ' -f1 > assignments/.hw1.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
 links:
