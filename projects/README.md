@@ -48,7 +48,9 @@ contributed equally" is not a responsibility breakdown.
 
 | Deliverable | Weight | When | Format |
 |---|---|---|---|
-| Proposal (report + lightning talk) | 5% | **Thu Oct 1** | 1–3 pages + 5–7 slides, 5–10 min |
+| Team sign-up (Brightspace groups, max 4) | — | **Tue Sep 22** | join the group for your topic |
+| Proposal report | 5% | **Tue Sep 29** | 1–3 pages |
+| Lightning-talk slides | — | **Mon Oct 5** | 5–7 slides, presented Tue Oct 6 |
 | Milestone (presentation + running artifact) | 10% | **Thu Nov 12** | ~8 slides, 8–15 min, **live tool demo** |
 | **Showcase poster or video file** | see below | **Thu Dec 3** | printable poster file, or a short video |
 | Final (report + presentation + demo + artifacts) | 35% | **Dec 8 / Dec 10** + finals period | 6–10 pages + ~15 min + repository |
@@ -84,7 +86,7 @@ testing-missed comparison, a 60-second screen recording of the tool finding a re
 The poster is folded into the final-deliverable grade (see [rubrics](rubrics.md)); it is not a
 separate percentage.
 
-### Proposal — Thursday October 1 (week 6)
+### Proposal — report Tuesday September 29, talk Tuesday October 6
 
 **Report (1–3 pages).** Must contain, explicitly labelled:
 

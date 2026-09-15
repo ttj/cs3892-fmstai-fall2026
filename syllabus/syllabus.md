@@ -343,7 +343,7 @@ defined topics, or propose your own with approval.
 | Deliverable | Share of course grade | When |
 |---|---|---|
 | **Early pitch** — team, topic, one slide, five minutes | (counts as participation) | *Tentative:* Thu Sep 17 |
-| Proposal — report plus lightning talk | 5% | *Tentative:* Thu Oct 1 |
+| Proposal — report plus lightning talk | 5% | Report **Tue Sep 29**; talk **Tue Oct 6** (slides due Mon Oct 5) |
 | Milestone — presentation plus **running artifact** | 10% | *Tentative:* Thu Nov 12 |
 | **Showcase poster or video file** — **required of undergraduate teams** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | *Tentative:* Dec 8 / Dec 10 and finals period |
