@@ -33,7 +33,7 @@ These are part of the 20% participation grade — see
   ethics interludes bolted onto a verification course. Each one bottoms out in a specification
   problem: someone had to say precisely what "safe," "fair," "transformative," or "one query's
   energy" means before anything could be checked, and mostly nobody did.
-- **Readings** — five to ten sources per topic, **89 in total, 86 verified by direct fetch**. Mixed
+- **Readings** — five to ten sources per topic, **89 in total**. Mixed
   academic, primary-document, legal, and journalism, and deliberately including sources that cut
   against the framing. One is assigned; the rest are there if you want to go further, or if you want
   to check a claim someone makes in the room.
@@ -70,6 +70,6 @@ the course, arriving early.
 
 ## Attribution
 
-Reading lists were assembled and every URL fetch-verified in August 2026. Three sources could not be
-retrieved from the network used and are marked ⚠️ in their packets; they are cited by their
-canonical identifiers and should be spot-checked before you rely on them.
+Reading lists were assembled in August 2026 and every link was checked. A few sources could not be
+opened and are marked ⚠️ in their packets; those are cited by their canonical identifiers and should
+be spot-checked before you rely on them.

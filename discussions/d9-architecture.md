@@ -104,7 +104,7 @@ still fail to say what you meant.
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. One is assigned to you; the rest are here if you want to go further, or if you need to back a claim up in the room.
+10 sources. One is assigned to you; the rest are here if you want to go further, or if you need to back a claim up in the room.
 
 - **Invariant Labs, "GitHub MCP Exploited: Accessing private repositories via MCP"** (primary, 2025)  
   <https://invariantlabs.ai/blog/mcp-github-vulnerability>  

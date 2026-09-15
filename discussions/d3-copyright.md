@@ -110,7 +110,7 @@ and data provenance is a supply-chain property with no accepted proof obligation
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. You will be assigned one; the rest are here if you want to go further, or if you want to check a claim you hear in the room.
+10 sources. You will be assigned one; the rest are here if you want to go further, or if you want to check a claim you hear in the room.
 
 - **Bartz v. Anthropic PBC, No. 3:24-cv-05417-WHA, Dkt. 231, "Order on Fair Use" (N.D. Cal. June 23, 2025) (Alsup, J.)** (primary, 2025)  
   <https://storage.courtlistener.com/recap/gov.uscourts.cand.434709/gov.uscourts.cand.434709.231.0_1.pdf>  

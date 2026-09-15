@@ -109,7 +109,7 @@ narrower than what we actually want.
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. One is assigned; the rest are here if you want to go further, or if you want to check a claim that comes up in discussion.
+10 sources. One is assigned; the rest are here if you want to go further, or if you want to check a claim that comes up in discussion.
 
 - **Chris Newcombe, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, Michael Deardeuff, "How Amazon Web Services Uses Formal Methods," Communications of the ACM 58(4), pp. 66-73** (academic, 2015)  
   <https://lamport.azurewebsites.net/tla/formal-methods-amazon.pdf>  

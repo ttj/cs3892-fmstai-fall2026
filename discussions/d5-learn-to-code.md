@@ -108,7 +108,7 @@ close.
 
 ## Readings
 
-9 sources, 9 verified by direct fetch. One is assigned; the rest are here if you want to go further, or to check a claim that comes up in the room.
+9 sources. One is assigned; the rest are here if you want to go further, or to check a claim that comes up in the room.
 
 - **Joel Becker, Nate Rush, Elizabeth Barnes, David Rein — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (METR)** (report, 2025)  
   <https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/>  

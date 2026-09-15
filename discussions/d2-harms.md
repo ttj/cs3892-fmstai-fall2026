@@ -118,7 +118,7 @@ the first specification-writing exercise rather than a rhetorical flourish.
 
 ## Readings
 
-10 sources, 8 verified by direct fetch. One of them will be assigned to you; the rest are here if you want to go further, or if you want to check a claim someone makes in class.
+10 sources. One of them will be assigned to you; the rest are here if you want to go further, or if you want to check a claim someone makes in class.
 
 - **Joy Buolamwini and Timnit Gebru, "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification," Proceedings of the 1st Conference on Fairness, Accountability and Transparency, PMLR vol. 81** (academic, 2018)  
   <https://proceedings.mlr.press/v81/buolamwini18a.html>  
@@ -185,21 +185,22 @@ the first specification-writing exercise rather than a rhetorical flourish.
   more robust. 313 pages; the parts you need are paragraphs 1-30 and the Horizon Issues
   answers (from para. 968).
 
-- **Royal Commission into the Robodebt Scheme, Report (Commissioner Catherine Holmes), delivered 7 July 2023, Commonwealth of Australia** (primary, 2023) ⚠️ *not fetch-verified*  
+- **Royal Commission into the Robodebt Scheme, Report (Commissioner Catherine Holmes), delivered 7 July 2023, Commonwealth of Australia** (primary, 2023) ⚠️ *page not opened while preparing this packet*  
   <https://robodebt.royalcommission.gov.au/publications/report>  
-  NOT VERIFIED FROM THIS ENVIRONMENT: the Commission's CDN reset every connection I made
-  (HTTP/1.1, HTTP/2, and the Wayback Machine all failed), so I am citing the official
-  publication page without having retrieved the document. Existence, date and the
+  The Commission's site would not serve the document while this packet was being put
+  together, so it is cited from its official publication page rather than from the report
+  itself. Existence, date and the
   Commissioner's description of the scheme as 'a crude and cruel mechanism, neither fair nor
   legal' were independently confirmed from the Australian Prime Minister's official statement
   of 7 July 2023 (https://www.pm.gov.au/media/final-report-royal-commission-robodebt-scheme),
-  which I did fetch. About 1,000 pages in three volumes; read the report overview only.
+  which is the version linked here. About 1,000 pages in three volumes; read the report
+  overview only.
 
-- **Alexandra Chouldechova and Daniel J. Hemel, "Race-conscious admissions algorithms and the law," Proceedings of the National Academy of Sciences 123(30), 20 July 2026, DOI 10.1073/pnas.2509764123** (academic, 2026) ⚠️ *citation confirmed via DOI resolution — title, authors, journal, volume and date all match; full text not fetch-verified, PNAS 403s automated fetchers*  
+- **Alexandra Chouldechova and Daniel J. Hemel, "Race-conscious admissions algorithms and the law," Proceedings of the National Academy of Sciences 123(30), 20 July 2026, DOI 10.1073/pnas.2509764123** (academic, 2026) ⚠️ *citation confirmed through the DOI; full text not read while preparing this packet*  
   <https://doi.org/10.1073/pnas.2509764123>  
-  NOT VERIFIED BY PAGE RETRIEVAL: pnas.org returns 403 to automated clients, so I confirmed
-  title, both authors, venue, volume/issue, date and the full abstract from publisher-
-  deposited Crossref metadata for this DOI rather than from the landing page. Substantively it
+  The citation — title, both authors, venue, volume and issue, date and abstract — is
+  confirmed from the publisher's own registered metadata for this DOI rather than from the
+  article page, which PNAS does not serve to non-browser clients. Substantively it
   is the source behind discussion question 5: it maps Students for Fair Admissions v.
   Harvard onto machine learning by distinguishing first- and second-order race consciousness
   at training and at prediction time, which turns 'the model never sees race' from a defence

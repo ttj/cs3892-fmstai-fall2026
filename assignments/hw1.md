@@ -67,8 +67,9 @@ Ask an LLM to produce the SMT-LIB encoding for Part 3. Report what it got right,
 wrong, and — critically — **how you knew.**
 
 An encoding that is `unsat` for the wrong reason looks exactly like a correct one until you check
-it. Say what check you ran. "I read it and it looked fine" is not a check; asserting the negation
-of a property you know should hold, and watching it come back `sat` with a model you can read, is.
+it, so say what check you ran. Reading it over and finding it plausible does not count. Asserting
+the negation of a property you know should hold, and watching it come back `sat` with a model you
+can read, does.
 
 ---
 
@@ -95,6 +96,7 @@ Discussion is encouraged; submitted work must be your own. **AI assistants are a
 expected** — this is a course about the reliability of AI-produced artifacts. Two conditions:
 
 1. **Disclose.** Say what you used and for what.
-2. **Verify.** You are responsible for everything you submit. "The model said so" is not a
-   justification, and here it is a particularly poor one: every tool in this course is a decision
-   procedure that can tell you whether the model was right. Use it.
+2. **Verify.** You are responsible for everything you submit, and "the model said so" does not
+   transfer that responsibility. It carries less weight in this course than almost anywhere else,
+   because every tool you will use is a decision procedure that can tell you whether the model was
+   right — so use one.

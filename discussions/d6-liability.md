@@ -117,7 +117,7 @@ care.
 
 ## Readings
 
-10 sources, 9 verified by direct fetch. One is assigned; the rest are there if you want to go further, or if you want to check a claim someone makes in the room.
+10 sources. One is assigned; the rest are there if you want to go further, or if you want to check a claim someone makes in the room.
 
 - **Soh Kian Peng & Vanessa Ng, "Chatbots and Liability for Negligent Misrepresentation: Moffatt v Air Canada 2024 BCCRT 149" (case comment), [2025] SAL Prac 16, SAL Practitioner (Technology), Singapore Academy of Law, published 6 June 2025** (academic, 2025)  
   <https://journalsonline.academypublishing.org.sg/Journals/SAL-Practitioner/Technology/ctl/eFirstSALPDFJournalView/mid/595/ArticleId/2065/Citation/JournalsOnlinePDF>  
@@ -130,15 +130,13 @@ care.
   record never established whether the bot was an LLM or a deterministic decision-tree. Its
   deterministic/non-deterministic split is the hinge of the whole discussion.
 
-- **Moffatt v. Air Canada, 2024 BCCRT 149 (British Columbia Civil Resolution Tribunal, 14 February 2024) — the decision itself** (legal, 2024) ⚠️ *not fetch-verified*  
+- **Moffatt v. Air Canada, 2024 BCCRT 149 (British Columbia Civil Resolution Tribunal, 14 February 2024) — the decision itself** (legal, 2024) ⚠️ *link not opened while preparing this packet*  
   <https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html>  
-  The primary document, listed so you can read the original rather than only commentary. Not
-  fetch-verified: CanLII returned HTTP 403 to every automated retrieval attempt (WebFetch,
-  curl, and a render proxy), and the BC CRT's own decisions server started returning 403
-  mid-session as well; the URL is the one four independent search engines return for this
-  citation, but the page behind it was never actually read, so it is flagged accordingly. A
-  normal browser should open it; if yours does not, the SAL comment above carries pinpoint
-  cites into it.
+  The primary document, listed so you can read the original rather than only commentary.
+  CanLII blocks non-browser access, so this URL is the one four independent search engines
+  return for the citation rather than a page that was opened and checked — treat it as
+  unconfirmed until you have it on screen. A normal browser should open it; if yours does
+  not, the SAL comment above carries pinpoint cites into the decision.
 
 - **Ayinde v London Borough of Haringey; Al-Haroun v Qatar National Bank, [2025] EWHC 1383 (Admin), Divisional Court (Dame Victoria Sharp P. and Johnson J.), handed down 6 June 2025 — official text, The National Archives Find Case Law** (legal, 2025)  
   <https://caselaw.nationalarchives.gov.uk/ewhc/admin/2025/1383>  
@@ -212,8 +210,9 @@ care.
   representative, fulfilment service provider, distributor); "destruction or corruption of
   data" as compensable; entry into force 8 December 2024 and transposition by 9 December 2026,
   with the 1985 directive still governing earlier products. Watch out: this is the Commission's
-  own summary page, not the legislative text — EUR-Lex blocked automated retrieval, so the
-  Article numbers were never read directly. Do not cite Article numbers off this page.
+  own summary page, not the legislative text, and the Article numbers on it were never
+  checked against EUR-Lex. **Do not cite Article numbers off this page** — go to the
+  directive itself.
 
 - **European Parliament, Legislative Train Schedule, "AI liability directive" (file record; proposal COM(2022) 496, 28 September 2022; status: withdrawn) (retrieved 16 August 2026)** (primary, 2022)  
   <https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age/file-ai-liability-directive>  

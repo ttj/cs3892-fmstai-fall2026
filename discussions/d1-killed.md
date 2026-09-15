@@ -102,7 +102,7 @@ safety property down in the first place.
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. You will be assigned one; the rest are here if you want to go further, or if you want to check a claim that gets made in the room.
+10 sources. You will be assigned one; the rest are here if you want to go further, or if you want to check a claim that gets made in the room.
 
 - **National Transportation Safety Board, "Collision Between Vehicle Controlled by Developmental Automated Driving System and Pedestrian, Tempe, Arizona, March 18, 2018," Highway Accident Report NTSB/HAR-19/03 (adopted 19 Nov 2019)** (primary, 2019)  
   <https://www.ntsb.gov/investigations/AccidentReports/Reports/HAR1903.pdf>  

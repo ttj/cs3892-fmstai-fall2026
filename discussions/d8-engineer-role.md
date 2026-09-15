@@ -106,7 +106,7 @@ to get it?
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. One of them is the assigned reading (marked below); the rest are here if you want to go further, or if you need to check a claim someone makes in the room.
+10 sources. One of them is the assigned reading (marked below); the rest are here if you want to go further, or if you need to check a claim someone makes in the room.
 
 - **Chris Newcombe, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, Michael Deardeuff, "Use of Formal Methods at Amazon Web Services," Amazon.com technical report, 29 September 2014** (primary, 2014)  
   <https://lamport.azurewebsites.net/tla/formal-methods-amazon.pdf>  
@@ -118,9 +118,9 @@ to get it?
   feasible way to model sustained emergent performance degradation, and 'The Most Frequently
   Asked Question' (p.9) asks how they know the code implements the verified design and answers
   'The answer is that we don't.' IMPORTANT: this is the longer 2014 technical report, NOT the
-  CACM 58(4) April 2015 article 'How Amazon Web Services Uses Formal Methods'; ACM's site
-  blocks automated retrieval, so the CACM version could not be verified and is deliberately
-  not cited. 12 pages, but the part you need is pp.1-5 plus the section on p.9 (~20 min).
+  CACM 58(4) April 2015 article 'How Amazon Web Services Uses Formal Methods'. The CACM
+  version sits behind the ACM paywall and could not be checked, so it is deliberately not
+  cited here. 12 pages, but the part you need is pp.1-5 plus the section on p.9 (~20 min).
 
 - **Neha Rungta, "A Billion SMT Queries a Day," Amazon Science (write-up of the CAV 2022 keynote, 18 August 2022)** (primary, 2022)  
   <https://www.amazon.science/blog/a-billion-smt-queries-a-day>  

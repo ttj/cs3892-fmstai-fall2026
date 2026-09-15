@@ -112,7 +112,7 @@ than a point, which is reachability over an uncertainty set rather than a single
 
 ## Readings
 
-10 sources, 10 verified by direct fetch. One of them is assigned before class; the rest are here if you want to go further, or to check a claim that comes up in discussion.
+10 sources. One of them is assigned before class; the rest are here if you want to go further, or to check a claim that comes up in discussion.
 
 - **International Energy Agency, "Key Questions on Energy and AI — Executive summary," World Energy Outlook Special Report** (report, 2026)  
   <https://www.iea.org/reports/key-questions-on-energy-and-ai/executive-summary>  
@@ -211,13 +211,11 @@ than a point, which is reachability over an uncertainty set rather than a single
   <https://research.vu.nl/en/publications/daca1753-5603-416f-8fad-36460dc944c4>  
   The origin of the 3 Wh-per-query figure, the 85–134 TWh-by-2027 projection, and the clearest
   statement of the Jevons-paradox argument that efficiency gains get absorbed by demand — the
-  strongest reply to Google's 44x improvement claim. VERIFICATION NOTE: cell.com and
-  sciencedirect return HTTP 403 to automated fetch; the URL given is the VU Amsterdam
-  research-portal record for the article, which I fetched and which confirms title, author,
-  journal, volume, pages and DOI but carries no full text. The headline figures above were
-  confirmed from the Cell Press release, and the 3 Wh attribution is independently confirmed
-  in Epoch AI's piece; get the four-page PDF through the Vanderbilt library before quoting
-  anything else from it.
+  strongest reply to Google's 44x improvement claim. The link goes to the VU Amsterdam
+  research-portal record, which carries the full citation but not the article text. The
+  figures quoted above are confirmed from the Cell Press release, and the 3 Wh number
+  independently from the Epoch AI piece. **Get the four-page PDF through the Vanderbilt
+  library before quoting anything else from it.**
 
 ## What you submit
 
