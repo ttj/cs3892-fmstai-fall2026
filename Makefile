@@ -36,11 +36,14 @@ syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@sha256sum syllabus/syllabus.md | cut -d' ' -f1 > syllabus/.syllabus.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
-assignments/hw1.pdf: assignments/hw1.md tools/print.css
+assignments/hw1.pdf: assignments/hw1.md tools/print.css $(wildcard assignments/figures/*)
 	@mkdir -p .pandoc-tmp
+	@# --resource-path lets `figures/x.svg` in the markdown resolve both here and on
+	@# GitHub, which reads it relative to the .md file. --embed-resources then inlines
+	@# it, so the Chrome step needs no path of its own.
 	$(PANDOC) -f gfm -t html5 --standalone \
 	  --metadata pagetitle="HW1 — Logic, SAT/SMT, and bounded reachability — CS 3892/5892" \
-	  --css tools/print.css --embed-resources \
+	  --css tools/print.css --embed-resources --resource-path=.:assignments \
 	  -o .pandoc-tmp/hw1.html $<
 	$(CHROME) --headless=new --disable-gpu --no-sandbox \
 	  --no-pdf-header-footer --print-to-pdf=$@ \

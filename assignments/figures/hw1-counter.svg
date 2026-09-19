@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 264" width="1100" height="264" role="img" aria-labelledby="t d" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title id="t">The HW1 Part 3 counter</title>
+<desc id="d">A chain of states x = 0 through x = 11. x starts at 0 and every step adds exactly 1. States 0 through 10 satisfy the safety property x is at most 10; state 11 is the state the homework asks about.</desc>
+<defs>
+<marker id="ah" viewBox="0 0 10 8" refX="9.2" refY="4" markerWidth="8" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 4 L0 8 z" fill="#475569"/></marker>
+<marker id="ahr" viewBox="0 0 10 8" refX="9.2" refY="4" markerWidth="8" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 4 L0 8 z" fill="#b91c1c"/></marker>
+</defs>
+<rect x="0" y="0" width="1100" height="264" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+<rect x="72.0" y="102.0" width="887.3" height="100.0" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="5 4"/>
+<text x="86.0" y="94.0" font-size="14" fill="#64748b">the safety property <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#334155">x ≤ 10</tspan> holds on every state in here</text>
+<path d="M44.0 152.0 H88.0" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<text x="66.0" y="140.0" font-size="13" fill="#64748b" text-anchor="middle">init</text>
+<path d="M136.0 152.0 H168.7" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<text x="152.4" y="141.0" font-size="13" fill="#475569" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">+1</text>
+<path d="M216.7 152.0 H249.5" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M297.5 152.0 H330.2" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M378.2 152.0 H410.9" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M458.9 152.0 H491.6" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M539.6 152.0 H572.4" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M620.4 152.0 H653.1" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M701.1 152.0 H733.8" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M781.8 152.0 H814.5" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M862.5 152.0 H895.3" stroke="#475569" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+<path d="M943.3 152.0 H976.0" stroke="#b91c1c" stroke-width="1.8" fill="none" marker-end="url(#ahr)"/>
+<text x="959.6" y="141.0" font-size="13" fill="#b91c1c" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" text-anchor="middle">+1</text>
+<circle cx="112.0" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="112.0" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">0</text>
+<circle cx="192.7" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="192.7" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">1</text>
+<circle cx="273.5" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="273.5" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">2</text>
+<circle cx="354.2" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="354.2" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">3</text>
+<circle cx="434.9" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="434.9" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">4</text>
+<circle cx="515.6" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="515.6" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">5</text>
+<circle cx="596.4" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="596.4" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">6</text>
+<circle cx="677.1" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="677.1" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">7</text>
+<circle cx="757.8" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="757.8" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">8</text>
+<circle cx="838.5" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="838.5" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">9</text>
+<circle cx="919.3" cy="152.0" r="20" fill="#eff6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="919.3" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#1e3a8a" text-anchor="middle">10</text>
+<circle cx="1000.0" cy="152.0" r="25" fill="none" stroke="#dc2626" stroke-width="1" opacity="0.45"/>
+<circle cx="1000.0" cy="152.0" r="20" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8"/>
+<text x="1000.0" y="157.0" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#991b1b" text-anchor="middle">11</text>
+<text x="112.0" y="220.0" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#334155" text-anchor="middle">x0 = 0</text>
+<text x="1000.0" y="98.0" font-size="12" fill="#94a3b8" text-anchor="middle">the state you ask about</text>
+<text x="1000.0" y="220.0" font-size="13" fill="#b91c1c" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">x = 11</text>
+<text x="550.0" y="246.0" font-size="14" fill="#475569" text-anchor="middle">one integer variable · <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#334155">x0 = 0</tspan> · every step <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" fill="#334155">x′ = x + 1</tspan> · no guard, no reset</text>
+</svg>

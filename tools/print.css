@@ -83,6 +83,16 @@ th, td {
 th { background: #eef0f4; font-weight: 600; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 tbody tr:nth-child(even) { background: #fafbfc; }
 
+/* Figures are authored at their natural pixel width; without this a wide one
+   runs off the right margin instead of scaling to the text column. */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10pt auto;
+  break-inside: avoid;
+}
+
 blockquote {
   margin: 8pt 0;
   padding: 5pt 11pt;
