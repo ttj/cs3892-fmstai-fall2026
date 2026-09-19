@@ -46,8 +46,8 @@ semester-long team project that satisfies the CS project and Immersion requireme
 | 5–6 | Logic and preliminaries |
 | 7–8 | SAT, SMT, and decision procedures (Z3) |
 | 9 | Transition systems, invariants, SMV |
-| 10, 12 | Temporal logic: LTL, CTL, ω-words, Büchi automata |
-| 11 | *Project proposal talks* |
+| 10 | *Project proposal talks* |
+| 11, 12 | Temporal logic: LTL, CTL, ω-words, Büchi automata |
 | 13–14 | Model checking: explicit, symbolic, bounded (nuXmv) |
 | 15–17 | Program analysis: CBMC, deductive verification, abstract interpretation |
 | **18–21** | **Interactive theorem proving: Lean 4, then Cslib in two parts** |
@@ -99,7 +99,7 @@ Cslib's README, which points at `main` and pulls a release-candidate toolchain. 
 | **Theorem proving expanded to four sessions + Cslib** | Deliberate deepening. Cslib did not exist in Fall 2025; it is split across two sessions so the ω-automata material does not get cut live. |
 | **AI-risk unit compressed 4 sessions → 3** | To fund the above. Case studies are folded into the lecture sessions rather than standing alone. |
 | **Nine structured discussions added** | The course had case studies but no scheduled discussion time. 89 verified references across nine contested questions. |
-| **Team size raised to 3–4 (from 2–4)** | ABET teamwork assessment, attrition risk, Showcase logistics — and team size is a Showcase judging metric. |
+| **Team size: four ideal, three with an undergraduate, graduate pairs allowed** | ABET teamwork assessment, attrition risk, Showcase logistics — and team size is a Showcase judging metric. |
 | **Currency pass on every citation** | Standards, tool versions, and competition results all moved. See [`LINK-AUDIT.md`](LINK-AUDIT.md). |
 
 ## Keeping this repo and the instructor repo in step

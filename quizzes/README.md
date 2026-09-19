@@ -8,9 +8,11 @@ four that count is worth 2.5%).
 - Delivered in **Brightspace**, auto-graded.
 - 10–15 minutes, 8–12 questions: multiple choice, multiple select, short numeric, and
   match-the-formula-to-the-English.
-- **Open notes, open tools.** You may run Z3 or a model checker while taking one. The questions are
-  written on the assumption that you can — which means they test whether you can *interpret* what a
-  tool tells you, not whether you memorized syntax.
+- **Open course materials, open tools — but no chatbots.** You may use the slides, your notes, and
+  the course repositories, and you may run Z3 or a model checker while taking one. The questions are
+  written on the assumption that you can, which means they test whether you can *interpret* what a
+  tool tells you, not whether you memorized syntax. **Do not use an LLM assistant during a quiz.**
+  This is the one place in the course where that line is drawn — everywhere else AI use is expected.
 - Open one week before the deadline; due at **11:00 a.m.** on the listed day, i.e. before the class
   that uses the material.
 - One attempt. If something goes wrong technically, email immediately — do not restart.

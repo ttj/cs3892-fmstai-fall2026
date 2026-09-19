@@ -10,10 +10,16 @@ student has personally run every tool class before they have to choose one for a
 ## Design principles
 
 **One tool per homework, one property throughout.** Every homework verifies a variant of the *same*
-running example — a bounded counter that must never exceed 10 — with a different tool. By HW5 you
-will have proved essentially one fact five ways and will understand, concretely, what each style of
+running example — a bounded counter that must never exceed 10 — with a different tool. The machine
+and the property are defined once, in
+**[`labs/running-example.md`](../labs/running-example.md)**; read it before HW1. By HW5 you will
+have proved essentially one fact five ways and will understand, concretely, what each style of
 verification buys and what it costs. This is the [`ttj/fmaiv`](https://github.com/ttj/fmaiv)
 capstone structure, spread across a semester.
+
+**HW1 is the exception, on purpose.** It works a variant with the guard removed, where the property
+is *false* and a bounded checker can find the violation. Every homework after it uses the canonical
+machine, where the property holds.
 
 **Everything runs in the browser.** No student should lose a weekend to a toolchain. Every
 homework has a zero-install path (GitHub Codespaces or Google Colab); local installation is

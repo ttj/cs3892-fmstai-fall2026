@@ -98,10 +98,14 @@ steps, constrain each transition, assert the target appears somewhere, and ask.
 your job is to give the argument that makes it obvious without running anything.
 
 This is the running example for the whole semester — you will verify this same property four more
-times with four more tools, so it is worth understanding completely now. **One thing to carry
-forward:** the versions in HW2–HW5 *do* have a guard (`x` increments only while `x < 10`, and
-resets at the cap), and that guard is what makes them safe. This one deliberately has none, so
-that bounded model checking has something to find.
+times with four more tools, so it is worth understanding completely now.
+**[`labs/running-example.md`](../labs/running-example.md) defines the canonical machine**, and it
+is worth reading now rather than in October.
+
+**One thing to carry forward:** the canonical machine is *not* this one. It increments only while
+`x < 10` and resets to `0` at the cap, and with that guard in place `x = 11` is unreachable — the
+property holds and no `N` ever flips the answer. Part 3 deliberately uses the variant where it
+fails, so that a bounded checker has something to find. HW2–HW5 all work the canonical machine.
 
 ## Part 4 — AI component  *(20 points)*
 

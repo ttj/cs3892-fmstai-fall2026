@@ -3,8 +3,9 @@
 You must choose one of the **eight topics below**, or propose your own (see
 [*Proposing your own topic*](#proposing-your-own-topic) at the end — the bar is higher).
 
-**Teams are three or four people** — see [`README.md`](README.md#teams--minimum-three-four-preferred)
-for why, and note that team size is one of the Immersion Showcase judging metrics.
+**Four is the intended team size; three if any member is an undergraduate, and a graduate-only
+pair is allowed** — see [`README.md`](README.md#teams--four-ideal-three-minimum) for why, and note
+that team size is one of the Immersion Showcase judging metrics.
 
 Each topic is written so that a team of 3–4 can produce a real result in one semester. Each
 one names the tools, the data or benchmarks, a concrete definition of "done," and a stretch

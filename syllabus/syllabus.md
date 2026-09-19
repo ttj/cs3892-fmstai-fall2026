@@ -199,7 +199,7 @@ semantics mechanized in Agda). Tools: α,β-CROWN, NNV, n2v, NeuralSAT, PyRAT, M
 2026 results as a live dataset. An honest account of the scaling limits, and of certification
 practice in aviation.
 
-**Unit 11 · Project presentations (sessions 27–28).** Proposal talks are session 11 and the milestone is session 22.
+**Unit 11 · Project presentations (sessions 27–28).** Proposal talks are session 10 and the milestone is session 22.
 
 ## 6. Materials
 
@@ -238,7 +238,8 @@ short course with worked examples, notebooks, and a Codespaces container:
 - Repository: <https://github.com/ttj/fmaiv> · Slides: <https://ttj.github.io/fmaiv/>
 
 FMAIV threads a single bounded counter through Z3, nuXmv, Lean, CBMC, and Cryptol, verifying the
-*same* property five ways. The homeworks follow that thread. By the end you will have a concrete,
+*same* property five ways. The homeworks follow that thread; the machine and the property are
+defined once, in [`labs/running-example.md`](../labs/running-example.md). By the end you will have a concrete,
 earned sense of what "bounded" versus "unbounded," and "checked" versus "proved," actually mean.
 
 ### AI risk, standards, and governance
@@ -342,8 +343,7 @@ defined topics, or propose your own with approval.
 
 | Deliverable | Share of course grade | When |
 |---|---|---|
-| **Early pitch** — team, topic, one slide, five minutes | (counts as participation) | *Tentative:* Thu Sep 17 |
-| Proposal — report plus lightning talk | 5% | Report **Tue Sep 29**; talk **Tue Oct 6** (slides due Mon Oct 5) |
+| Proposal — report plus lightning talk | 5% | Talks in class **Tue Sep 29**; report and slides both due that day at **11:00 a.m.** |
 | Milestone — presentation plus **running artifact** | 10% | *Tentative:* Thu Nov 12 |
 | **Showcase poster or video file** — **required of undergraduate teams** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | *Tentative:* Dec 8 / Dec 10 and finals period |
@@ -356,11 +356,10 @@ defined topics, or propose your own with approval.
 > the **December 3 poster deadline**, the **December 10 Showcase**, add/drop, and the withdrawal
 > deadline. Plan against those as fixed.
 
-**The early pitch is new this year, and it is deliberately low-stakes.** Five minutes, one slide, no
-report: who is on your team, which topic you are taking, and what your FM half and AI half are. It
-is not separately weighted — it counts within participation. Its only job is to make you commit to a
-team and a topic in September rather than late October, because the second most common problem in
-Fall 2025 was teams starting the formal work too late to recover.
+**The proposal talks are deliberately early.** They are in class on **Tuesday September 29**, with
+the report (1–3 pages) and the slides (roughly 5–7) both due at 11:00 a.m. that morning. The point
+is to make you commit to a team and a topic in September rather than late October: the second most
+common problem in Fall 2025 was teams starting the formal work too late to recover.
 
 Full instructions, the eight-topic menu, and the grading rubrics are posted on Brightspace and
 in the course repository.
@@ -455,7 +454,7 @@ the project rubrics, both posted on Brightspace and in the course repository.
 
 Attendance is expected. If you cannot attend, tell me in advance — much of the value of the course
 is in the in-class activities and discussions, and they cannot be made up asynchronously.
-Attendance on project presentation days — tentatively Sep 17, Oct 1, Nov 12, Dec 8 and Dec 10, per
+Attendance on project presentation days — Sep 29, and tentatively Nov 12, Dec 8 and Dec 10, per
 the table in §7 — is required; peer feedback on those days is part of the participation grade. If
 one of those dates moves, the attendance requirement moves with it.
 
@@ -474,6 +473,11 @@ be beside the point. Two conditions:
 
 Submitting an unverified AI-generated proof is both an integrity problem and a strategic error:
 Lean will not accept `sorry`, and the compiler is a more rigorous grader than I am.
+
+**One exception: quizzes.** Quizzes are **open course materials and open tools — but no chatbots.**
+Slides, notes, the course repositories, and a running solver are all fair game; an LLM assistant is
+not. A quiz is a readiness check on your own understanding, and it is the only place in this course
+where that line is drawn.
 
 Vanderbilt guidance: <https://www.vanderbilt.edu/generative-ai/students/> ·
 <https://www.vanderbilt.edu/generative-ai/academic-integrity/>
@@ -566,10 +570,10 @@ undergraduate team regardless** (see below).
 selected "Senior project design." The Office of Immersion contacts instructors around the time
 final grades are due.
 
-### Team size — minimum three
+### Team size — four ideal, three minimum
 
-**Project teams must have at least three members. Four is preferred.** This is a firm rule, for
-three reasons:
+**Four is the intended size.** A team may be **three** if any of its members is an undergraduate,
+and a **graduate-only team of two** is permitted. This rule is here for three reasons:
 
 1. **ABET requires that we assess your ability to function as a member or leader of a team.** Two
    people is a stretch of that definition.
@@ -577,8 +581,8 @@ three reasons:
    member of a *pair* drops, you are alone in November with a project scoped for two.
 3. **Showcase logistics.** Fewer, larger teams means each team gets a proper space at the event.
 
-Teams of two, or solo projects, require my approval in advance and are held to the same total
-scope. Students using this course for the CS Project requirement must be on a team.
+Solo projects require my approval in advance and are held to the same total scope; a graduate pair
+does not. Students using this course for the CS Project requirement must be on a team.
 
 ### Posters — file due Thursday, December 3
 

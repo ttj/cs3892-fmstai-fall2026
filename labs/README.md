@@ -91,16 +91,12 @@ mid-2025).
 
 ## The running example
 
-Every tool in this course verifies a variant of the *same* property:
+Every tool in this course verifies a variant of the *same* property — a bounded counter whose
+value `x` never exceeds 10 — and the machine, the property, and the verdict you should get from
+each tool are defined once, in **[`running-example.md`](running-example.md)**.
 
-> **P:** a bounded counter's value `x` never exceeds 10.
-
-| Tool | Style | Verdict you should get |
-|---|---|---|
-| Z3 | bounded (SMT, depth ≤ N) | `unsat` — no counterexample within N |
-| NuSMV / nuXmv | unbounded (BDD reachability) | `x <= 10` is `true` |
-| Lean 4 | inductive proof, all N at once | builds, sorry-free |
-| CBMC | bounded, on real C source | `VERIFICATION SUCCESSFUL` |
+Read that page before HW1. It is the single source of truth: if a homework, a quiz or a slide
+disagrees with it, it is right and the other one is a bug.
 
 Five verdicts, five different meanings of the word "verified." Working out precisely how they
 differ — which ones would miss a bug past the bound, which ones force you to supply an inductive

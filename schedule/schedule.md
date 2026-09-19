@@ -22,9 +22,9 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 7 | Thu Sep 17 | 3 · SAT/SMT | SAT: CNF, DPLL/CDCL, resolution, UNSAT cores. Proving by refutation (`¬φ` UNSAT). | |
 | 8 | Tue Sep 22 | 3 · SAT/SMT | **💬 D5 (30 min): If AI writes all our software, do we still need to learn to code?** — SMT: theories (LIA, bit-vectors, EUF), DPLL(T). Z3 from Python and SMT-LIB. Encoding problems as constraints. Bounded reachability. | **Quiz 2** |
 | 9 | Thu Sep 24 | 4 · Modeling | Transition systems `T = (S, S₀, →, AP, L)`. Traces, reachability. Invariants and *inductive* invariants; strengthening. The SMV language. | **HW1 due · HW2 out** |
-| 10 | Tue Sep 29 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | **Proposal due** |
-| 11 | Thu Oct 1 | Project | **Project proposal lightning talks.** 5–10 min per team. *Talk day may move to Tue Oct 6 — slides are due Mon Oct 5 either way.* | **HW2 out** |
-| 12 | Tue Oct 6 | 5 · Temporal logic | **💬 D6 (30 min): Who is liable when AI-assisted software fails?** — CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3 · lightning-talk slides due Mon Oct 5** |
+| 10 | Tue Sep 29 | Project | **Project proposal lightning talks.** 5–10 min per team, roughly 5–7 slides. | **Proposal report + slides due 11:00 a.m.** |
+| 11 | Thu Oct 1 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | **HW2 out** |
+| 12 | Tue Oct 6 | 5 · Temporal logic | **💬 D6 (30 min): Who is liable when AI-assisted software fails?** — CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3** |
 | 13 | Thu Oct 8 | 6 · Model checking | Explicit-state and symbolic model checking. BDDs, image computation, fixpoints, quantifier elimination. | |
 | 14 | Tue Oct 13 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | |
 | 15 | Thu Oct 15 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | **HW2 due · HW3 out** |
@@ -85,8 +85,8 @@ verify what we cannot specify" is that lecture's question, not a digression from
 | Quiz 2 — logic, sets, first-order logic | — | Tue Sep 22 |
 | HW1 — logic, SAT/SMT, bounded reachability (Z3) | Thu Sep 10 | **Thu Sep 24** |
 | **Project team sign-up** (Brightspace groups, max 4) | — | **Tue Sep 22** |
-| **Project proposal** + lightning talk | Thu Aug 27 | **Tue Sep 29** |
-| **Lightning-talk slides** | — | **Mon Oct 5** |
+| **Project proposal** report + lightning talk | Thu Aug 27 | **Tue Sep 29, 11:00 a.m.** |
+| **Lightning-talk slides** | — | **Tue Sep 29, 11:00 a.m.** |
 | Quiz 3 — transition systems, invariants, SMV | — | Tue Oct 6 |
 | Quiz 4 — temporal logic and model checking | — | Tue Oct 27 |
 | HW2 — temporal logic and model checking (nuXmv) | Thu Oct 1 | **Thu Oct 15** |
@@ -128,7 +128,7 @@ day — before the class that uses the material. Lowest of the five is dropped.
   fully machine-checked arc (HML + bisimulation + the Hennessy–Milner theorem). Session 21 is the
   ω-automata material plus the honest inventory of what is missing. Running them as one session
   guarantees the second half gets cut live.
-- **Two project gates before the withdraw deadline.** The proposal (Oct 1) lands well before the
+- **Two project gates before the withdraw deadline.** The proposal (Sep 29) lands well before the
   Oct 30 withdrawal deadline, so you will know whether the course suits you while you still have
   options. The milestone (Nov 12) is deliberately four weeks from the end.
 - **Lean gets four sessions and HW4 gets three weeks**, spanning Thanksgiving on purpose. It is the

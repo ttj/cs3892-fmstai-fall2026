@@ -97,6 +97,6 @@ many places are left, so you can see what is still open.
 I assign the leftovers — the topic is easier to cover well when one of you takes the mechanism and
 the other takes the formal-methods question.
 
-Presentations run **one or two per class** across the rest of the semester, and your session will
+Presentations run **one per class** across the rest of the semester, and your session will
 be scheduled to sit near the relevant unit — the Therac-25 and Ariane failures belong early, the
 neural-network cases belong in November. I will confirm dates once sign-up closes.

@@ -29,11 +29,12 @@ and in one case not at all. A public or instructor-accessible Git repository is 
 **proposal** time, and commit history is part of the final grade — not to police you, but because
 a project with three commits on the last night did not happen the way the report claims.
 
-## Teams — minimum three, four preferred
+## Teams — four ideal, three minimum
 
-**Three or four members.** Teams of two, and solo projects, require instructor approval in advance
-and carry the same total scope. Undergraduates using this course for the CS Project requirement
-**must** be on a team.
+**Four is the intended size.** A team may be **three** if any of its members is an
+undergraduate, and a **graduate-only team of two** is permitted. Solo projects require
+instructor approval in advance and carry the same total scope. Undergraduates using this
+course for the CS Project requirement **must** be on a team.
 
 The rationale is in [syllabus §12](../syllabus/syllabus.md#12-cs-project-requirement-immersion-and-the-showcase)
 and is worth reading rather than skipping: ABET requires that we assess your ability to function as
@@ -49,8 +50,8 @@ contributed equally" is not a responsibility breakdown.
 | Deliverable | Weight | When | Format |
 |---|---|---|---|
 | Team sign-up (Brightspace groups, max 4) | — | **Tue Sep 22** | join the group for your topic |
-| Proposal report | 5% | **Tue Sep 29** | 1–3 pages |
-| Lightning-talk slides | — | **Mon Oct 5** | 5–7 slides, presented Tue Oct 6 |
+| Proposal report | 5% | **Tue Sep 29, 11:00 a.m.** | 1–3 pages |
+| Lightning-talk slides | — | **Tue Sep 29, 11:00 a.m.** | 5–7 slides, presented in class that day |
 | Milestone (presentation + running artifact) | 10% | **Thu Nov 12** | ~8 slides, 8–15 min, **live tool demo** |
 | **Showcase poster or video file** | see below | **Thu Dec 3** | printable poster file, or a short video |
 | Final (report + presentation + demo + artifacts) | 35% | **Dec 8 / Dec 10** + finals period | 6–10 pages + ~15 min + repository |
@@ -86,7 +87,7 @@ testing-missed comparison, a 60-second screen recording of the tool finding a re
 The poster is folded into the final-deliverable grade (see [rubrics](rubrics.md)); it is not a
 separate percentage.
 
-### Proposal — report Tuesday September 29, talk Tuesday October 6
+### Proposal — report and talk, Tuesday September 29
 
 **Report (1–3 pages).** Must contain, explicitly labelled:
 
