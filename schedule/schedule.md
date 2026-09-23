@@ -21,7 +21,7 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 6 | Tue Sep 15 | 2 · Logic | **💬 D4 (30 min): What are AI's environmental impacts — real, or overstated?** — First-order and higher-order logic. Quantifiers. The duality between formulas and sets of states — the idea the rest of the course runs on. | |
 | 7 | Thu Sep 17 | 3 · SAT/SMT | SAT: CNF, DPLL/CDCL, resolution, UNSAT cores. Proving by refutation (`¬φ` UNSAT). | |
 | 8 | Tue Sep 22 | 3 · SAT/SMT | **💬 D5 (30 min): If AI writes all our software, do we still need to learn to code?** — SMT: theories (LIA, bit-vectors, EUF), DPLL(T). Z3 from Python and SMT-LIB. Encoding problems as constraints. Bounded reachability. | **Quiz 2** |
-| 9 | Thu Sep 24 | 4 · Modeling | Transition systems `T = (S, S₀, →, AP, L)`. Traces, reachability. Invariants and *inductive* invariants; strengthening. The SMV language. | **HW1 due · HW2 out** |
+| 9 | Thu Sep 24 | 4 · Modeling | Transition systems `T = (S, S₀, →, AP, L)`. Traces, reachability. Invariants and *inductive* invariants; strengthening. The SMV language. | **HW1 due** |
 | 10 | Tue Sep 29 | Project | **Project proposal lightning talks.** 5–10 min per team, roughly 5–7 slides. | **Proposal report + slides due 11:00 a.m.** |
 | 11 | Thu Oct 1 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | **HW2 out** |
 | 12 | Tue Oct 6 | 5 · Temporal logic | **💬 D6 (30 min): Who is liable when AI-assisted software fails?** — CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3** |
