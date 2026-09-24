@@ -83,15 +83,15 @@ deliverables, which are presented in class and therefore cannot slip.
    (the vehicle-actuated traffic light makes this substantive).
 3. **Break it.** Introduce a bug into `next(x)`, obtain a counterexample, and explain the trace
    step by step: which transition fires, why the property fails at that state.
-4. **Bound hunt.** Using `bmc_depth.smv`, which hides a bug at depth 12, find the smallest BMC
+4. **Bound hunt.** Using `bmc_depth.smv`, which hides a bug some number of steps deep, find the smallest BMC
    bound that exposes it, and explain what a *passing* BMC run at bound 10 would and would not
    have told you.
 5. **AI component.** Have an LLM produce LTL for the same eight requirements. Check its formulas
    mechanically against yours (model-check `mine <-> llm`) rather than by eye, and report the
    disagreements.
 
-*Starters:* [`fmaiv/day02/examples`](https://github.com/ttj/fmaiv/tree/main/day02/examples) ·
-[smvis in-browser](https://bit.ly/fmaiv_smvis)
+*Starters:* [`cs3892-examples/homework/hw2-temporal-logic-model-checking`](https://github.com/ttj/cs3892-examples/tree/main/homework/hw2-temporal-logic-model-checking) ·
+[smvis in-browser](https://bit.ly/fmaiv_smvis) · full handout: `assignments/hw2.pdf`
 
 ### HW3 — Program analysis: bounded model checking and abstract interpretation
 *Out Thu Oct 15, due Thu Oct 29. Tools: CBMC, plus Frama-C or the course abstract interpreter.*

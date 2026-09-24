@@ -1,6 +1,6 @@
 # Course document build.
 #
-#   make pdf     regenerate syllabus/syllabus.pdf from syllabus/syllabus.md
+#   make pdf     regenerate syllabus/syllabus.pdf and assignments/hw*.pdf from their .md sources
 #   make links   re-check every URL in the repo (writes link-check.txt, gitignored)
 #
 # Pipeline: pandoc (GitHub-flavoured markdown) -> standalone HTML with inlined print CSS
@@ -19,7 +19,7 @@ check:
 	@python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
 	@python3 scripts/check_course.py
 
-pdf: syllabus/syllabus.pdf assignments/hw1.pdf
+pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf
 
 syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@mkdir -p .pandoc-tmp
@@ -50,6 +50,19 @@ assignments/hw1.pdf: assignments/hw1.md tools/print.css $(wildcard assignments/f
 	  file://$(CURDIR)/.pandoc-tmp/hw1.html
 	@rm -rf .pandoc-tmp
 	@sha256sum assignments/hw1.md | cut -d' ' -f1 > assignments/.hw1.md.sha256
+	@echo "wrote $@ (+ source stamp)"
+
+assignments/hw2.pdf: assignments/hw2.md tools/print.css $(wildcard assignments/figures/*)
+	@mkdir -p .pandoc-tmp
+	$(PANDOC) -f gfm -t html5 --standalone \
+	  --metadata pagetitle="HW2 — Temporal logic and model checking — CS 3892/5892" \
+	  --css tools/print.css --embed-resources --resource-path=.:assignments \
+	  -o .pandoc-tmp/hw2.html $<
+	$(CHROME) --headless=new --disable-gpu --no-sandbox \
+	  --no-pdf-header-footer --print-to-pdf=$@ \
+	  file://$(CURDIR)/.pandoc-tmp/hw2.html
+	@rm -rf .pandoc-tmp
+	@sha256sum assignments/hw2.md | cut -d' ' -f1 > assignments/.hw2.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
 links:
