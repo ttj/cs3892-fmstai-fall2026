@@ -26,8 +26,8 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 11 | Thu Oct 1 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | **HW2 out** |
 | 12 | Tue Oct 6 | 5 · Temporal logic | **💬 D6 (30 min): Who is liable when AI-assisted software fails?** — CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3** |
 | 13 | Thu Oct 8 | 6 · Model checking | Explicit-state and symbolic model checking. BDDs, image computation, fixpoints, quantifier elimination. | |
-| 14 | Tue Oct 13 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | |
-| 15 | Thu Oct 15 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | **HW2 due · HW3 out** |
+| 14 | Tue Oct 13 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | **HW2 due** |
+| 15 | Thu Oct 15 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | **HW3 out** |
 | 16 | Tue Oct 20 | 7 · Programs | **💬 D7 (30 min): Can we verify what we cannot specify?** — Deductive verification: Hoare logic, loop invariants, ACSL and Frama-C. Why the obvious invariant is usually not inductive. | |
 | — | Thu Oct 22 | | **Fall Break — no class** | |
 | 17 | Tue Oct 27 | 7 · Programs | Abstract interpretation: abstract domains, Galois connections, widening; what precision is lost at a join. Static, dynamic, and concolic analysis; automated test generation. | **Quiz 4** |
@@ -89,7 +89,7 @@ verify what we cannot specify" is that lecture's question, not a digression from
 | **Lightning-talk slides** | — | **Tue Sep 29, 11:00 a.m.** |
 | Quiz 3 — transition systems, invariants, SMV | — | Tue Oct 6 |
 | Quiz 4 — temporal logic and model checking | — | Tue Oct 27 |
-| HW2 — temporal logic and model checking (nuXmv) | Thu Oct 1 | **Thu Oct 15** |
+| HW2 — temporal logic and model checking (nuXmv) | Thu Oct 1 | **Tue Oct 13** |
 | HW3 — program analysis (CBMC, abstract interpretation) | Thu Oct 15 | **Thu Oct 29** |
 | Quiz 5 — program analysis and Lean basics | — | Tue Nov 10 |
 | **Project milestone** + live demo | — | **Thu Nov 12** |

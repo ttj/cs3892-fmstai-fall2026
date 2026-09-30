@@ -38,7 +38,7 @@ read by a human.
 | # | Out | Due | Topic | Primary tool | Zero-install path |
 |---|---|---|---|---|---|
 | HW1 | Thu Sep 10 | Thu Sep 24 | Logic, SAT/SMT, bounded reachability | Z3 (Python + SMT-LIB) | Colab / Codespaces |
-| HW2 | Thu Oct 1 | Thu Oct 15 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
+| HW2 | Thu Oct 1 | Tue Oct 13 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
 | HW3 | Thu Oct 15 | Thu Oct 29 | Program analysis: BMC and abstract interpretation | CBMC (+ Frama-C or the course abstract interpreter) | Codespaces |
 | HW4 | Thu Oct 29 | Thu Nov 12 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
 | HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
@@ -73,7 +73,7 @@ deliverables, which are presented in class and therefore cannot slip.
 [Colab](https://colab.research.google.com/github/ttj/fmaiv/blob/main/notebooks/01_day1_logic_sat_smt.ipynb)
 
 ### HW2 — Temporal logic and model checking
-*Out Thu Oct 1, due Thu Oct 15. Tool: nuXmv / NuSMV.*
+*Out Thu Oct 1, due Tue Oct 13. Tool: nuXmv / NuSMV.*
 
 1. **Read a model.** Given an SMV file, identify its initial states, transition relation, and
    state space size, and predict each property's verdict *before* running the tool. Then run it.

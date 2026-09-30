@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Out** | Thursday, October 1 |
-| **Due** | **Thursday, October 15, 11:59 p.m. US Central** |
+| **Due** | **Tuesday, October 13, 11:59 p.m. US Central** |
 | **Weight** | 4% of the course grade (100 points) |
 | **Tool** | nuXmv, or NuSMV — the same SMV language, and the same verdicts on every model here |
 | **Zero-install path** | smvis in the browser, or NuSMV in Google Colab or GitHub Codespaces |
@@ -22,8 +22,8 @@ liveness) covers Parts 1, 3 and 5 and seven of Part 2's eight requirements. **Re
 Part 2 needs CTL's path quantifiers — `EF` versus `AF` — which is Tuesday Oct 6's material.** Part
 1's one `SPEC` line uses `AG p`, which you have been reading as "`p` holds in every reachable
 state" since Sep 24; that is all it needs. Part 4 is bounded model checking, which you met with Z3
-on Sep 22. nuXmv's BMC engine is Tuesday Oct 13's lecture, but every command Part 4 needs is given
-below, so you do not have to wait for it.
+on Sep 22. nuXmv's BMC engine is Tuesday Oct 13's lecture — the day HW2 is due — so every command
+Part 4 needs is given below, and you do not need that lecture to do it.
 
 ---
 
