@@ -42,7 +42,8 @@ it stands for. And a bounded check that finds nothing has only looked as far as 
 
 **In the browser.** [smvis](https://bit.ly/fmaiv_smvis) runs NuSMV on your own `.smv` files and
 draws the state graph — enough to check properties and read counterexamples. Part 1's `-r` count
-and all of Part 4 use NuSMV command-line options, so for those use one of the routes below.
+and all of Part 4 use NuSMV command-line options, so for those use one of the routes below. (smvis
+labels a passing `LTLSPEC` as `SPEC` in its results list; the check it ran is still the LTL one.)
 
 **In Codespaces.** The course container described in [`labs/README.md`](../labs/README.md) has
 `NuSMV` preinstalled. Clone the examples repository into it and run `NuSMV` directly.
@@ -126,7 +127,9 @@ run it.
   it never needs one.)
 
 For each requirement, report the formula, whether it is LTL or CTL, and the verdict. For R1–R7,
-also say whether the requirement is a safety or a liveness property, with a one-line reason.
+also say whether the requirement is a safety property, a liveness property, or neither, with a
+one-line reason. Classify the formula you wrote: if it is both a safety and a liveness condition at
+once, say so.
 
 **For R8 — Tuesday Oct 6's material** — also check the formula you get by replacing `EF` with
 `AF` in yours (or `AF` with `EF`, if that is what you wrote). Report both verdicts and explain, in
@@ -222,7 +225,8 @@ result.
 
 Report the prompt you used, the LLM's eight formulas, a table with one row per requirement
 (agrees on the model? agrees in general? who was right?), and a paragraph on what kinds of mistake
-it made.
+it made. A pair that disagrees on the model cannot agree in general, so it needs no second check —
+write "no" and say which formula is right about the run that separates them.
 
 ---
 
