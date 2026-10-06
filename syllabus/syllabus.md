@@ -159,7 +159,7 @@ constraints. Bounded reachability. Why SMT is the engine under industrial halluc
 **Unit 4 · Modeling and specification (session 9).** Transition systems `T = (S, S₀, →, AP, L)`;
 traces and reachability; invariants and *inductive* invariants; strengthening. The SMV language.
 
-**Unit 5 · Temporal logic (sessions 10, 12).** LTL and CTL; safety versus liveness; ω-words and ω-regular
+**Unit 5 · Temporal logic (sessions 11, 12).** LTL and CTL; safety versus liveness; ω-words and ω-regular
 languages; Büchi automata and the automata-theoretic view of model checking. Signal temporal logic
 and quantitative robustness. Temporal properties over *agent execution traces* — the specification
 problem that per-request content filtering cannot express.
