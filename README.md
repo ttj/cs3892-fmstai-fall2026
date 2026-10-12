@@ -5,8 +5,9 @@ Instructor: [Taylor T. Johnson](https://www.taylortjohnson.com)
 
 Course materials: syllabus, schedule, homeworks, project topics, and rubrics.
 
-> **Status: pre-semester draft.** Items marked **[confirm]** await institutional confirmation
-> (cross-listing, room, TA, Immersion Showcase date). See [`STATUS.md`](STATUS.md) for the open list.
+> **Where things are.** Announcements, due dates, submissions and grades are in Brightspace, and
+> Brightspace is authoritative. Runnable examples and homework starters are in
+> [`ttj/cs3892-examples`](https://github.com/ttj/cs3892-examples).
 
 ## Contents
 
@@ -17,13 +18,13 @@ Course materials: syllabus, schedule, homeworks, project topics, and rubrics.
 | [`projects/README.md`](projects/README.md) | Project instructions and deliverables |
 | [`projects/project-topics.md`](projects/project-topics.md) | **Eight defined project topics** with tools, benchmarks, and success criteria |
 | [`projects/rubrics.md`](projects/rubrics.md) | How each project deliverable is graded |
-| [`assignments/README.md`](assignments/README.md) | The five homeworks |
+| [`assignments/README.md`](assignments/README.md) | The five homeworks. Handouts so far: [HW1](assignments/hw1.md), [HW2](assignments/hw2.md) |
 | [`discussions/README.md`](discussions/README.md) | **Nine in-class discussion packets** — case-study background, questions, readings |
 | [`discussions/participation.md`](discussions/participation.md) | The reflection you submit after each discussion, and how it is graded |
 | [`quizzes/README.md`](quizzes/README.md) | Quiz format and coverage |
 | [`labs/README.md`](labs/README.md) | Tool setup, zero-install paths, and the Lean version pin |
 | [`LINK-AUDIT.md`](LINK-AUDIT.md) | Every URL in the course materials, checked and dated |
-| [`course.yml`](course.yml) | **Single source of truth** — dates, weights, the nine discussions. Edit here first |
+| [`course.yml`](course.yml) | Dates, weights and the nine discussions, in one place; the documents are checked against it |
 
 ## The course in one paragraph
 

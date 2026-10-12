@@ -7,6 +7,9 @@
 #           -> headless Chrome --print-to-pdf.
 # Rationale: pandoc's LaTeX writer chokes on some of the unicode and long URLs here, and
 # Chrome's print engine gives usable page breaks and clickable links without a TeX install.
+#
+# tools/abs-links.lua turns repository-relative links into absolute GitHub URLs. Without it a
+# link from one document to another becomes file:///... on the build machine, dead for students.
 
 PANDOC  ?= pandoc
 CHROME  ?= $(shell command -v google-chrome || command -v chromium || command -v chromium-browser)
@@ -21,11 +24,12 @@ check:
 
 pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf
 
-syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
+syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css tools/abs-links.lua
 	@mkdir -p .pandoc-tmp
 	$(PANDOC) -f gfm -t html5 --standalone \
 	  --metadata pagetitle="CS 3892/5892 — Formal Methods: Safe and Trustworthy AI — Fall 2026" \
 	  --css tools/print.css --embed-resources \
+	  --lua-filter tools/abs-links.lua -M srcdir=syllabus \
 	  -o .pandoc-tmp/syllabus.html $<
 	$(CHROME) --headless=new --disable-gpu --no-sandbox \
 	  --no-pdf-header-footer --print-to-pdf=$@ \
@@ -36,7 +40,7 @@ syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css
 	@sha256sum syllabus/syllabus.md | cut -d' ' -f1 > syllabus/.syllabus.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
-assignments/hw1.pdf: assignments/hw1.md tools/print.css $(wildcard assignments/figures/*)
+assignments/hw1.pdf: assignments/hw1.md tools/print.css tools/abs-links.lua $(wildcard assignments/figures/*)
 	@mkdir -p .pandoc-tmp
 	@# --resource-path lets `figures/x.svg` in the markdown resolve both here and on
 	@# GitHub, which reads it relative to the .md file. --embed-resources then inlines
@@ -44,6 +48,7 @@ assignments/hw1.pdf: assignments/hw1.md tools/print.css $(wildcard assignments/f
 	$(PANDOC) -f gfm -t html5 --standalone \
 	  --metadata pagetitle="HW1 — Logic, SAT/SMT, and bounded reachability — CS 3892/5892" \
 	  --css tools/print.css --embed-resources --resource-path=.:assignments \
+	  --lua-filter tools/abs-links.lua -M srcdir=assignments \
 	  -o .pandoc-tmp/hw1.html $<
 	$(CHROME) --headless=new --disable-gpu --no-sandbox \
 	  --no-pdf-header-footer --print-to-pdf=$@ \
@@ -52,11 +57,12 @@ assignments/hw1.pdf: assignments/hw1.md tools/print.css $(wildcard assignments/f
 	@sha256sum assignments/hw1.md | cut -d' ' -f1 > assignments/.hw1.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
-assignments/hw2.pdf: assignments/hw2.md tools/print.css $(wildcard assignments/figures/*)
+assignments/hw2.pdf: assignments/hw2.md tools/print.css tools/abs-links.lua $(wildcard assignments/figures/*)
 	@mkdir -p .pandoc-tmp
 	$(PANDOC) -f gfm -t html5 --standalone \
 	  --metadata pagetitle="HW2 — Temporal logic and model checking — CS 3892/5892" \
 	  --css tools/print.css --embed-resources --resource-path=.:assignments \
+	  --lua-filter tools/abs-links.lua -M srcdir=assignments \
 	  -o .pandoc-tmp/hw2.html $<
 	$(CHROME) --headless=new --disable-gpu --no-sandbox \
 	  --no-pdf-header-footer --print-to-pdf=$@ \

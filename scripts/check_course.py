@@ -348,7 +348,7 @@ def _markdown_files():
 # The exemption is deliberately narrow: it covers only the two categories that
 # describe *apparatus and phrasing*. Secrets and student data are never exempt,
 # anywhere, for any file.
-POLICY_FILES = {"README.md", "STATUS.md", "LINK-AUDIT.md"}
+POLICY_FILES = {"README.md", "LINK-AUDIT.md"}
 POLICY_EXEMPT_CATEGORIES = {"instructor_apparatus", "instructor_voice", "instructor_voice_exact"}
 
 
