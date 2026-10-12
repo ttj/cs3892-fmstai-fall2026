@@ -2,6 +2,7 @@
 #
 #   make pdf     regenerate syllabus/syllabus.pdf and assignments/hw*.pdf from their .md sources
 #   make links   re-check every URL in the repo (writes link-check.txt, gitignored)
+#   make student-links   every link a student can click opens for a student (markdown and PDFs)
 #
 # Pipeline: pandoc (GitHub-flavoured markdown) -> standalone HTML with inlined print CSS
 #           -> headless Chrome --print-to-pdf.
@@ -14,7 +15,7 @@
 PANDOC  ?= pandoc
 CHROME  ?= $(shell command -v google-chrome || command -v chromium || command -v chromium-browser)
 
-.PHONY: check pdf links clean
+.PHONY: check pdf links student-links clean
 
 ## check: validate every cross-referenced fact against course.yml, and that
 ## nothing instructor-only has leaked into this class-facing repo.
@@ -83,6 +84,18 @@ links:
 	done < .links.txt | tee link-check.txt | grep -vE '^(200|202|203) ' || true
 	@rm -f .links.txt
 	@echo "full results in link-check.txt (see LINK-AUDIT.md for known bot-blocked hosts)"
+
+## student-links: no file: links, no missing files, and every link into a GitHub
+## repository goes to a PUBLIC repository and a path that exists. The script lives
+## in the examples repository; use the checkout beside this one, or fetch it.
+STUDENT_LINKS := $(firstword $(wildcard ../cs3892-examples/scripts/check_links.py))
+student-links:
+ifeq ($(STUDENT_LINKS),)
+	@curl -sSfL https://raw.githubusercontent.com/ttj/cs3892-examples/main/scripts/check_links.py -o .check_links.py
+	@python3 .check_links.py --skip LINK-AUDIT.md . ; rc=$$?; rm -f .check_links.py; exit $$rc
+else
+	@python3 $(STUDENT_LINKS) --skip LINK-AUDIT.md .
+endif
 
 clean:
 	rm -rf .pandoc-tmp .links.txt link-check.txt

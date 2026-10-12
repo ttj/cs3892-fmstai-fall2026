@@ -389,25 +389,60 @@ def check_no_forbidden_paths(m):
 
 
 def check_pdf_fresh(m):
-    """syllabus.pdf was built from the current syllabus.md.
+    """Every committed PDF was built from the current markdown beside it.
 
     git does not preserve mtimes, so a stale PDF on main is otherwise silent.
-    `make pdf` writes the source hash to syllabus/.syllabus.md.sha256.
+    `make pdf` writes the source hash to .<name>.md.sha256 next to each PDF.
     """
-    src = os.path.join(ROOT, "syllabus/syllabus.md")
-    pdf = os.path.join(ROOT, "syllabus/syllabus.pdf")
-    stamp = os.path.join(ROOT, "syllabus/.syllabus.md.sha256")
-    if not os.path.exists(pdf):
-        return ["syllabus/syllabus.pdf is missing"]
-    if not os.path.exists(stamp):
-        return ["syllabus/.syllabus.md.sha256 is missing — run `make pdf` and commit it"]
-    with open(src, "rb") as fh:
-        want = hashlib.sha256(fh.read()).hexdigest()
-    got = open(stamp).read().strip().split()[0]
-    if want != got:
-        return ["syllabus.pdf is stale — syllabus.md changed since the last `make pdf`. "
-                "Run `make pdf` and commit both the PDF and the .sha256 stamp."]
-    return []
+    problems = []
+    for rel in ("syllabus/syllabus", "assignments/hw1", "assignments/hw2"):
+        src, pdf = os.path.join(ROOT, rel + ".md"), os.path.join(ROOT, rel + ".pdf")
+        d, name = os.path.split(rel)
+        stamp = os.path.join(ROOT, d, f".{name}.md.sha256")
+        if not os.path.exists(src):
+            continue
+        if not os.path.exists(pdf):
+            problems.append(f"{rel}.pdf is missing — run `make pdf`")
+            continue
+        if not os.path.exists(stamp):
+            problems.append(f"{d}/.{name}.md.sha256 is missing — run `make pdf` and commit it")
+            continue
+        with open(src, "rb") as fh:
+            want = hashlib.sha256(fh.read()).hexdigest()
+        if want != open(stamp).read().strip().split()[0]:
+            problems.append(f"{rel}.pdf is stale — {name}.md changed since the last `make pdf`. "
+                            "Run `make pdf` and commit both the PDF and the .sha256 stamp.")
+    return problems
+
+
+def check_pdf_links(m):
+    """No committed PDF carries a link that only works on the machine that built it.
+
+    A PDF made from markdown turns a relative link into file:///... unless the
+    build rewrites it (tools/abs-links.lua does). Students got a syllabus and
+    two handouts whose cross-references were all dead that way.
+    """
+    import zlib
+    problems = []
+    uri = re.compile(rb"/URI\s*\((.*?)\)")
+    for dirpath, dirnames, filenames in os.walk(ROOT):
+        dirnames[:] = [d for d in dirnames if d not in {".git", "build", ".pandoc-tmp"}]
+        for fn in filenames:
+            if not fn.endswith(".pdf"):
+                continue
+            data = open(os.path.join(dirpath, fn), "rb").read()
+            found = set(uri.findall(data))
+            for blob in re.finditer(rb"stream\r?\n(.*?)\r?\nendstream", data, re.S):
+                try:
+                    found |= set(uri.findall(zlib.decompress(blob.group(1))))
+                except zlib.error:
+                    pass
+            rel = os.path.relpath(os.path.join(dirpath, fn), ROOT)
+            for u in sorted(found):
+                if u.lower().startswith((b"file:", b"http://localhost", b"http://127.")):
+                    problems.append(f"{rel} links to {u.decode('latin1')[:90]!r}, which opens only "
+                                    "on the build machine — rebuild with `make pdf`")
+    return problems
 
 
 def check_internal_links(m):
@@ -543,7 +578,8 @@ CHECKS = [
     ("every discussion has a marquee question", check_marquee_questions),
     ("no instructor-only content", check_no_instructor_content),
     ("no scratch or draft files", check_no_forbidden_paths),
-    ("syllabus.pdf built from current syllabus.md", check_pdf_fresh),
+    ("committed PDFs built from current markdown", check_pdf_fresh),
+    ("committed PDFs carry no local file links", check_pdf_links),
     ("internal links resolve", check_internal_links),
     ("every discussion has a deck", check_decks_present),
     ("dates parse, weekdays match, due offsets hold", check_due_offsets),

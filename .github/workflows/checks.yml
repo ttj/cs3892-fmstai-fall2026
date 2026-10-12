@@ -32,6 +32,19 @@ jobs:
       - name: validate against course.yml
         run: python3 scripts/check_course.py
 
+      # A homework README once linked a handout in a private repository, and the
+      # PDFs posted to students carried file:/// links. Both were invisible from
+      # the instructor's machine. This reads every markdown file and PDF here and
+      # fails on a link a student could not open: a local file, a missing file,
+      # or a GitHub repository that is not public. The script is the one the
+      # examples repository uses, fetched so there is a single copy.
+      - name: every link is one a student can open
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/ttj/cs3892-examples/main/scripts/check_links.py -o /tmp/check_links.py
+          python3 /tmp/check_links.py --skip LINK-AUDIT.md .
+
       - name: summary
         if: always()
         run: |

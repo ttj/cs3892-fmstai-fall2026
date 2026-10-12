@@ -109,16 +109,18 @@ Every fact that appears in more than one place — a date, a weight, a discussio
 lives once in [`course.yml`](course.yml). The markdown is checked against it rather than trusted.
 
 ```
-make check     # 14 consistency and leak checks (fast, no network)
-make links     # every cited URL; fails only on conclusively dead ones
-make pdf       # rebuild the syllabus PDF and stamp its source hash
+make check          # consistency and leak checks (fast, no network)
+make student-links  # every link opens for a student: no local files, no private repositories
+make links          # every cited URL; fails only on conclusively dead ones
+make pdf            # rebuild the syllabus and handout PDFs and stamp their source hashes
 ```
 
 **`make check` enforces:** packet headers, section order, and both index tables match `course.yml`;
 the 💬 markers sit on the right sessions; manifest dates appear in the syllabus; grading weights sum
 to 100 and agree across the syllabus and `participation.md`; the reflection spec is worded
 identically everywhere; the reading-list invariant (89 URLs, 3 unverified marks) is intact; internal
-links resolve; the committed PDF was built from the current markdown; no scratch or draft files; and
+links resolve; each committed PDF was built from the current markdown and carries no link that
+works only on the build machine; no scratch or draft files; and
 **nothing instructor-only has leaked into this repo** — run sheets, answer keys, instructor voice
 ("assign only pp. 1–2"), secrets, or student data.
 
