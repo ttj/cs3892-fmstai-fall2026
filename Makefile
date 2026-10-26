@@ -23,7 +23,7 @@ check:
 	@python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
 	@python3 scripts/check_course.py
 
-pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf assignments/hw3.pdf
+pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf assignments/hw3.pdf assignments/hw4.pdf
 
 syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css tools/abs-links.lua
 	@mkdir -p .pandoc-tmp
@@ -84,6 +84,20 @@ assignments/hw3.pdf: assignments/hw3.md tools/print.css tools/abs-links.lua $(wi
 	  file://$(CURDIR)/.pandoc-tmp/hw3.html
 	@rm -rf .pandoc-tmp
 	@sha256sum assignments/hw3.md | cut -d' ' -f1 > assignments/.hw3.md.sha256
+	@echo "wrote $@ (+ source stamp)"
+
+assignments/hw4.pdf: assignments/hw4.md tools/print.css tools/abs-links.lua $(wildcard assignments/figures/*)
+	@mkdir -p .pandoc-tmp
+	$(PANDOC) -f gfm -t html5 --standalone \
+	  --metadata pagetitle="HW4 — Interactive theorem proving in Lean 4 — CS 3892/5892" \
+	  --css tools/print.css --embed-resources --resource-path=.:assignments \
+	  --lua-filter tools/abs-links.lua -M srcdir=assignments \
+	  -o .pandoc-tmp/hw4.html $<
+	$(CHROME) --headless=new --disable-gpu --no-sandbox \
+	  --no-pdf-header-footer --print-to-pdf=$@ \
+	  file://$(CURDIR)/.pandoc-tmp/hw4.html
+	@rm -rf .pandoc-tmp
+	@sha256sum assignments/hw4.md | cut -d' ' -f1 > assignments/.hw4.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
 links:

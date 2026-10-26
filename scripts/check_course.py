@@ -395,7 +395,7 @@ def check_pdf_fresh(m):
     `make pdf` writes the source hash to .<name>.md.sha256 next to each PDF.
     """
     problems = []
-    for rel in ("syllabus/syllabus", "assignments/hw1", "assignments/hw2", "assignments/hw3"):
+    for rel in ("syllabus/syllabus", "assignments/hw1", "assignments/hw2", "assignments/hw3", "assignments/hw4"):
         src, pdf = os.path.join(ROOT, rel + ".md"), os.path.join(ROOT, rel + ".pdf")
         d, name = os.path.split(rel)
         stamp = os.path.join(ROOT, d, f".{name}.md.sha256")

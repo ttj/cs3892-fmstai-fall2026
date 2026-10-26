@@ -40,7 +40,7 @@ read by a human.
 | HW1 | Thu Sep 10 | Thu Sep 24 | Logic, SAT/SMT, bounded reachability | Z3 (Python + SMT-LIB) | Colab / Codespaces |
 | HW2 | Thu Oct 1 | Tue Oct 13 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
 | HW3 | Mon Oct 26 | Tue Nov 3 | Program analysis: BMC, loop invariants, abstract interpretation | CBMC 6, Z3, the course abstract interpreter | Colab / Codespaces |
-| HW4 | Tue Nov 3 | Thu Nov 12 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
+| HW4 | Tue Nov 3 | Thu Nov 12 | Interactive theorem proving | Lean 4 | Colab notebook / live.lean-lang.org / Codespaces |
 | HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
 
 Due dates are on the [course schedule](../schedule/schedule.md); submission is through Brightspace.
@@ -113,26 +113,28 @@ deliverables, which are presented in class and therefore cannot slip.
 [cs3892-examples](https://github.com/ttj/cs3892-examples), with a Colab notebook
 
 ### HW4 — Interactive theorem proving in Lean 4
-*Out Tue Nov 3, due Thu Nov 12. Tool: Lean 4.*
+*Out Tue Nov 3, due Thu Nov 12. Tool: Lean 4 (v4.33.0, core library only).*
 
-1. **Warm-up.** Finish the tactic ladder (`CounterLadder.lean`) — six rungs from `rfl` to the
-   counter's base case. If you have not played the Natural Number Game, do that first.
-2. **Discrete maths in Lean.** Prove a small set-theory batch: subset transitivity, De Morgan,
-   distribution of `∩` over `∪`. These are the propositions from week 4, now machine-checked.
-3. **Transition system.** Define a transition system in Lean, state an invariant, and prove it by
-   the inductive-invariant pattern (init lemma + step lemma + strengthening). You will be given a
-   property that is **not** inductive as stated and must strengthen it yourself. That step is the
-   whole assignment.
-4. **Parametric.** Generalize a bound from `10` to arbitrary `N` and prove it for all `N` — the
-   thing HW2's model checker could not do.
-5. **AI component.** Use an AI assistant as a proof partner and keep a per-lemma log: who wrote
-   it, how many iterations, and every hallucinated lemma name (Lean will tell you — the compiler
-   is the ground truth, which is exactly why this is a good place to study AI reliability).
+1. **A tactic ladder.** Seven rungs, one idea each: computation, linear arithmetic, `∧`, `∃`, `→`
+   (Curry–Howard), induction on a recursive definition, case analysis.
+2. **Discrete maths in Lean.** Five set identities with sets as predicates, the propositions of week
+   4 machine-checked. One needs classical logic: say which, and why.
+3. **Transition system.** A rate limiter for an agent's actions, where the property "at most 10 per
+   window" is true but **not inductive**, and the obvious strengthening is not enough either. You
+   find the invariant that is, and prove it by the inductive-invariant pattern (init lemma, step
+   lemma). That step is the whole assignment.
+4. **Parametric.** The same bound for every capacity `N`, and a proof that it is tight: the thing
+   HW2's model checker could not do.
+5. **AI component.** Use an AI assistant as a proof partner and keep a per-theorem log: who wrote
+   it, how many iterations, and every invented lemma or tactic name, with Lean's error. The compiler
+   is the ground truth, which is exactly why this is a good place to study AI reliability.
 
-**Acceptance:** `lake build` clean and **sorry-free**. `sorry` compiles and proves nothing; it is
-checked for automatically.
+**Acceptance:** `python3 check_hw4.py --strict` passes: every part builds, every statement is
+unchanged, and no proof uses `sorry`, `native_decide` or an axiom of your own. `sorry` compiles and
+proves nothing; the checker looks for it with `#print axioms`.
 
-*Starters:* [`fmaiv/day03`](https://github.com/ttj/fmaiv/tree/main/day03) ·
+*Full handout:* `assignments/hw4.pdf` · *starters:* `homework/hw4-lean/` in
+[cs3892-examples](https://github.com/ttj/cs3892-examples), with a Colab notebook ·
 [Lean web editor](https://live.lean-lang.org/) · [Natural Number Game](https://adam.math.hhu.de/)
 
 ### HW5 — Neural-network verification
