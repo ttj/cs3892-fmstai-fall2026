@@ -35,9 +35,9 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 19 | Tue Nov 3 | 8 · Theorem proving | **Lean 4 I:** terms, types, `def`, `theorem`, tactics. Curry–Howard. Induction. Live proving. | **HW3 due · Quiz 4 · HW4 out** |
 | 20 | Thu Nov 5 | 8 · Theorem proving | **💬 D8 (30 min): The future role of the software engineer: correctness, or design?** — **Lean 4 II:** transition systems in Lean. The inductive-invariant pattern — init lemma, step lemma, strengthening. Proving a *parametric* bound a model checker cannot settle. | |
 | 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib — the complete arc, and the honest gap.** Labelled transition systems, bisimulation and Hennessy–Milner logic, with the machine-checked Hennessy–Milner theorem; Büchi automata and the generalized-Büchi intersection — the intersection step of the pipeline from session 12. Then what Cslib does **not** have — no LTL, no LTL→Büchi translation, no emptiness check — i.e. exactly where "proved" stops and "asserted on a slide" begins. | **Quiz 5** |
-| 22 | Thu Nov 12 | Project | **Project milestone presentations.** 8–15 min per team, **live demo of running tooling required.** | **Milestone due · HW4 due** |
-| 23 | Tue Nov 17 | 9 · AI4FM | Autoformalization: English → LTL, → SMV, → ACSL, → Lean. What the measured success rates actually are — semantic correctness runs far below syntactic, and how you would even measure the difference. | |
-| 24 | Thu Nov 19 | 9 · AI4FM | **💬 D9 (30 min): Does system architecture still matter in the age of agentic coding?** — LLM proof search and the state of AI theorem proving. Saturated benchmarks. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. The Erdős arc, revisited with the machinery to understand it. | |
+| 22 | Thu Nov 12 | Project | **No in-person class (instructor travelling).** A project work session for Tuesday's milestone; TA office hours on Zoom. | **HW4 due** |
+| 23 | Tue Nov 17 | Project | **Project milestone presentations.** All eight teams, about 8 min each, **live demo of running tooling required.** | **Milestone due (11:00 a.m.)** |
+| 24 | Thu Nov 19 | 9 · AI4FM | **💬 D9 (30 min): Does system architecture still matter in the age of agentic coding?** — **AI for formal methods.** Autoformalization: English → LTL, → SMV, → ACSL, → Lean, and how far semantic correctness lags syntactic. LLM proof search with Lean as the checker. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. | |
 | — | Tue Nov 24 | | **Thanksgiving — no class** | |
 | — | Thu Nov 26 | | **Thanksgiving — no class** | |
 | 25 | Tue Dec 1 | 10 · NN verification | Robustness as a formal property. Complete vs. incomplete methods; IBP, CROWN-style linear relaxation, branch-and-bound. ONNX and VNN-LIB 2.0. | **HW5 out** |
@@ -92,8 +92,8 @@ verify what we cannot specify" is that lecture's question, not a digression from
 | HW2 — temporal logic and model checking (nuXmv) | Thu Oct 1 | **Tue Oct 13** |
 | HW3 — program analysis (CBMC, loop invariants, abstract interpretation) | Mon Oct 26 | **Tue Nov 3** |
 | Quiz 5 — program analysis and Lean basics | — | Tue Nov 10 |
-| **Project milestone** + live demo | — | **Thu Nov 12** |
 | HW4 — interactive theorem proving (Lean 4) | Tue Nov 3 | **Thu Nov 12** |
+| **Project milestone** + live demo | — | **Tue Nov 17, 11:00 a.m.** |
 | HW5 — neural network verification | Tue Dec 1 | Thu Dec 10 |
 | **Final presentations** | — | **Tue Dec 8 / Thu Dec 10** |
 | **Final report, demo, artifacts** | — | **Finals period** |
@@ -129,7 +129,8 @@ day — before the class that uses the material. Lowest of the five is dropped.
   ω-automata material together, ending on the honest inventory of what Cslib does not prove.
 - **Two project gates before the withdraw deadline.** The proposal (Sep 29) lands well before the
   Oct 30 withdrawal deadline, so you will know whether the course suits you while you still have
-  options. The milestone (Nov 12) is deliberately four weeks from the end.
+  options. The milestone (Tue Nov 17; moved from Nov 12 because the instructor is travelling that week) is three
+  weeks before the final presentations.
 - **Lean gets three sessions** (two of Lean, one of Cslib). It is the steepest part of the course.
 - **The last two weeks are compressed.** NN verification gets two sessions and HW5 is deliberately
   the lightest homework, because final projects are landing at the same time.

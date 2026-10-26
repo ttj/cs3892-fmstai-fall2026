@@ -344,7 +344,7 @@ defined topics, or propose your own with approval.
 | Deliverable | Share of course grade | When |
 |---|---|---|
 | Proposal — report plus lightning talk | 5% | Talks in class **Tue Sep 29**; report and slides both due that day at **11:00 a.m.** |
-| Milestone — presentation plus **running artifact** | 10% | *Tentative:* Thu Nov 12 |
+| Milestone — presentation plus **running artifact** | 10% | Tue Nov 17 (moved from Nov 12) |
 | **Showcase poster or video file** — **required of undergraduate teams** | (within the final) | **Thu Dec 3 — hard deadline, see §12** |
 | Final — report, presentation, demo, artifacts | 35% | *Tentative:* Dec 8 / Dec 10 and finals period |
 
@@ -365,7 +365,7 @@ Full instructions, the eight-topic menu, and the grading rubrics are posted on B
 in the course repository.
 
 **A change from previous years, stated plainly.** Topics are now provided rather than open, and the
-milestone is a *gate*: by Nov 12 you must have a verifier that runs and produces output. Last year
+milestone is a *gate*: by Nov 17 you must have a verifier that runs and produces output. Last year
 several teams reached November with models trained and nothing verified, and there is not enough
 semester left after that point to recover. Both changes exist to protect your grade, not to
 constrain your ambition — every topic on the menu has a genuinely open stretch goal.
@@ -454,7 +454,7 @@ the project rubrics, both posted on Brightspace and in the course repository.
 
 Attendance is expected. If you cannot attend, tell me in advance — much of the value of the course
 is in the in-class activities and discussions, and they cannot be made up asynchronously.
-Attendance on project presentation days — Sep 29, and tentatively Nov 12, Dec 8 and Dec 10, per
+Attendance on project presentation days — Sep 29, Nov 17, Dec 8 and Dec 10, per
 the table in §7 — is required; peer feedback on those days is part of the participation grade. If
 one of those dates moves, the attendance requirement moves with it.
 

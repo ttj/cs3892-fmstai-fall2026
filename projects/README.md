@@ -52,7 +52,7 @@ contributed equally" is not a responsibility breakdown.
 | Team sign-up (Brightspace groups, max 4) | — | **Tue Sep 22** | join the group for your topic |
 | Proposal report | 5% | **Tue Sep 29, 11:00 a.m.** | 1–3 pages |
 | Lightning-talk slides | — | **Tue Sep 29, 11:00 a.m.** | 5–7 slides, presented in class that day |
-| Milestone (presentation + running artifact) | 10% | **Thu Nov 12** | ~8 slides, 8–15 min, **live tool demo** |
+| Milestone (presentation + running artifact) | 10% | **Tue Nov 17, 11:00 a.m.** | ~8 slides, about 8 min, **live tool demo** |
 | **Showcase poster or video file** | see below | **Thu Dec 3** | printable poster file, or a short video |
 | Final (report + presentation + demo + artifacts) | 35% | **Dec 8 / Dec 10** + finals period | 6–10 pages + ~15 min + repository |
 
@@ -112,9 +112,11 @@ on a toy input, and be able to show the output. This is not a demo; it is proof 
 toolchain exists on your machine and that you will not discover in November that it does not
 build.
 
-### Milestone — Thursday November 12 (week 12)
+### Milestone — Tuesday November 17 (week 13)
 
-~8 slides, 8–15 minutes, live. Structure (from the Fall 2025 template, which worked):
+~8 slides, **about 8 minutes**, live. All eight teams present in one session, so the time is firm.
+Slides and your repository link are due at **11:00 a.m.**, before class. (Moved from Thu Nov 12.)
+Structure (from the Fall 2025 template, which worked):
 
 1. Title slide **with names**
 2. Motivation and overview — one slide, brief recap
