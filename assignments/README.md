@@ -41,7 +41,7 @@ read by a human.
 | HW2 | Thu Oct 1 | Tue Oct 13 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
 | HW3 | Mon Oct 26 | Tue Nov 3 | Program analysis: BMC, loop invariants, abstract interpretation | CBMC 6, Z3, the course abstract interpreter | Colab / Codespaces |
 | HW4 | Tue Nov 3 | Thu Nov 12 | Interactive theorem proving | Lean 4 | Colab notebook / live.lean-lang.org / Codespaces |
-| HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
+| HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | auto_LiRPA (IBP / CROWN / α-CROWN), an exact MILP (HiGHS), PGD; VNN-LIB | Colab notebook |
 
 Due dates are on the [course schedule](../schedule/schedule.md); submission is through Brightspace.
 
@@ -138,24 +138,29 @@ proves nothing; the checker looks for it with `#print axioms`.
 [Lean web editor](https://live.lean-lang.org/) · [Natural Number Game](https://adam.math.hhu.de/)
 
 ### HW5 — Neural-network verification
-*Out Tue Dec 1, due Thu Dec 10. Tools: α,β-CROWN / Marabou / auto_LiRPA.*
+*Out Tue Dec 1, due Thu Dec 10. Tools: auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved
+by HiGHS, a PGD attack; VNN-LIB. The lightest homework, because final projects land the same week.*
 
-1. **Robustness as a query.** For a small MNIST network, state local robustness at a given input
-   and `ε` as a formal property, and verify it. Report verified / falsified / timeout.
-2. **The `ε` frontier.** Binary-search the largest `ε` you can verify and the smallest at which
-   you can find an adversarial example. Explain the gap between them: what lives in it, and why
-   incompleteness rather than a bug is the usual reason.
-3. **Two tools.** Run at least two verifiers on the same queries and compare verdicts and times.
-   If they disagree on a verdict, that is a finding — investigate it.
-4. **Bounds.** Compare a cheap incomplete bound (IBP) with a tighter one (CROWN/α-CROWN) on the
-   same property and explain the precision/cost trade-off you measure.
-5. **AI component.** The network is the AI. Additionally: have an LLM generate VNN-LIB
-   specifications from English property descriptions and check whether the generated properties are
-   (a) syntactically valid and (b) actually the property you asked for.
+The network classifies 14×14 MNIST digits (196 → 32 → 32 → 10, ReLU); three tools answer every
+query: CROWN (sound, incomplete), the MILP (sound and complete) and PGD (finds counterexamples,
+proves nothing).
 
-*Starters:* [`fmaiv/day04/examples/nn`](https://github.com/ttj/fmaiv/tree/main/day04/examples/nn) ·
-[Colab](https://colab.research.google.com/github/ttj/fmaiv/blob/main/notebooks/05_day4_nn_robustness.ipynb) ·
-VNN-COMP 2026 benchmarks
+1. **Robustness as a query.** State local robustness at an input and `ε` as a formula, and write it
+   as VNN-LIB — which states the *counterexample*. Report the three tools' verdicts, and what a
+   timeout lets you conclude.
+2. **The `ε` frontier.** Binary-search the largest `ε` CROWN verifies, the exact robustness radius
+   (from the MILP) and the smallest `ε` at which PGD finds an adversarial example. Explain the gaps:
+   what lives in them, and why incompleteness rather than a bug is the usual reason.
+3. **Two verifiers.** CROWN and the MILP on the same 30 queries: verdicts and times, a query where
+   CROWN says "unknown" and the MILP decides, and why the two can never disagree the other way.
+4. **Bounds.** IBP vs CROWN vs α-CROWN on the same properties: the precision/cost trade-off you
+   measure, and the query where only α-CROWN verifies.
+5. **AI component.** The network is the AI. Additionally: have an LLM write VNN-LIB from three
+   English properties and check whether each is (a) syntactically valid and (b) actually the
+   property you asked for; correct it; and see what the verifiers say about the wrong one.
+
+*Full handout:* `assignments/hw5.pdf` · *starters:* `homework/hw5-nn-verification/` in
+[cs3892-examples](https://github.com/ttj/cs3892-examples), with a Colab notebook
 
 ## Collaboration and AI use
 
