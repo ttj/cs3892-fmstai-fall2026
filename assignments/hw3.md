@@ -20,10 +20,11 @@ runs every one of them in Colab as it ships. Each starter runs as it is, with a 
 your work goes.
 
 **What you need, and when you get it.** Tuesday Oct 27 (a C program as a transition system; CBMC;
-reading a trace; unwinding assertions) covers **Parts 1 and 4**. Thursday Oct 29 (Hoare triples and
-the loop rule; CBMC loop contracts; abstract interpretation with signs and intervals, widening and the
-join; vacuous specifications) covers **Parts 2, 3 and 5**. You can start Parts 1 and 4 as soon as
-Tuesday's class ends.
+reading a trace; unwinding assertions) covers **Part 1**. Thursday Oct 29 (test generation with
+`cbmc --cover`; Hoare triples and the loop rule; CBMC loop contracts; abstract interpretation with
+signs and intervals, widening and the join; vacuous specifications) covers **Parts 2–5**. Every
+command you need is in this handout, so you can start any part early; Part 1 needs only Tuesday's
+class.
 
 ---
 
