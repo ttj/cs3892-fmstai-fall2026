@@ -17,7 +17,7 @@ These are part of the 20% participation grade — see
 | **D4** | 6 | Tue Sep 15 | 4 | What does a prompt cost the planet? | [`d4-environment.md`](d4-environment.md) |
 | **D5** | 8 | Tue Sep 22 | 5 | If AI writes all our software, do we still need to learn to code? | [`d5-learn-to-code.md`](d5-learn-to-code.md) |
 | **D6** | 12 | Tue Oct 6 | 7 | Who is liable when AI-assisted software fails? | [`d6-liability.md`](d6-liability.md) |
-| **D7** | 16 | Tue Oct 20 | 9 | Can we verify what we cannot specify? | [`d7-specify.md`](d7-specify.md) |
+| **D7** | 17 | Tue Oct 27 | 10 | Can we verify what we cannot specify? | [`d7-specify.md`](d7-specify.md) |
 | **D8** | 20 | Thu Nov 5 | 11 | Correctness or design? What is left for the engineer | [`d8-engineer-role.md`](d8-engineer-role.md) |
 | **D9** | 24 | Thu Nov 19 | 13 | Does system architecture still matter in the age of agentic coding? | [`d9-architecture.md`](d9-architecture.md) |
 

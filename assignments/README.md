@@ -39,8 +39,8 @@ read by a human.
 |---|---|---|---|---|---|
 | HW1 | Thu Sep 10 | Thu Sep 24 | Logic, SAT/SMT, bounded reachability | Z3 (Python + SMT-LIB) | Colab / Codespaces |
 | HW2 | Thu Oct 1 | Tue Oct 13 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
-| HW3 | Thu Oct 15 | Thu Oct 29 | Program analysis: BMC and abstract interpretation | CBMC (+ Frama-C or the course abstract interpreter) | Codespaces |
-| HW4 | Thu Oct 29 | Thu Nov 12 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
+| HW3 | Mon Oct 26 | Tue Nov 3 | Program analysis: BMC, loop invariants, abstract interpretation | CBMC 6, Z3, the course abstract interpreter | Colab / Codespaces |
+| HW4 | Tue Nov 3 | Thu Nov 12 | Interactive theorem proving | Lean 4 | live.lean-lang.org / Codespaces |
 | HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | α,β-CROWN / Marabou / auto_LiRPA | Colab |
 
 Due dates are on the [course schedule](../schedule/schedule.md); submission is through Brightspace.
@@ -93,30 +93,27 @@ deliverables, which are presented in class and therefore cannot slip.
 *Starters:* [`cs3892-examples/homework/hw2-temporal-logic-model-checking`](https://github.com/ttj/cs3892-examples/tree/main/homework/hw2-temporal-logic-model-checking) ·
 [smvis in-browser](https://bit.ly/fmaiv_smvis) · full handout: `assignments/hw2.pdf`
 
-### HW3 — Program analysis: bounded model checking and abstract interpretation
-*Out Thu Oct 15, due Thu Oct 29. Tools: CBMC, plus Frama-C or the course abstract interpreter.*
+### HW3 — Program analysis: bounded model checking, loop invariants, abstract interpretation
+*Out Mon Oct 26, due Tue Nov 3. Tools: CBMC 6, Z3, and the course's small abstract interpreter.*
 
-1. **CBMC.** Verify the counter in C. Then weaken the assertion, read the counterexample trace,
-   and explain the role of `--unwind` and `--unwinding-assertions`. Say what an unwinding
-   assertion actually protects you from.
-2. **Loop invariants.** Supply a loop invariant strong enough to verify `array_max` or `binsearch`
-   unboundedly, and explain why the obvious invariant is not inductive.
-3. **Abstract interpretation.** Run the interval and sign domains over the supplied C examples.
-   Find a program where the interval domain is too imprecise and say exactly what is lost at the
-   join, and what a relational domain would have kept.
-4. **Test generation.** Use `cbmc --cover branch` to generate a branch-covering test suite for
-   `gcd`, and compare it to tests an LLM writes for the same function. Coverage is measurable;
-   measure it.
-5. **AI component.** Have an LLM write ACSL contracts (or CBMC assertions) for two functions, then
-   check them. Report any *vacuous* contract it produced — a specification the code satisfies
-   trivially. Vacuity is the characteristic failure of AI-written specifications and you should
-   expect to find it.
+1. **CBMC.** Verify the counter in C. Weaken the assertion, read the counterexample, find the
+   smallest bound that reveals it, and say what an unwinding assertion protects you from.
+2. **Loop invariants.** Prove `array_max` for every array length with an invariant that is
+   established, preserved and sufficient (Z3); and find out why the obvious invariant for a
+   second loop is true but not inductive (a CBMC loop contract).
+3. **Abstract interpretation.** Run the sign and interval domains over four programs, say which
+   step lost each bit of precision, and write a program of your own where a join causes a false
+   alarm — confirmed against `goto-analyzer` and CBMC.
+4. **Test generation.** Generate a branch-covering suite with `cbmc --cover branch`, compare it
+   with an LLM's tests, measure both with `gcov`, and see which catches a planted bug.
+5. **AI component.** Have an LLM write function contracts, check them against the functions,
+   against mutants, and for preconditions nothing can meet. Report the vacuous ones.
 
-*Starters:* [`fmaiv/day04/examples`](https://github.com/ttj/fmaiv/tree/main/day04/examples) ·
-Fall 2025 abstract-interpretation demo (interval/sign domains, five annotated C examples)
+*Full handout:* `assignments/hw3.pdf` · *starters:* `homework/hw3-program-analysis/` in
+[cs3892-examples](https://github.com/ttj/cs3892-examples), with a Colab notebook
 
 ### HW4 — Interactive theorem proving in Lean 4
-*Out Thu Oct 29, due Thu Nov 12. Tool: Lean 4.*
+*Out Tue Nov 3, due Thu Nov 12. Tool: Lean 4.*
 
 1. **Warm-up.** Finish the tactic ladder (`CounterLadder.lean`) — six rungs from `rfl` to the
    counter's base case. If you have not played the Natural Number Game, do that first.

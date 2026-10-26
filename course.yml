@@ -159,10 +159,10 @@ discussions:
   - id: D7
     key: specify
     file: d7-specify.md
-    session: 16
-    date: "Tue Oct 20"
-    week: 9
-    due: "Mon Oct 26"
+    session: 17
+    date: "Tue Oct 27"
+    week: 10
+    due: "Thu Oct 29"
     short: "Can we verify what we cannot specify?"
     question: "Is writing the property harder than proving it?"
     title: "Can We Verify What We Cannot Specify?"
@@ -170,7 +170,6 @@ discussions:
     prompts: 5          # run sheets reference these by number
     urls: 10             # reading-list size; edit here when you add a source
     unverified: 0
-    note: "Due date is NOT the usual +2 days: Thu Oct 22 is Fall Break, so it moves to Mon Oct 26."
 
   - id: D8
     key: engineer-role

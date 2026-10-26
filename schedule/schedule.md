@@ -26,15 +26,15 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 11 | Thu Oct 1 | 5 · Temporal logic | LTL: `G`, `F`, `X`, `U`. Safety vs. liveness. Writing English requirements as formulas — and the ways that goes wrong. Temporal properties over *agent traces*. | **HW2 out** |
 | 12 | Tue Oct 6 | 5 · Temporal logic | **💬 D6 (30 min): Who is liable when AI-assisted software fails?** — CTL and path quantifiers; `EF` vs `AF`. ω-words, ω-regular languages, Büchi automata, and the automata-theoretic view: check `L(system) ∩ L(¬φ) = ∅`. | **Quiz 3** |
 | 13 | Thu Oct 8 | 6 · Model checking | Explicit-state and symbolic model checking. BDDs, image computation, fixpoints, quantifier elimination. | |
-| 14 | Tue Oct 13 | 6 · Model checking | Bounded model checking; k-induction and IC3. nuXmv in practice: counterexample-guided debugging, fairness, composition. | **HW2 due** |
-| 15 | Thu Oct 15 | 7 · Programs | Programs as transition systems over memory states. Bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | **HW3 out** |
-| 16 | Tue Oct 20 | 7 · Programs | **💬 D7 (30 min): Can we verify what we cannot specify?** — Deductive verification: Hoare logic, loop invariants, ACSL and Frama-C. Why the obvious invariant is usually not inductive. | |
+| 14 | Tue Oct 13 | 6 · Model checking | When two systems are the same: trace equivalence, simulation, bisimulation; partition refinement; an abstraction that simulates a system carries its proofs. *(Guest lecture: Ben Wooding.)* | **HW2 due** |
+| 15 | Thu Oct 15 | 7 · Specifications | Specifications in practice: spec-driven development and requirements checked before code (EARS); per-request policies (Cedar) and policies over an agent's history (Dogwood); a monitor beside an agent; checking an LLM's answer against rules. *(Guest lecture: Hongchao Zhang.)* | |
+| 16 | Tue Oct 20 | 6 · Model checking | Symbolic model checking: the reachable set as a fixpoint; BDDs and image computation. Model checking vs. runtime verification. | |
 | — | Thu Oct 22 | | **Fall Break — no class** | |
-| 17 | Tue Oct 27 | 7 · Programs | Abstract interpretation: abstract domains, Galois connections, widening; what precision is lost at a join. Static, dynamic, and concolic analysis; automated test generation. | **Quiz 4** |
-| 18 | Thu Oct 29 | 8 · Theorem proving | **Lean 4 I:** terms, types, `def`, `theorem`, tactics. Curry–Howard. Induction. Live proving. | **HW3 due · HW4 out** |
-| 19 | Tue Nov 3 | 8 · Theorem proving | **Lean 4 II:** transition systems in Lean. The inductive-invariant pattern — init lemma, step lemma, strengthening. Proving a *parametric* bound a model checker cannot settle. | |
-| 20 | Thu Nov 5 | 8 · Theorem proving | **💬 D8 (30 min): The future role of the software engineer: correctness, or design?** — **Cslib I — the complete arc.** Labelled transition systems, bisimulation (including the greatest-fixed-point characterization), Hennessy–Milner logic, and the machine-checked Hennessy–Milner theorem: two states satisfy the same HML formulas iff they are bisimilar. A modal logic, a semantics over transition systems, an equivalence, and the theorem tying them together — with no missing pieces. | |
-| 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib II — ω-automata, and the honest gap.** Büchi acceptance; deterministic Büchi automata are strictly weaker than nondeterministic (`not_da_buchi`); the generalized-Büchi intersection construction — literally the intersection step of the pipeline from session 12; closure of ω-regular languages under complementation, which is what makes "check ¬φ" legitimate. Then the four things Cslib does **not** have — no LTL, no LTL→Büchi translation, no emptiness check, no system×property product — i.e. exactly where "proved" stops and "asserted on a slide" begins. | **Quiz 5** |
+| 17 | Tue Oct 27 | 7 · Programs | **💬 D7 (30 min): Can we verify what we cannot specify?** — Bounded model checking, k-induction and IC3. Programs as transition systems over memory states; bounded model checking of C with CBMC: unwinding, unwinding assertions, nondeterministic inputs, reading a trace. | |
+| 18 | Thu Oct 29 | 7 · Programs | Past the bound. Hoare logic and loop invariants — why the obvious invariant is usually not inductive; CBMC loop contracts; ACSL. Abstract interpretation: signs, intervals, widening; what precision is lost at a join. Sound vs. complete analyses; test generation; vacuous specifications. | |
+| 19 | Tue Nov 3 | 8 · Theorem proving | **Lean 4 I:** terms, types, `def`, `theorem`, tactics. Curry–Howard. Induction. Live proving. | **HW3 due · Quiz 4 · HW4 out** |
+| 20 | Thu Nov 5 | 8 · Theorem proving | **💬 D8 (30 min): The future role of the software engineer: correctness, or design?** — **Lean 4 II:** transition systems in Lean. The inductive-invariant pattern — init lemma, step lemma, strengthening. Proving a *parametric* bound a model checker cannot settle. | |
+| 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib — the complete arc, and the honest gap.** Labelled transition systems, bisimulation and Hennessy–Milner logic, with the machine-checked Hennessy–Milner theorem; Büchi automata and the generalized-Büchi intersection — the intersection step of the pipeline from session 12. Then what Cslib does **not** have — no LTL, no LTL→Büchi translation, no emptiness check — i.e. exactly where "proved" stops and "asserted on a slide" begins. | **Quiz 5** |
 | 22 | Thu Nov 12 | Project | **Project milestone presentations.** 8–15 min per team, **live demo of running tooling required.** | **Milestone due · HW4 due** |
 | 23 | Tue Nov 17 | 9 · AI4FM | Autoformalization: English → LTL, → SMV, → ACSL, → Lean. What the measured success rates actually are — semantic correctness runs far below syntactic, and how you would even measure the difference. | |
 | 24 | Thu Nov 19 | 9 · AI4FM | **💬 D9 (30 min): Does system architecture still matter in the age of agentic coding?** — LLM proof search and the state of AI theorem proving. Saturated benchmarks. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. The Erdős arc, revisited with the machinery to understand it. | |
@@ -69,7 +69,7 @@ ahead. After each session you submit a one-paragraph reflection — see
 | **D4** | 6 | Tue Sep 15 | 4 | What does a prompt cost the planet? |
 | **D5** | 8 | Tue Sep 22 | 5 | If AI writes all our software, do we still need to learn to code? |
 | **D6** | 12 | Tue Oct 6 | 7 | Who is liable when AI-assisted software fails? |
-| **D7** | 16 | Tue Oct 20 | 9 | Can we verify what we cannot specify? |
+| **D7** | 17 | Tue Oct 27 | 10 | Can we verify what we cannot specify? |
 | **D8** | 20 | Thu Nov 5 | 11 | Correctness or design? What is left for the engineer |
 | **D9** | 24 | Thu Nov 19 | 13 | Does system architecture still matter in the age of agentic coding? |
 
@@ -88,12 +88,12 @@ verify what we cannot specify" is that lecture's question, not a digression from
 | **Project proposal** report + lightning talk | Thu Aug 27 | **Tue Sep 29, 11:00 a.m.** |
 | **Lightning-talk slides** | — | **Tue Sep 29, 11:00 a.m.** |
 | Quiz 3 — transition systems, invariants, SMV | — | Tue Oct 6 |
-| Quiz 4 — temporal logic and model checking | — | Tue Oct 27 |
+| Quiz 4 — temporal logic and model checking | — | Tue Nov 3 |
 | HW2 — temporal logic and model checking (nuXmv) | Thu Oct 1 | **Tue Oct 13** |
-| HW3 — program analysis (CBMC, abstract interpretation) | Thu Oct 15 | **Thu Oct 29** |
+| HW3 — program analysis (CBMC, loop invariants, abstract interpretation) | Mon Oct 26 | **Tue Nov 3** |
 | Quiz 5 — program analysis and Lean basics | — | Tue Nov 10 |
 | **Project milestone** + live demo | — | **Thu Nov 12** |
-| HW4 — interactive theorem proving (Lean 4) | Thu Oct 29 | **Thu Nov 12** |
+| HW4 — interactive theorem proving (Lean 4) | Tue Nov 3 | **Thu Nov 12** |
 | HW5 — neural network verification | Tue Dec 1 | Thu Dec 10 |
 | **Final presentations** | — | **Tue Dec 8 / Thu Dec 10** |
 | **Final report, demo, artifacts** | — | **Finals period** |
@@ -124,14 +124,12 @@ day — before the class that uses the material. Lowest of the five is dropped.
   foundation of LTL model checking; session 21 shows the same objects machine-checked in Lean,
   and then shows exactly which parts of the pipeline are *not* proved. Seeing the gap is the point,
   and it is a ready-made capstone project.
-- **The Cslib unit is split rather than crammed.** Session 20 is a complete, self-contained,
-  fully machine-checked arc (HML + bisimulation + the Hennessy–Milner theorem). Session 21 is the
-  ω-automata material plus the honest inventory of what is missing. Running them as one session
-  guarantees the second half gets cut live.
+- **Cslib is one session.** It was two; the fall-break week and the guest lectures moved the
+  programs unit back, so session 21 now runs the machine-checked Hennessy–Milner arc and the
+  ω-automata material together, ending on the honest inventory of what Cslib does not prove.
 - **Two project gates before the withdraw deadline.** The proposal (Sep 29) lands well before the
   Oct 30 withdrawal deadline, so you will know whether the course suits you while you still have
   options. The milestone (Nov 12) is deliberately four weeks from the end.
-- **Lean gets four sessions and HW4 gets three weeks**, spanning Thanksgiving on purpose. It is the
-  steepest part of the course.
+- **Lean gets three sessions** (two of Lean, one of Cslib). It is the steepest part of the course.
 - **The last two weeks are compressed.** NN verification gets two sessions and HW5 is deliberately
   the lightest homework, because final projects are landing at the same time.

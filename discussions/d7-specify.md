@@ -1,9 +1,9 @@
 # D7 — Can We Verify What We Cannot Specify?
 
-**Session 16 · Tue Oct 20 · week 9 · 30 minutes in class · think–pair–share**
+**Session 17 · Tue Oct 27 · week 10 · 30 minutes in class · think–pair–share**
 
 > **Before class:** read the assigned source (posted on Brightspace) and the background below.
-> **After class:** one paragraph, 150–250 words, due **Mon Oct 26, 11:59 p.m.** — see
+> **After class:** one paragraph, 150–250 words, due **Thu Oct 29, 11:59 p.m.** — see
 > [participation.md](participation.md).
 
 ## Background
@@ -214,7 +214,7 @@ narrower than what we actually want.
 
 ## What you submit
 
-One paragraph, 150–250 words, by **Mon Oct 26, 11:59 p.m.**, to the `D7` assignment folder on
+One paragraph, 150–250 words, by **Thu Oct 29, 11:59 p.m.**, to the `D7` assignment folder on
 Brightspace. Answer three things: where you landed and why, what the strongest argument against you
 was, and what would change your mind. Scored 0–2; lowest of the nine is dropped. Full details and
 the rubric are in [participation.md](participation.md).
