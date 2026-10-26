@@ -9,7 +9,7 @@
 | **Weight** | 4% of the course grade (100 points) |
 | **Tools** | CBMC 6 (bounded model checking of C, loop and function contracts, test generation), Z3, and the course's small abstract interpreter |
 | **Zero-install path** | the HW3 notebook in Google Colab, or the FMAIV Codespace |
-| **Submit** | Brightspace → Assignments → *HW3 — Program analysis (CBMC; abstract interpretation)* |
+| **Submit** | Brightspace → Assignments → *HW3 — Program analysis (CBMC, abstract interpretation)* |
 
 Nothing to install. Every part of this runs in a browser tab.
 
