@@ -109,7 +109,7 @@ narrower than what we actually want.
 
 ## Readings
 
-10 sources. One is assigned; the rest are here if you want to go further, or if you want to check a claim that comes up in discussion.
+12 sources. One is assigned; the rest are here if you want to go further, or if you want to check a claim that comes up in discussion. The last two came up in class on Oct 27.
 
 - **Chris Newcombe, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, Michael Deardeuff, "How Amazon Web Services Uses Formal Methods," Communications of the ACM 58(4), pp. 66-73** (academic, 2015)  
   <https://lamport.azurewebsites.net/tla/formal-methods-amazon.pdf>  
@@ -211,6 +211,23 @@ narrower than what we actually want.
   gripper positioning itself to occlude the camera. 5-minute read. Treat it as framing, not
   evidence: it is a curated list of anecdotes from RL simulation environments, not a
   controlled study, and it is routinely over-cited as if it were measurement.
+
+- **Edsger W. Dijkstra, "On the foolishness of \"natural language programming\"," EWD 667** (essay, undated; usually cited as about 1978)
+  <https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html>
+  Discussed in class on Oct 27. A three-page argument that formal notation is not a burden to be
+  engineered away. It is what lets us reason at all, and moving programming "back" to natural
+  language trades precision for an illusion of ease. Read it with question 3 in mind: an
+  English prompt is a specification too, and Dijkstra explains why it is a weak one.
+  About 10 minutes.
+
+- **Anthropic, "LLMs are making formal software verification feasible at a much larger scale"** (industry, Oct 22 2026)
+  <https://www.anthropic.com/research/formal-verification>
+  The other side of question 1, at scale. Fuzz tests from 123 OSS-Fuzz libraries were turned into
+  specifications: no crash for any input under 64 MB, over the compiled RISC-V code. Claude
+  wrote machine-checked Rocq proofs for 239 entry points and found bugs along the way. Note
+  what it says about trust: "This doesn't mean these libraries contain no bugs." The proofs hold
+  only relative to the RISC-V and Linux models, the theorem statements and the proof checker.
+  The animations show the pipeline well. About 20 minutes.
 
 ## What you submit
 

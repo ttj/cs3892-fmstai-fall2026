@@ -168,7 +168,7 @@ discussions:
     title: "Can We Verify What We Cannot Specify?"
     deck: "https://gamma.app/docs/D7-Can-we-verify-what-we-cannot-specify-CS-3892-Fall-2026-hoho47rcwaiuumk"
     prompts: 5          # run sheets reference these by number
-    urls: 10             # reading-list size; edit here when you add a source
+    urls: 12             # reading-list size; edit here when you add a source
     unverified: 0
 
   - id: D8
