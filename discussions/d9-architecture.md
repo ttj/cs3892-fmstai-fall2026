@@ -1,9 +1,9 @@
 # D9 — Does system architecture still matter in the age of agentic coding?
 
-**Session 24 · Thu Nov 19 · week 13 · 30 minutes in class · think–pair–share**
+**Session 26 · Thu Dec 3 · week 15 · 30 minutes in class · think–pair–share**
 
 > **Before class:** read the assigned source (posted on Brightspace) and the background below.
-> **After class:** one paragraph, 150–250 words, due **Sat Nov 21, 11:59 p.m.** — see
+> **After class:** one paragraph, 150–250 words, due **Sat Dec 5, 11:59 p.m.** — see
 > [participation.md](participation.md).
 
 ## Background
@@ -186,7 +186,7 @@ still fail to say what you meant.
 
 ## What you submit
 
-One paragraph, 150–250 words, by **Sat Nov 21, 11:59 p.m.**, to the `D9` assignment folder on
+One paragraph, 150–250 words, by **Sat Dec 5, 11:59 p.m.**, to the `D9` assignment folder on
 Brightspace. Answer three things: where you landed and why, what the strongest argument against you
 was, and what would change your mind. Scored 0–2; lowest of the nine is dropped. Full details and
 the rubric are in [participation.md](participation.md).

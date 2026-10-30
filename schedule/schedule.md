@@ -37,11 +37,11 @@ Topics may shift by a session; **deadlines will not move without notice on Brigh
 | 21 | Tue Nov 10 | 8 · Theorem proving | **Cslib — the complete arc, and the honest gap.** Labelled transition systems, bisimulation and Hennessy–Milner logic, with the machine-checked Hennessy–Milner theorem; Büchi automata and the generalized-Büchi intersection — the intersection step of the pipeline from session 12. Then what Cslib does **not** have — no LTL, no LTL→Büchi translation, no emptiness check — i.e. exactly where "proved" stops and "asserted on a slide" begins. | **Quiz 5** |
 | 22 | Thu Nov 12 | Project | **No in-person class (instructor travelling).** A project work session for Tuesday's milestone; TA office hours on Zoom. | **HW4 due** |
 | 23 | Tue Nov 17 | Project | **Project milestone presentations.** All eight teams, about 8 min each, **live demo of running tooling required.** | **Milestone due (11:00 a.m.)** |
-| 24 | Thu Nov 19 | 10 · NN verification | **💬 D9 (30 min): Does system architecture still matter in the age of agentic coding?** — **Neural network verification I.** Robustness as a formal property. Complete vs. incomplete methods; IBP, CROWN-style linear relaxation, branch-and-bound. ONNX and VNN-LIB 2.0. | **HW5 out** |
+| 24 | Thu Nov 19 | 10 · NN verification | **Neural network verification I.** Robustness as a formal property. Complete vs. incomplete methods; IBP, CROWN-style linear relaxation, branch-and-bound. ONNX and VNN-LIB 2.0. | **HW5 out** |
 | — | Tue Nov 24 | | **Thanksgiving — no class** | |
 | — | Thu Nov 26 | | **Thanksgiving — no class** | |
 | 25 | Tue Dec 1 | 10 · NN verification | **Neural network verification II.** Tools and results: α,β-CROWN, NNV, n2v, NeuralSAT, PyRAT, Marabou. VNN-COMP 2026 as a live dataset. What "verified" and "timeout" mean; an LLM writing VNN-LIB. Scaling limits, stated honestly. Certification practice in aviation. | |
-| 26 | Thu Dec 3 | 9 · AI4FM | **AI for formal methods.** Autoformalization: English → LTL, → SMV, → ACSL, → Lean, and how far semantic correctness lags syntactic. LLM proof search with Lean as the checker. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. | **HW5 due Fri Dec 4** |
+| 26 | Thu Dec 3 | 9 · AI4FM | **💬 D9 (30 min): Does system architecture still matter in the age of agentic coding?** — **AI for formal methods.** Autoformalization: English → LTL, → SMV, → ACSL, → Lean, and how far semantic correctness lags syntactic. LLM proof search with Lean as the checker. **The soundness gap:** a machine-checked proof of a machine-generated formalization certifies only that the two agree. | **HW5 due Fri Dec 4** |
 | 27 | Tue Dec 8 | Project | **Final project presentations I.** ~15 min per team plus questions. | |
 | 28 | Thu Dec 10 | Project | **Final project presentations II.** Course wrap-up. *Last day of classes.* | |
 
@@ -71,7 +71,7 @@ ahead. After each session you submit a one-paragraph reflection — see
 | **D6** | 12 | Tue Oct 6 | 7 | Who is liable when AI-assisted software fails? |
 | **D7** | 17 | Tue Oct 27 | 10 | Can we verify what we cannot specify? |
 | **D8** | 20 | Thu Nov 5 | 11 | Correctness or design? What is left for the engineer |
-| **D9** | 24 | Thu Nov 19 | 13 | Does system architecture still matter in the age of agentic coding? |
+| **D9** | 26 | Thu Dec 3 | 15 | Does system architecture still matter in the age of agentic coding? |
 
 The technical content of a discussion session is correspondingly lighter; the homework and the
 FMAIV notebooks carry the drill work. D7 is placed deliberately on the CBMC session — "can we

@@ -189,10 +189,10 @@ discussions:
   - id: D9
     key: architecture
     file: d9-architecture.md
-    session: 24
-    date: "Thu Nov 19"
-    week: 13
-    due: "Sat Nov 21"
+    session: 26
+    date: "Thu Dec 3"
+    week: 15
+    due: "Sat Dec 5"
     short: "Does system architecture still matter in the age of agentic coding?"
     question: "If no permission was exceeded, did anything fail?"
     title: "Does system architecture still matter in the age of agentic coding?"
