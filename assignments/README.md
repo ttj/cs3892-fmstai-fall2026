@@ -41,7 +41,7 @@ read by a human.
 | HW2 | Thu Oct 1 | Tue Oct 13 | Temporal logic and model checking | nuXmv / NuSMV | smvis in browser / Codespaces |
 | HW3 | Mon Oct 26 | Tue Nov 3 | Program analysis: BMC, loop invariants, abstract interpretation | CBMC 6, Z3, the course abstract interpreter | Colab / Codespaces |
 | HW4 | Tue Nov 3 | Thu Nov 12 | Interactive theorem proving | Lean 4 | Colab notebook / live.lean-lang.org / Codespaces |
-| HW5 | Tue Dec 1 | Thu Dec 10 | Neural-network verification | auto_LiRPA (IBP / CROWN / α-CROWN), an exact MILP (HiGHS), PGD; VNN-LIB | Colab notebook |
+| HW5 | Thu Nov 19 | Fri Dec 4 | Neural-network verification | auto_LiRPA (IBP / CROWN / α-CROWN), an exact MILP (HiGHS), PGD; VNN-LIB | Colab notebook |
 
 Due dates are on the [course schedule](../schedule/schedule.md); submission is through Brightspace.
 
@@ -138,7 +138,7 @@ proves nothing; the checker looks for it with `#print axioms`.
 [Lean web editor](https://live.lean-lang.org/) · [Natural Number Game](https://adam.math.hhu.de/)
 
 ### HW5 — Neural-network verification
-*Out Tue Dec 1, due Thu Dec 10. Tools: auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved
+*Out Thu Nov 19, due Fri Dec 4. Tools: auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved
 by HiGHS, a PGD attack; VNN-LIB. The lightest homework, because final projects land the same week.*
 
 The network classifies 14×14 MNIST digits (196 → 32 → 32 → 10, ReLU); three tools answer every

@@ -184,7 +184,7 @@ of ω-regular languages under complementation. We will also look carefully at wh
 yet contain — there is no LTL, no LTL→Büchi translation, and no emptiness check — because the
 boundary between "proved" and "asserted on a slide" is precisely what this course is about.
 
-**Unit 9 · AI for formal methods (sessions 23–24).** Autoformalization: English → temporal logic,
+**Unit 9 · AI for formal methods (session 26, after Unit 10 this term).** Autoformalization: English → temporal logic,
 English → SMV, English → ACSL, English → Lean. LLM proof search and the current state of AI
 theorem proving. What is genuinely solved, what is saturated benchmark theater, and the
 **soundness gap**: a machine-checked proof of a machine-generated formalization certifies only
@@ -192,7 +192,7 @@ that the two agree. The Erdős #728 episode — where formalization in Lean is e
 a real result from a retracted claim — is the argument for this entire course, delivered by
 current events.
 
-**Unit 10 · Neural network verification (sessions 25–26).** Robustness as a formal property. Incomplete
+**Unit 10 · Neural network verification (sessions 24–25).** Robustness as a formal property. Incomplete
 versus complete methods; interval bound propagation, CROWN-style linear relaxation,
 branch-and-bound. ONNX and VNN-LIB (and the 2.0 revision, which gives the format a formal
 semantics mechanized in Agda). Tools: α,β-CROWN, NNV, n2v, NeuralSAT, PyRAT, Marabou. VNN-COMP

@@ -53,8 +53,8 @@ semester-long team project that satisfies the CS project and Immersion requireme
 | 15–17 | Program analysis: CBMC, deductive verification, abstract interpretation |
 | **18–21** | **Interactive theorem proving: Lean 4, then Cslib in two parts** |
 | 22 | *Project milestone* |
-| 23–24 | AI for formal methods: autoformalization, proof search, the soundness gap |
-| 25–26 | Neural network verification |
+| 24–25 | Neural network verification |
+| 26 | AI for formal methods: autoformalization, proof search, the soundness gap |
 | 27–28 | Final project presentations |
 
 **Grading:** 50% project · 20% homeworks · 10% quizzes · 20% case studies, discussions, and

@@ -4,8 +4,8 @@
 
 | | |
 |---|---|
-| **Out** | Tuesday, December 1 |
-| **Due** | **Thursday, December 10, 11:59 p.m. US Central** |
+| **Out** | Thursday, November 19 |
+| **Due** | **Friday, December 4, 11:59 p.m. US Central** |
 | **Weight** | 4% of the course grade (100 points) |
 | **Tools** | auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved by HiGHS, a PGD attack; VNN-LIB |
 | **Zero-install path** | the HW5 notebook in Google Colab |
@@ -18,9 +18,9 @@ installs the tools and runs everything in Colab. Each starter runs as it is, wit
 where your work goes.
 
 **What you need, and when you get it.**
-- **Tuesday Dec 1** covers **Parts 1, 2 and 4**: robustness as a formal query, VNN-LIB, IBP and
+- **Thursday Nov 19** covers **Parts 1, 2 and 4**: robustness as a formal query, VNN-LIB, IBP and
   CROWN bounds, complete vs incomplete.
-- **Thursday Dec 3** covers **Parts 3 and 5**: tools and VNN-COMP, what "verified" and "timeout"
+- **Tuesday Dec 1** covers **Parts 3 and 5**: tools and VNN-COMP, what "verified" and "timeout"
   mean, and LLM-written specifications.
 
 This is deliberately the lightest homework: the final projects land the same week.
