@@ -188,9 +188,9 @@ boundary between "proved" and "asserted on a slide" is precisely what this cours
 English → SMV, English → ACSL, English → Lean. LLM proof search and the current state of AI
 theorem proving. What is genuinely solved, what is saturated benchmark theater, and the
 **soundness gap**: a machine-checked proof of a machine-generated formalization certifies only
-that the two agree. The Erdős #728 episode — where formalization in Lean is exactly what separated
-a real result from a retracted claim — is the argument for this entire course, delivered by
-current events.
+that the two agree. The Erdős #728 episode — an AI-produced Lean proof (January 2026), after
+which the argument was over whether the formal statement captured the problem Erdős meant — is the
+soundness gap in one story, and the argument for this entire course, delivered by current events.
 
 **Unit 10 · Neural network verification (sessions 24–25).** Robustness as a formal property. Incomplete
 versus complete methods; interval bound propagation, CROWN-style linear relaxation,
