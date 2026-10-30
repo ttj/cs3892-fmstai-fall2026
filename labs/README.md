@@ -79,7 +79,7 @@ That is fine. What is *not* automatic:
   confirm it finishes; if it does not, come to office hours with the error rather than losing the
   session.
 
-If your machine cannot spare 11 GB, use Codespaces — the container has everything prebuilt.
+If your machine cannot spare 11 GB, a Codespace with that much disk works too, but the course container does **not** come with Mathlib or Cslib built: `lake exe cache get` and `lake build` run there just as locally. Nothing graded needs Cslib: session 21's slides and its example folder show every output.
 
 **AI assistance in Lean:** use
 [`lean-lsp-mcp`](https://github.com/oOo0oOo/lean-lsp-mcp) — it rides the Lean language server, is
