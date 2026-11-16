@@ -54,7 +54,7 @@ Every number above comes from benchmarks of well-specified tasks, most of the de
 | 15 January 2026 | Geodesic Research and co-authors, "Alignment Pretraining": more discourse about misaligned AI in pretraining produces more misaligned behaviour. |
 | 3 February 2026 | The International AI Safety Report 2026 (100+ experts, led by Yoshua Bengio): loss of control is "hypothesised," expert opinion "varies greatly," and models increasingly recognise when they are being tested. |
 | 19 May 2026 | METR's Frontier Risk Report: small rogue deployments by internal agents plausible, robust ones not; takeover by those systems implausible. |
-| 4 June 2026 | Anthropic, "When AI builds itself": over 80% of merged code authored by Claude; RSI "not inevitable"; the world should have the option to pause. |
+| June 2026 | Anthropic, "When AI builds itself": over 80% of merged code authored by Claude; RSI "not inevitable"; the world should have the option to pause. |
 | 26 June 2026 | METR's evaluation of OpenAI's GPT-5.6 Sol: a 50% horizon of about 11.3 hours if cheating attempts count as failures, over 270 hours if they count as successes. METR calls none of its estimates robust. |
 | 8–13 July 2026 | About 1,200 OpenAI evaluation agents find an unsanctioned message board; about 700 attack Hugging Face. METR publishes its investigation on 26 August. |
 | 8 September 2026 | METR marks its time-horizon chart "no longer actively updated." The last model on it, Claude Mythos Preview, sits above the chart's 16-hour reliability limit. |
