@@ -6,10 +6,14 @@
 |---|---|
 | **Out** | Thursday, November 19 |
 | **Due** | **Friday, December 4, 11:59 p.m. US Central** |
-| **Weight** | 4% of the course grade (100 points) |
+| **Weight** | 4% of the course grade: Parts 1, 2, 4 and 5, 80 points, scaled to 100. Part 3 is optional and ungraded |
 | **Tools** | auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved by HiGHS, a PGD attack; VNN-LIB |
 | **Zero-install path** | the HW5 notebook in Google Colab |
 | **Submit** | Brightspace → Assignments → *HW5 — Neural network verification* |
+
+> **Changed Mon Nov 16:** Part 3 is now **optional and ungraded**; HW5 is graded out of 80 (Parts 1, 2,
+> 4 and 5) and scaled to 100. Also: 2.4 is shorter, the report is shorter, and Part 5 gives the commands
+> it needs.
 
 **Start here:** [github.com/ttj/cs3892-examples](https://github.com/ttj/cs3892-examples) has the
 starters in `homework/hw5-nn-verification/`, and
@@ -20,8 +24,8 @@ where your work goes.
 **What you need, and when you get it.**
 - **Thursday Nov 19** covers **Parts 1, 2 and 4**: robustness as a formal query, VNN-LIB, IBP and
   CROWN bounds, complete vs incomplete.
-- **Tuesday Dec 1** covers **Parts 3 and 5**: tools and VNN-COMP, what "verified" and "timeout"
-  mean, and LLM-written specifications.
+- **Tuesday Dec 1** covers **Part 5** and the optional **Part 3**: tools and VNN-COMP, what "verified"
+  and "timeout" mean, and LLM-written specifications.
 
 This is deliberately the lightest homework: the final projects land the same week.
 
@@ -87,7 +91,8 @@ minute, once per runtime) and runs every starter. Edit the files with the file b
 left), save, and re-run. **A Colab runtime is deleted when it disconnects: download your files
 before you leave.**
 
-**On your machine, or in a Codespace**, preferably in a virtual environment:
+**On your machine, or in a Codespace**, with Python 3.10–3.13 (on Python 3.14 or an Intel Mac, use
+Colab), preferably in a virtual environment:
 
 ```bash
 git clone --depth 1 https://github.com/ttj/cs3892-examples.git
@@ -100,7 +105,7 @@ python3 check_hw5.py
 **Every version is pinned:** torch 2.11.0 (CPU), auto_LiRPA 0.8.0, highspy 1.15.1 and numpy 2.2.6.
 `check_hw5.py` reports any difference. It checks Parts 1, 2, 3 and 5 and reports each as *ok*,
 *placeholder*, *wrong* (with the reason) or *error*. `python3 check_hw5.py --strict` exits 0 only
-when every part is *ok*.
+when Parts 1, 2 and 5 are *ok* (Part 3 is optional).
 
 ---
 
@@ -110,7 +115,8 @@ when every part is *ok*.
    [0, 1], is classified as its label y"* as a formula over x and the network f. *(4)*
 2. Write `make_vnnlib(x0, label, eps)` in `part1_query.py`. It returns the VNN-LIB text for that
    property. The checker compares its **meaning** (box pixel by pixel, unsafe output region as a set)
-   with the property on five queries. *(8)*
+   with the property on five queries. Write every bound at full precision (`f"{v}"` does; `:.4f`
+   does not): the checker compares bounds to within 10⁻⁶. *(8)*
 3. Run `python3 part1_query.py` and report the three tools' verdicts for image 4 at ε = 0.02, 0.03
    and 0.05. Explain why CROWN's "unknown" at 0.03 is not a "no", and what the MILP adds. *(4)*
 4. The last line re-runs the MILP on ε = 0.03 with a 0.01 s time limit. What does its verdict let
@@ -129,20 +135,21 @@ when every part is *ok*.
    attack. *(8)*
 3. What lives between ε_C and r\*, and between r\* and ε_A? Why is incompleteness, not a bug, the
    usual reason for a gap? *(4)*
-4. Binary search needs a monotone predicate. "The MILP verifies at ε" is monotone; why? Is "CROWN
-   verifies at ε" guaranteed to be? And "PGD finds nothing at ε"? What does your search return if a
-   predicate is not monotone? *(4)*
+4. Binary search needs a monotone predicate. Why is "the MILP verifies at ε" monotone in ε? What does
+   your search return if a predicate is not monotone? *(4)*
 
-## Part 3 — Two verifiers on the same queries  *(20 points)*
+## Part 3 — Two verifiers on the same queries  *(optional, ungraded)*
+
+Not graded since Nov 16. It is the comparison session 25 is built on.
 
 1. Run `python3 part3_compare.py`: CROWN and the MILP on 30 queries (10 images × 3 values of ε).
    Of the queries where CROWN says "unknown", how many does the MILP verify, and how many does it
-   falsify? *(6)*
+   falsify?
 2. Set `FINDING` to one query where CROWN says "unknown" and the MILP decides. Explain what CROWN
-   approximates that the MILP does not, and why the MILP's way does not scale. *(6)*
-3. Compare the times. Which queries are slow for the MILP, and why those? *(4)*
-4. The script stops with an error if CROWN ever verifies a query the MILP falsifies. Why must that
-   never happen, and what would it mean if it did? *(4)*
+   approximates that the MILP does not, and why the MILP's way does not scale.
+3. Compare the times. Which queries are slow for the MILP, and why those?
+4. The script prints a warning (`!!`) if CROWN ever verifies a query the MILP falsifies. Why must
+   that never happen, and what would it mean if it did?
 
 ## Part 4 — IBP, CROWN, α-CROWN: precision against cost  *(20 points)*
 
@@ -162,10 +169,16 @@ the time taken.
 `part5/properties.md` states three properties in English: robustness, a target class that must
 never be on top, and a margin. Give an LLM the three sentences, the network's interface, and the
 pixel values of the images. You may also ask it for a program that writes the files. Ask it for
-one VNN-LIB file per property.
+one VNN-LIB file per property. To print an image's pixels with enough digits (here image 2), from
+the homework folder:
+
+```bash
+python3 -c "import hw5lib; print(*hw5lib.load_images()[0][2].round(6))"
+```
 
 1. Save its answers verbatim as `part5/P5a_llm.vnnlib`, `P5b_llm.vnnlib` and `P5c_llm.vnnlib`, and
-   your prompt in `part5/prompt.md`. Run `check_hw5.py`. For each file, report what it says:
+   your prompt in `part5/prompt.md`. Run `check_hw5.py` (it reports on the `_llm` files before you
+   write the `_fixed` ones). For each file, report what it says:
    - a syntax error;
    - a match;
    - a difference in meaning: in the input box, or in the output region, with the output vector on
@@ -175,7 +188,28 @@ one VNN-LIB file per property.
 2. Write corrected versions, `part5/P5a_fixed.vnnlib` and the other two. The checker must report a
    match for each. *(6)*
 3. Run CROWN and the MILP on the LLM's files and on yours, and report every verdict. If a wrong
-   property was **verified**, explain what that verification is worth. *(6)*
+   property was **verified**, explain what that verification is worth. *(6)* This prints every
+   verdict (in Colab, the notebook's Part 5 cell runs the same code):
+
+   ```python
+   # part5_run.py -- save it in the homework folder; run: python3 part5_run.py
+   from pathlib import Path
+   from hw5lib import load_net, parse_vnnlib, lirpa_check, milp_check, VnnlibError
+   W = load_net()
+   for name in ("P5a", "P5b", "P5c"):
+       for which in ("llm", "fixed"):
+           text = Path(f"part5/{name}_{which}.vnnlib").read_text()
+           if "PLACEHOLDER" in text:
+               print(name, which, "still the placeholder")
+               continue
+           try:
+               spec = parse_vnnlib(text)
+           except VnnlibError as ex:
+               print(name, which, "syntax error:", ex)
+               continue
+           print(name, which, "CROWN", lirpa_check(W, spec, "CROWN").verdict,
+                 "| MILP", milp_check(W, spec).verdict)
+   ```
 
 ---
 
@@ -183,10 +217,11 @@ one VNN-LIB file per property.
 
 One archive or repository link containing:
 
-1. Your `part1_query.py`, `part2_frontier.py` and `part3_compare.py`, and the six `.vnnlib` files
-   and `prompt.md` in `part5/`. `python3 check_hw5.py --strict` is the acceptance test.
-2. A short report, Markdown or PDF, about two pages. It answers every numbered question, with the
-   tool output it relies on.
+1. Your `part1_query.py` and `part2_frontier.py` (and `part3_compare.py` if you did Part 3), and the
+   six `.vnnlib` files and `prompt.md` in `part5/`. `python3 check_hw5.py --strict` is the acceptance
+   test.
+2. A short report, Markdown or PDF. It answers every numbered question of Parts 1, 2, 4 and 5 in two
+   to four sentences, with the tool output it relies on.
 3. The AI-use disclosure (below).
 
 ## Late policy

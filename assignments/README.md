@@ -139,7 +139,9 @@ proves nothing; the checker looks for it with `#print axioms`.
 
 ### HW5 — Neural-network verification
 *Out Thu Nov 19, due Fri Dec 4. Tools: auto_LiRPA (IBP, CROWN, α-CROWN), an exact MILP encoding solved
-by HiGHS, a PGD attack; VNN-LIB. The lightest homework, because final projects land the same week.*
+by HiGHS, a PGD attack; VNN-LIB. The lightest homework, because final projects land the same week:
+since Nov 16, Part 3 is optional and ungraded, and HW5 is graded out of 80 (Parts 1, 2, 4, 5), scaled
+to 100.*
 
 The network classifies 14×14 MNIST digits (196 → 32 → 32 → 10, ReLU); three tools answer every
 query: CROWN (sound, incomplete), the MILP (sound and complete) and PGD (finds counterexamples,
@@ -151,7 +153,7 @@ proves nothing).
 2. **The `ε` frontier.** Binary-search the largest `ε` CROWN verifies, the exact robustness radius
    (from the MILP) and the smallest `ε` at which PGD finds an adversarial example. Explain the gaps:
    what lives in them, and why incompleteness rather than a bug is the usual reason.
-3. **Two verifiers.** CROWN and the MILP on the same 30 queries: verdicts and times, a query where
+3. **Two verifiers** *(optional, ungraded)*. CROWN and the MILP on the same 30 queries: verdicts and times, a query where
    CROWN says "unknown" and the MILP decides, and why the two can never disagree the other way.
 4. **Bounds.** IBP vs CROWN vs α-CROWN on the same properties: the precision/cost trade-off you
    measure, and the query where only α-CROWN verifies.
