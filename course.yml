@@ -187,18 +187,19 @@ discussions:
     unverified: 0
 
   - id: D9
-    key: architecture
-    file: d9-architecture.md
-    session: 26
-    date: "Thu Dec 3"
-    week: 15
-    due: "Sat Dec 5"
-    short: "Does system architecture still matter in the age of agentic coding?"
-    question: "If no permission was exceeded, did anything fail?"
-    title: "Does system architecture still matter in the age of agentic coding?"
-    deck: "https://gamma.app/docs/D9-Does-architecture-still-matter-CS-3892-Fall-2026-l7cp7ee2iyq5czb"
+    key: worried
+    file: d9-worried.md
+    session: 24
+    date: "Thu Nov 19"
+    week: 13
+    due: "Sat Nov 21"
+    short: "Should we be worried about AI alignment and AI safety?"
+    question: "Should we be worried about AI alignment and AI safety?"
+    title: "Should we be worried about AI alignment and AI safety?"
+    # Moved Nov 16 from Thu Dec 3 (session 26) and rewritten; it runs inside session 24's deck.
+    deck: "instructor:slides/cs3892-2026-11-19-nn-verification-robustness.html"
     prompts: 5          # run sheets reference these by number
-    urls: 10             # reading-list size; edit here when you add a source
+    urls: 15             # reading-list size; edit here when you add a source
     unverified: 0
 
 # Reading-list sizes are recorded per discussion above (`urls` / `unverified`).

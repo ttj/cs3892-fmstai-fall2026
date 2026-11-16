@@ -466,8 +466,11 @@ def check_decks_present(m):
     repo, but the manifest is where they are declared)."""
     problems = []
     for d in m["discussions"]:
-        if not d.get("deck", "").startswith("https://gamma.app/"):
-            problems.append(f"{d['id']} has no gamma.app deck URL in course.yml")
+        # A discussion run inside a lecture deck (D9, Nov 19) names that deck in the
+        # instructor repo instead of a Gamma URL.
+        deck = d.get("deck", "")
+        if not (deck.startswith("https://gamma.app/") or re.fullmatch(r"instructor:slides/cs3892-[0-9a-z-]+\.html", deck)):
+            problems.append(f"{d['id']} has no gamma.app deck URL (or instructor:slides/… deck) in course.yml")
     return problems
 
 
