@@ -22,10 +22,11 @@ installs the tools and runs everything in Colab. Each starter runs as it is, wit
 where your work goes.
 
 **What you need, and when you get it.**
-- **Thursday Nov 19** covers **Parts 1, 2 and 4**: robustness as a formal query, VNN-LIB, IBP and
-  CROWN bounds, complete vs incomplete.
-- **Tuesday Dec 1** covers **Part 5** and the optional **Part 3**: tools and VNN-COMP, what "verified"
-  and "timeout" mean, and LLM-written specifications.
+- **Thursday Nov 19** covers **every graded part (1, 2, 4 and 5)**: robustness as a formal query,
+  VNN-LIB, IBP and CROWN bounds, complete vs incomplete, and checking an LLM-written VNN-LIB file.
+  There is no class Thanksgiving week, so everything you need is taught before the break.
+- **Tuesday Dec 1** goes deeper (the exact MILP verifier, real tools and VNN-COMP, what "verified"
+  and "timeout" mean at scale) and covers the optional **Part 3**. Bring HW5 questions.
 
 This is deliberately the lightest homework: the final projects land the same week.
 
