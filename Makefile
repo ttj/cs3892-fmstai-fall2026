@@ -23,7 +23,7 @@ check:
 	@python3 -c "import yaml" 2>/dev/null || pip install --quiet pyyaml
 	@python3 scripts/check_course.py
 
-pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf assignments/hw3.pdf assignments/hw4.pdf assignments/hw5.pdf projects/milestone.pdf
+pdf: syllabus/syllabus.pdf assignments/hw1.pdf assignments/hw2.pdf assignments/hw3.pdf assignments/hw4.pdf assignments/hw5.pdf projects/milestone.pdf projects/final.pdf
 
 projects/milestone.pdf: projects/milestone.md tools/print.css tools/abs-links.lua
 	@mkdir -p .pandoc-tmp
@@ -37,6 +37,20 @@ projects/milestone.pdf: projects/milestone.md tools/print.css tools/abs-links.lu
 	  file://$(CURDIR)/.pandoc-tmp/milestone.html
 	@rm -rf .pandoc-tmp
 	@sha256sum projects/milestone.md | cut -d' ' -f1 > projects/.milestone.md.sha256
+	@echo "wrote $@ (+ source stamp)"
+
+projects/final.pdf: projects/final.md tools/print.css tools/abs-links.lua
+	@mkdir -p .pandoc-tmp
+	$(PANDOC) -f gfm -t html5 --standalone \
+	  --metadata pagetitle="Final project — CS 3892/5892" \
+	  --css tools/print.css --embed-resources \
+	  --lua-filter tools/abs-links.lua -M srcdir=projects \
+	  -o .pandoc-tmp/final.html $<
+	$(CHROME) --headless=new --disable-gpu --no-sandbox \
+	  --no-pdf-header-footer --print-to-pdf=$@ \
+	  file://$(CURDIR)/.pandoc-tmp/final.html
+	@rm -rf .pandoc-tmp
+	@sha256sum projects/final.md | cut -d' ' -f1 > projects/.final.md.sha256
 	@echo "wrote $@ (+ source stamp)"
 
 syllabus/syllabus.pdf: syllabus/syllabus.md tools/print.css tools/abs-links.lua

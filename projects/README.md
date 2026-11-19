@@ -54,7 +54,7 @@ contributed equally" is not a responsibility breakdown.
 | Lightning-talk slides | — | **Tue Sep 29, 11:00 a.m.** | 5–7 slides, presented in class that day |
 | Milestone (presentation + running artifact) | 10% | **Tue Nov 17, 11:00 a.m.** | ~8 slides, about 8 min, **live tool demo** |
 | **Showcase poster or video file** | see below | **Thu Dec 3** | printable poster file, or a short video |
-| Final (report + presentation + demo + artifacts) | 35% | **Dec 8 / Dec 10** + finals period | 6–10 pages + ~15 min + repository |
+| Final (report + presentation + demo + artifacts) | 35% | talks **Tue Dec 8 / Thu Dec 10**; report + repository **Fri Dec 18** | 6–10 pages + ~15 min + repository — [requirements](final.md) |
 
 Exact dates are on the [course schedule](../schedule/schedule.md).
 
@@ -148,7 +148,8 @@ components clearly delineated) · implementation · evaluation with quantitative
 related work · threats to validity · conclusions and future work · responsibility breakdown ·
 **AI-use disclosure**.
 
-**Presentation.** ~15 minutes plus questions, in class during the last week or the finals slot.
+**Presentation.** ~15 minutes plus questions, in class on Tue Dec 8 or Thu Dec 10; slides due 11:00 a.m.
+on the day you present. The full requirements are in [final.md](final.md).
 
 **Demo.** Required. Live if possible, recorded if not. Something must actually run.
 
